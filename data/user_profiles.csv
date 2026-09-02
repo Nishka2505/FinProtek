@@ -1,0 +1,101 @@
+user_id,avg_amount,home_location,known_device
+u1,2185.43,North Matthew,device_1_A
+u2,4778.21,Lorraineton,device_2_A
+u3,3793.97,Port Kimhaven,device_3_A
+u4,3193.96,South Julie,device_4_A
+u5,1202.08,East Jeanettebury,device_5_A
+u6,1201.98,Bookerchester,device_6_A
+u7,761.38,Lake Ashleyview,device_7_A
+u8,4397.79,Kochchester,device_8_A
+u9,3205.02,South Christina,device_9_A
+u10,3686.33,Ricardostad,device_10_A
+u11,592.63,North Johnbury,device_11_A
+u12,4864.59,Molinafurt,device_12_A
+u13,4245.99,East Tamara,device_13_A
+u14,1455.53,Allenmouth,device_14_A
+u15,1318.21,Strongfort,device_15_A
+u16,1325.32,Lake Lauren,device_16_A
+u17,1869.09,Port Derekfort,device_17_A
+u18,2861.4,Knoxfurt,device_18_A
+u19,2443.75,Port Danielview,device_19_A
+u20,1810.53,New Brittanymouth,device_20_A
+u21,3253.34,Thorntontown,device_21_A
+u22,1127.72,Smithland,device_22_A
+u23,1814.65,Mosston,device_23_A
+u24,2148.63,West Michele,device_24_A
+u25,2552.31,Lake Allison,device_25_A
+u26,4033.29,North Amanda,device_26_A
+u27,1398.53,East Catherineville,device_27_A
+u28,2814.05,Richardsonview,device_28_A
+u29,3165.87,Timothyport,device_29_A
+u30,709.03,Clinemouth,device_30_A
+u31,3233.95,West Georgestad,device_31_A
+u32,1267.36,North Jonathanland,device_32_A
+u33,792.73,East Sarah,device_33_A
+u34,4769.98,Butlerbury,device_34_A
+u35,4845.34,West Bryanburgh,device_35_A
+u36,4137.79,South Carolhaven,device_36_A
+u37,1870.76,Thomasside,device_37_A
+u38,939.52,East Danielle,device_38_A
+u39,3579.05,West Matthew,device_39_A
+u40,2480.69,Josephfort,device_40_A
+u41,1049.17,East Laura,device_41_A
+u42,2728.3,Brandiberg,device_42_A
+u43,654.75,West Thomaston,device_43_A
+u44,4591.94,Alexanderville,device_44_A
+u45,1664.51,West William,device_45_A
+u46,3481.35,Pearsonville,device_46_A
+u47,1902.7,New Kyle,device_47_A
+u48,2840.31,Gonzalezville,device_48_A
+u49,2960.2,Franklinfort,device_49_A
+u50,1331.85,Garciabury,device_50_A
+u51,4863.13,South Lauriemouth,device_51_A
+u52,3988.1,Maryfurt,device_52_A
+u53,4727.75,South Mauricefurt,device_53_A
+u54,4526.72,Port Jay,device_54_A
+u55,3190.55,Gilesstad,device_55_A
+u56,4648.43,Christinachester,device_56_A
+u57,898.22,West Jessica,device_57_A
+u58,1381.92,Port Anthony,device_58_A
+u59,703.52,Alexanderborough,device_59_A
+u60,1963.99,Port Joshuamouth,device_60_A
+u61,2249.05,Wallaceville,device_61_A
+u62,1721.07,East Kristen,device_62_A
+u63,4229.32,Brewerfort,device_63_A
+u64,2105.39,Meyerhaven,device_64_A
+u65,1764.21,Robertstad,device_65_A
+u66,2942.13,Lake Benjamin,device_66_A
+u67,1134.16,Shawnhaven,device_67_A
+u68,4109.89,Port David,device_68_A
+u69,835.48,Sharonland,device_69_A
+u70,4940.99,Chapmanbury,device_70_A
+u71,3975.1,Ericside,device_71_A
+u72,1394.22,West Matthewfurt,device_72_A
+u73,524.85,Jenniferbury,device_73_A
+u74,4169.58,North Christopher,device_74_A
+u75,3680.86,West Donna,device_75_A
+u76,3780.53,East Heidi,device_76_A
+u77,3970.72,Hunterburgh,device_77_A
+u78,833.2,Pattersonburgh,device_78_A
+u79,2113.1,South Brittanyshire,device_79_A
+u80,1021.41,East Jeremyview,device_80_A
+u81,4383.97,Lake Jerryport,device_81_A
+u82,3304.84,Francomouth,device_82_A
+u83,1989.04,Port Jasonview,device_83_A
+u84,786.01,North Dianaport,device_84_A
+u85,1899.42,North Adamview,device_85_A
+u86,1963.32,Allisonfurt,device_86_A
+u87,3783.23,Oliviaside,device_87_A
+u88,3369.01,East Lisa,device_88_A
+u89,4492.46,West Danielton,device_89_A
+u90,2624.97,West Julia,device_90_A
+u91,1038.17,New Lisaside,device_91_A
+u92,3709.6,West Philipport,device_92_A
+u93,3923.53,Eatonfort,device_93_A
+u94,3025.75,South Matthewland,device_94_A
+u95,3969.35,South Williamshire,device_95_A
+u96,2722.08,Delgadoville,device_96_A
+u97,2852.3,Flynnville,device_97_A
+u98,2423.93,Knightstad,device_98_A
+u99,614.39,Alexandershire,device_99_A
+u100,985.51,West Darryl,device_100_A
