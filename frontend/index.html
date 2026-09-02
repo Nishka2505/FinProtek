@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FinProtek — Fraud Protection</title>
+<style>
+  :root {
+    --bg: #0a0e14; --card: #151b23; --border: #262c36;
+    --accent: #78e3f8; --accent2: #4a9eff; --danger: #c1464a; --success: #3fb950;
+    --text: #e6edf3; --muted: #8b949e;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: radial-gradient(circle at 20% 0%, #131a24 0%, var(--bg) 55%);
+    color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif;
+    padding: 40px 60px 80px; min-height: 100vh;
+    position: relative;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: -20%; left: -10%;
+    width: 60%; height: 60%;
+    background: radial-gradient(circle, rgba(232,163,61,0.08) 0%, transparent 70%);
+    animation: drift 12s ease-in-out infinite alternate;
+    pointer-events: none;
+    z-index: 0;
+  }
+  body::after {
+    content: "";
+    position: fixed;
+    bottom: -20%; right: -10%;
+    width: 50%; height: 50%;
+    background: radial-gradient(circle, rgba(74,158,255,0.06) 0%, transparent 70%);
+    animation: drift 14s ease-in-out infinite alternate-reverse;
+    pointer-events: none;
+    z-index: 0;
+  }
+  @keyframes drift {
+    from { transform: translate(0,0); }
+    to { transform: translate(40px, 30px); }
+  }
+  header, .subtitle, .bank-box, .main-cta, .verdict-banner, .grid, .section-title,
+  .section-sub, #txnSection, .advanced-panel, .toast-container, .scan-ticker, #riskSparkline {
+    position: relative; z-index: 1;
+  }
+  @keyframes fadeUp { from{opacity:0; transform:translateY(14px);} to{opacity:1; transform:translateY(0);} }
+  @keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(232,163,61,0.4);} 50%{box-shadow:0 0 0 10px rgba(232,163,61,0);} }
+  @keyframes spin { to{transform:rotate(360deg);} }
+  @keyframes shimmer { 0%{background-position:-200px 0;} 100%{background-position:calc(200px + 100%) 0;} }
+  @keyframes floatIn { from{opacity:0; transform:scale(0.96);} to{opacity:1; transform:scale(1);} }
+  @keyframes slideIn { from{opacity:0; transform:translateX(40px);} to{opacity:1; transform:translateX(0);} }
+  @keyframes slideOut { to{opacity:0; transform:translateX(40px);} }
+ 
+  header { display:flex; align-items:center; gap:16px; margin-bottom:8px; animation:fadeUp 0.5s ease; }
+  header .icon {
+    width:50px; height:50px; background:linear-gradient(135deg, var(--accent), #ff7a45);
+    border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:24px;
+    animation:pulse 2.4s infinite;
+  }
+  h1 { font-size:26px; font-weight:800; }
+  .live-dot { width:8px; height:8px; border-radius:50%; background:var(--success); display:inline-block; margin-right:6px; animation:pulse 1.6s infinite; }
+  .subtitle { color:var(--muted); margin-bottom:28px; font-size:14px; max-width:600px; line-height:1.5; }
+ 
+  .bank-box {
+    background:var(--card); border:1px solid var(--border); border-radius:14px;
+    padding:18px 22px; margin-bottom:22px; display:flex; align-items:center; justify-content:space-between;
+    flex-wrap:wrap; gap:14px;
+  }
+  .bank-left { display:flex; align-items:center; gap:14px; }
+  .bank-icon { width:40px; height:40px; border-radius:10px; background:rgba(74,158,255,0.12); display:flex; align-items:center; justify-content:center; font-size:18px; }
+  .bank-status-title { font-size:14px; font-weight:700; }
+  .bank-status-sub { font-size:12px; color:var(--muted); margin-top:2px; }
+  .connect-btn {
+    background:var(--accent2); color:#0d1117; border:none; padding:10px 22px; border-radius:9px;
+    font-weight:700; font-size:13px; cursor:pointer; transition:transform 0.15s ease;
+  }
+  .connect-btn:hover { transform:translateY(-2px); }
+  .connect-btn.connected { background:rgba(63,185,80,0.15); color:var(--success); border:1px solid var(--success); cursor:default; }
+  .bank-select { background:#0d1117; color:var(--text); border:1px solid var(--border); border-radius:8px; padding:9px 12px; font-size:13px; margin-right:10px; }
+  .alert-toggle { display:flex; align-items:center; gap:8px; font-size:12px; color:var(--muted); }
+  .switch { position:relative; width:38px; height:20px; }
+  .switch input { opacity:0; width:0; height:0; }
+  .slider-switch { position:absolute; cursor:pointer; inset:0; background:#262c36; border-radius:20px; transition:0.2s; }
+  .slider-switch::before { content:""; position:absolute; height:14px; width:14px; left:3px; bottom:3px; background:white; border-radius:50%; transition:0.2s; }
+  .switch input:checked + .slider-switch { background:var(--success); }
+  .switch input:checked + .slider-switch::before { transform:translateX(18px); }
+ 
+  .main-cta {
+    background: linear-gradient(135deg, var(--accent), #ff7a45);
+    border-radius: 18px;
+    padding: 28px 32px;
+    margin-bottom: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+  .main-cta-text h2 { color: #1a1a1a; font-size: 19px; font-weight: 800; margin-bottom: 4px; }
+  .main-cta-text p { color: rgba(26,26,26,0.75); font-size: 13px; max-width: 420px; }
+  .run-btn {
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    padding: 15px 32px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    white-space: nowrap;
+  }
+  .run-btn:hover:not(:disabled) { transform: translateY(-2px) scale(1.02); box-shadow: 0 8px 24px rgba(0,0,0,0.35); }
+  .run-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+ 
+  .loading { color:var(--muted); font-size:14px; margin:16px 0; }
+  .spinner { display:inline-block; width:14px; height:14px; border:2px solid var(--border); border-top-color:var(--accent); border-radius:50%; animation:spin 0.8s linear infinite; margin-right:8px; vertical-align:middle; }
+  .skeleton { height:60px; border-radius:12px; margin-bottom:12px; background:linear-gradient(90deg, var(--card) 25%, #1c232e 37%, var(--card) 63%); background-size:400px 100%; animation:shimmer 1.4s infinite linear; }
+ 
+  .verdict-banner {
+    border-radius: 18px;
+    padding: 30px 34px;
+    margin-bottom: 26px;
+    display: none;
+    animation: floatIn 0.5s ease both;
+    text-align: center;
+  }
+  .verdict-banner.safe { background: linear-gradient(135deg, rgba(63,185,80,0.18), rgba(63,185,80,0.05)); border: 1px solid rgba(63,185,80,0.4); }
+  .verdict-banner.warning { background: linear-gradient(135deg, rgba(232,163,61,0.18), rgba(232,163,61,0.05)); border: 1px solid rgba(232,163,61,0.4); }
+  .verdict-emoji { font-size: 42px; margin-bottom: 8px; }
+  .verdict-title { font-size: 22px; font-weight: 800; margin-bottom: 6px; }
+  .verdict-sub { color: var(--muted); font-size: 14px; }
+ 
+  .grid { display:none; grid-template-columns:repeat(3, 1fr); gap:18px; margin-bottom:14px; }
+  .card {
+    background:var(--card); border:1px solid var(--border); border-radius:16px; padding:22px;
+    position:relative; overflow:visible; transition:transform 0.2s ease, border-color 0.2s ease;
+    animation:floatIn 0.45s ease both;
+  }
+  .card:hover { transform:translateY(-4px); border-color:rgba(232,163,61,0.35); }
+  .card .label { color:var(--muted); font-size:12px; margin-bottom:10px; display:flex; align-items:center; gap:6px; }
+  .card .value { font-size:30px; font-weight:800; }
+  .card .sub { font-size:12px; color:var(--muted); margin-top:6px; }
+  .card.danger .value { color:var(--danger); }
+  .card.success .value { color:var(--success); }
+  .card.accent .value { color:var(--accent); }
+ 
+  .section-title { font-size:15px; font-weight:700; margin:30px 0 14px; color:var(--text); display:flex; align-items:center; gap:8px; }
+  .section-sub { font-size: 13px; color: var(--muted); margin-top: -8px; margin-bottom: 16px; }
+ 
+  .txn-list { display:flex; flex-direction:column; gap:12px; }
+  .txn-card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:18px 22px; cursor:pointer; transition:border-color 0.2s ease, transform 0.15s ease; animation:floatIn 0.4s ease both; }
+  .txn-card:hover { border-color:var(--accent); transform:translateX(3px); box-shadow: 0 4px 20px rgba(232,163,61,0.15); }
+  .txn-card:active { transform: translateX(3px) scale(0.99); }
+  .txn-header { display:flex; justify-content:space-between; align-items:center; }
+  .txn-left { display: flex; align-items: center; gap: 12px; }
+  .rank-badge {
+    width: 26px; height: 26px; border-radius: 50%;
+    background: rgba(255,255,255,0.06); color: var(--muted);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 800; flex-shrink: 0;
+  }
+  .risk-icon { font-size: 22px; }
+  .txn-id { font-weight:700; font-size:14px; }
+  .txn-amount { font-size:16px; font-weight: 800; color: var(--text); margin-top:2px; }
+  .badge-group { display:flex; gap:8px; align-items:center; }
+  .tier-badge { padding:5px 14px; border-radius:20px; font-size:12px; font-weight:800; color:#0d1117; }
+  .chevron { transition:transform 0.25s ease; display:inline-block; margin-left:6px; color:var(--muted); }
+  .txn-card.open .chevron { transform:rotate(90deg); }
+  .txn-details { max-height:0; overflow:hidden; transition:max-height 0.35s ease, margin-top 0.35s ease; }
+  .txn-card.open .txn-details { max-height:400px; margin-top:16px; }
+  .plain-reason {
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text);
+    white-space: pre-line;
+  }
+  .reason-icon-list { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+  .reason-item { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--muted); }
+  .action-row { display: flex; gap: 10px; margin-top: 16px; }
+  .action-btn {
+    flex: 1; padding: 10px; border-radius: 8px; border: 1px solid var(--border);
+    background: transparent; color: var(--text); font-size: 13px; font-weight: 600; cursor: pointer;
+    transition: background 0.15s ease;
+  }
+  .action-btn.confirm:hover { background: rgba(63,185,80,0.12); border-color: var(--success); }
+  .action-btn.report:hover { background: rgba(229,72,77,0.12); border-color: var(--danger); }
+ 
+  .advanced-panel { display:block; margin-top: 16px; }
+ 
+  .slider-box {
+    background:var(--card); border:1px solid var(--border); border-radius:12px; padding:14px 20px;
+    display:flex; align-items:center; gap:14px; max-width: 560px; margin-bottom: 20px;
+  }
+  .slider-box label { font-size:13px; color:var(--muted); white-space:nowrap; display:flex; align-items:center; }
+  .slider-box input[type=range] { flex:1; accent-color:var(--accent); cursor:pointer; }
+  .slider-val { font-weight:800; color:var(--accent); min-width:70px; text-align:right; font-size: 13px; }
+ 
+  .tech-panel { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px 20px; margin-bottom:20px; font-size:13px; color:var(--muted); display: flex; gap: 36px; flex-wrap: wrap; }
+  .tech-panel .item { display: flex; flex-direction: column; }
+  .tech-panel .item .item-label { display: flex; align-items: center; }
+  .tech-panel .item b { color:var(--text); display:block; font-size:18px; }
+ 
+  .sim-box { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:26px; }
+  .sim-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-bottom:18px; }
+  .field label { display:flex; align-items:center; font-size:12px; color:var(--muted); margin-bottom:6px; }
+  .field input[type=number] { width:100%; background:#0d1117; border:1px solid var(--border); color:var(--text); padding:11px 12px; border-radius:9px; font-size:14px; }
+  .toggle-field { display:flex; align-items:center; gap:10px; background:#0d1117; border:1px solid var(--border); border-radius:9px; padding:11px 12px; cursor:pointer; }
+  .toggle-field label { font-size:13px; color:var(--text); margin:0; cursor:pointer; }
+  .sim-btn { background:var(--accent2); color:#0d1117; border:none; padding:11px 26px; border-radius:9px; font-weight:700; font-size:13px; cursor:pointer; }
+ 
+  .sim-result-wrap { margin-top:20px; display:none; align-items:center; gap:26px; }
+  .gauge { position:relative; width:110px; height:110px; flex-shrink:0; }
+  .gauge svg { transform:rotate(-90deg); }
+  .gauge circle { fill:none; stroke-width:10; }
+  .gauge .bg { stroke:#262c36; }
+  .gauge .fg { stroke:var(--accent); stroke-linecap:round; transition:stroke-dashoffset 0.8s cubic-bezier(.22,1,.36,1), stroke 0.3s ease; }
+  .gauge-label { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center; }
+  .gauge-label .pct { font-size:22px; font-weight:800; }
+  .gauge-label .txt { font-size:9px; color:var(--muted); text-transform:uppercase; }
+  .sim-info { flex:1; }
+  .sim-tier-badge { padding:5px 14px; border-radius:20px; font-size:12px; font-weight:800; color:#0d1117; display:inline-block; margin-bottom:10px; }
+ 
+  .toast-container { position:fixed; top:24px; right:24px; display:flex; flex-direction:column; gap:10px; z-index:999; max-width:320px; }
+  .toast { background:#161b23; border:1px solid var(--danger); border-left:4px solid var(--danger); border-radius:10px; padding:14px 16px; animation:slideIn 0.35s ease both; box-shadow:0 10px 30px rgba(0,0,0,0.4); cursor:pointer; }
+  .toast.closing { animation:slideOut 0.3s ease forwards; }
+  .toast-title { font-size:13px; font-weight:700; display:flex; align-items:center; gap:6px; }
+  .toast-body { font-size:12px; color:var(--muted); margin-top:4px; }
+ 
+  .scan-ticker {
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 12px 18px; margin-bottom: 16px; font-size: 13px; color: var(--muted);
+    display: none; align-items: center; gap: 10px;
+    font-variant-numeric: tabular-nums;
+  }
+  .scan-dot {
+    width: 8px; height: 8px; border-radius: 50%; background: var(--accent);
+    animation: pulse 0.8s infinite; flex-shrink: 0;
+  }
+ 
+  .info-icon {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 15px; height: 15px; border-radius: 50%;
+    background: rgba(139,148,158,0.2); color: var(--muted);
+    font-size: 10px; font-weight: 700; cursor: help;
+    position: relative; margin-left: 5px; flex-shrink: 0;
+  }
+  .info-icon:hover { background: var(--accent); color: #0d1117; }
+  .info-icon .tooltip {
+    display: none;
+    position: absolute;
+    bottom: 22px; left: 50%; transform: translateX(-50%);
+    background: #1c232e; border: 1px solid var(--border);
+    color: var(--text); font-size: 12px; font-weight: 400;
+    padding: 10px 12px; border-radius: 8px; width: 220px;
+    line-height: 1.5; text-align: left;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    z-index: 30;
+  }
+  .info-icon:hover .tooltip { display: block; }
+  .info-icon .tooltip::after {
+    content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+    border: 6px solid transparent; border-top-color: #1c232e;
+  }
+</style>
+</head>
+<body>
+ 
+<header>
+  <div class="icon">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2L4 5V11C4 16.5 7.4 21.7 12 23C16.6 21.7 20 16.5 20 11V5L12 2Z" fill="#1a1a1a"/>
+      <path d="M10.5 13.5L8.5 11.5L7 13L10.5 16.5L17 10L15.5 8.5L10.5 13.5Z" fill="#e8a33d"/>
+    </svg>
+  </div>
+  <div><h1>FinProtek</h1></div>
+</header>
+<div class="subtitle"><span class="live-dot"></span>We watch your account for suspicious activity and tell you clearly if something looks wrong.</div>
+ 
+<div class="bank-box">
+  <div class="bank-left">
+    <div class="bank-icon">bank</div>
+    <div>
+      <div class="bank-status-title" id="bankStatusTitle">No account connected yet</div>
+      <div class="bank-status-sub" id="bankStatusSub">Connect your bank so we can start watching for you</div>
+    </div>
+  </div>
+  <div style="display:flex; align-items:center; gap:14px;">
+    <select class="bank-select" id="bankSelect">
+      <option value="HDFC Bank">HDFC Bank</option>
+      <option value="ICICI Bank">ICICI Bank</option>
+      <option value="State Bank of India">State Bank of India</option>
+      <option value="Axis Bank">Axis Bank</option>
+    </select>
+    <button class="connect-btn" id="connectBtn">Connect My Bank</button>
+    <div class="alert-toggle">
+      <label class="switch"><input type="checkbox" id="alertToggle" checked><span class="slider-switch"></span></label>
+      Notify me
+    </div>
+  </div>
+</div>
+ 
+<div class="main-cta">
+  <div class="main-cta-text">
+    <h2>Check my account for fraud</h2>
+    <p>We'll look through your recent transactions and flag anything suspicious, with a clear explanation for each one.</p>
+  </div>
+  <button class="run-btn" id="runBtn">Check My Account Now</button>
+</div>
+ 
+<div class="loading" id="loadingText" style="display:none;"><span class="spinner"></span>Looking through your transactions...</div>
+<div class="scan-ticker" id="scanTicker">
+  <span class="scan-dot"></span>
+  <span id="scanText">Scanning transaction 1 of 1000...</span>
+</div>
+<div id="skeletonWrap" style="display:none;"><div class="skeleton"></div><div class="skeleton"></div></div>
+ 
+<div class="verdict-banner" id="verdictBanner">
+  <div class="verdict-emoji" id="verdictEmoji">OK</div>
+  <div class="verdict-title" id="verdictTitle">You're safe</div>
+  <div class="verdict-sub" id="verdictSub"></div>
+</div>
+ 
+<div class="grid" id="statsGrid">
+  <div class="card danger">
+    <div class="label">Needs Your Attention</div>
+    <div class="value" id="flaggedCount">0</div>
+    <div class="sub">out of <span id="totalTxns">0</span> transactions checked</div>
+  </div>
+  <div class="card success">
+    <div class="label">Money Protected
+      <span class="info-icon">i
+        <span class="tooltip">Total value of transactions that were both flagged by our system AND confirmed as real fraud in this test dataset.</span>
+      </span>
+    </div>
+    <div class="value" id="moneyProtected">Rs.0</div>
+    <div class="sub">caught before it was too late</div>
+  </div>
+  <div class="card accent">
+    <div class="label">Everything Else</div>
+    <div class="value" id="safePct">0%</div>
+    <div class="sub">looked completely normal</div>
+  </div>
+</div>
+ 
+<div id="txnSection" style="display:none;">
+  <div class="section-title">Flagged Transactions
+    <span class="info-icon">i
+      <span class="tooltip">Risk Tiers: Low (0-30%), Medium (30-60%), High (60-85%), Critical (85-100%) based on the model's fraud probability score.</span>
+    </span>
+  </div>
+  <div class="section-sub">Sorted from most risky to least risky - tap any one to see why we flagged it.</div>
+  <canvas id="riskSparkline" width="600" height="60" style="width:100%; max-width:600px; margin-bottom:18px; display:block;"></canvas>
+  <div class="txn-list" id="txnList"></div>
+</div>
+ 
+<div class="section-title" style="margin-top:36px;">Advanced Settings &amp; Technical Details</div>
+<div class="advanced-panel" id="advancedPanel">
+  <div class="slider-box">
+    <label>Fraud Threshold
+      <span class="info-icon">i
+        <span class="tooltip">The minimum risk score (0-1) a transaction needs to be flagged as fraud. Lower = catches more fraud but more false alarms. Higher = fewer false alarms but may miss some fraud.</span>
+      </span>
+    </label>
+    <input type="range" id="thresholdSlider" min="0.1" max="0.95" step="0.05" value="0.6">
+    <div class="slider-val" id="thresholdVal">0.60</div>
+  </div>
+  <div class="tech-panel" id="techPanel">
+    <div class="item">
+      <div class="item-label">Precision
+        <span class="info-icon">i
+          <span class="tooltip">Of all the transactions we flagged as fraud, this % were actually fraud. Higher precision = fewer false alarms.</span>
+        </span>
+      </div>
+      <b id="precisionVal">-</b>
+    </div>
+    <div class="item">
+      <div class="item-label">Recall
+        <span class="info-icon">i
+          <span class="tooltip">Of all the real fraud that happened, this % was actually caught by the system. Higher recall = fewer missed fraud cases.</span>
+        </span>
+      </div>
+      <b id="recallVal">-</b>
+    </div>
+    <div class="item">
+      <div class="item-label">False Positives
+        <span class="info-icon">i
+          <span class="tooltip">Normal transactions that were incorrectly flagged as fraud. These cost customer trust and support time.</span>
+        </span>
+      </div>
+      <b id="fpVal">-</b>
+    </div>
+    <div class="item">
+      <div class="item-label">False Negatives
+        <span class="info-icon">i
+          <span class="tooltip">Actual fraud transactions that slipped through undetected. These cost real money lost.</span>
+        </span>
+      </div>
+      <b id="fnVal">-</b>
+    </div>
+  </div>
+ 
+  <div class="section-title" style="margin-top:30px;">Simulate a Transaction</div>
+  <div class="section-sub">Enter details of a made-up transaction to see how the model would score it.</div>
+  <div class="sim-box">
+    <div class="sim-grid">
+      <div class="field"><label>Amount Deviation
+          <span class="info-icon">i
+            <span class="tooltip">How many times bigger this purchase is compared to the user's normal average. 1 = normal, 5 = five times higher than usual.</span>
+          </span>
+        </label>
+        <input type="number" id="simAmount" value="1.0" step="0.1">
+      </div>
+      <div class="field"><label>Velocity
+          <span class="info-icon">i
+            <span class="tooltip">Number of transactions made by this user in the last hour. High velocity in a short time is a common fraud signal.</span>
+          </span>
+        </label>
+        <input type="number" id="simVelocity" value="1" step="1">
+      </div>
+      <div class="toggle-field"><input type="checkbox" id="simDevice"><label for="simDevice">New / unrecognized device</label></div>
+      <div class="toggle-field"><input type="checkbox" id="simLocation"><label for="simLocation">New / unrecognized location</label></div>
+      <div class="toggle-field"><input type="checkbox" id="simHour"><label for="simHour">Unusual hour (midnight to 5am)</label></div>
+    </div>
+    <button class="sim-btn" id="simBtn">Check This Transaction</button>
+    <div class="sim-result-wrap" id="simResultWrap">
+      <div class="gauge">
+        <svg width="110" height="110">
+          <circle class="bg" cx="55" cy="55" r="46"></circle>
+          <circle class="fg" id="gaugeCircle" cx="55" cy="55" r="46" stroke-dasharray="289" stroke-dashoffset="289"></circle>
+        </svg>
+        <div class="gauge-label"><div class="pct" id="gaugePct">0%</div><div class="txt">Risk</div></div>
+      </div>
+      <div class="sim-info">
+        <div class="sim-tier-badge" id="simTierBadge">-</div>
+        <div class="plain-reason" id="simExplanation"></div>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<div class="toast-container" id="toastContainer"></div>
+<canvas id="confettiCanvas" style="position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:998; display:none;"></canvas>
+ 
+<script>
+  var API_URL = "http://127.0.0.1:8000";
+  var tierHex = { Low:"#3fb950", Medium:"#e8c93d", High:"#ff9d3d", Critical:"#e5484d" };
+  var tierEmoji = { Low:"LOW", Medium:"MED", High:"HIGH", Critical:"CRIT" };
+  var bankConnected = false;
+ 
+  function animateCount(el, target, prefix, suffix) {
+    prefix = prefix || "";
+    suffix = suffix || "";
+    var startTime = null;
+    var duration = 700;
+    function step(ts) {
+      if (!startTime) { startTime = ts; }
+      var progress = Math.min((ts - startTime) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      var current = Math.floor(target * eased);
+      el.innerText = prefix + current.toLocaleString() + suffix;
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.innerText = prefix + target.toLocaleString() + suffix;
+      }
+    }
+    requestAnimationFrame(step);
+  }
+ 
+  document.getElementById("thresholdSlider").addEventListener("input", function () {
+    document.getElementById("thresholdVal").innerText = parseFloat(this.value).toFixed(2);
+  });
+ 
+  document.getElementById("thresholdSlider").addEventListener("change", function () {
+    if (document.getElementById("statsGrid").style.display !== "none") {
+      runAnalysis();
+    }
+  });
+ 
+  document.getElementById("connectBtn").addEventListener("click", function () {
+    if (bankConnected) { return; }
+    var btn = this;
+    var bank = document.getElementById("bankSelect").value;
+    btn.innerText = "Connecting...";
+    btn.disabled = true;
+    setTimeout(function () {
+      bankConnected = true;
+      btn.innerText = "Connected";
+      btn.classList.add("connected");
+      var last4 = Math.floor(1000 + Math.random() * 9000);
+      document.getElementById("bankStatusTitle").innerText = bank + " connected";
+      document.getElementById("bankStatusSub").innerText = "Account ending in " + last4 + " - we are watching it now";
+    }, 1400);
+  });
+ 
+  function showToast(txn) {
+    var container = document.getElementById("toastContainer");
+    var toast = document.createElement("div");
+    toast.className = "toast";
+    var title = document.createElement("div");
+    title.className = "toast-title";
+    title.innerText = "Fraud Alert - " + txn.risk_tier + " Risk";
+    var body = document.createElement("div");
+    body.className = "toast-body";
+    body.innerText = "Rs." + txn.amount.toLocaleString() + " transaction needs your attention. Tap to review.";
+    toast.appendChild(title);
+    toast.appendChild(body);
+    toast.addEventListener("click", function () {
+      var card = document.querySelector('[data-txn-id="' + txn.txn_id + '"]');
+      if (card) {
+        card.scrollIntoView({ behavior: "smooth", block: "center" });
+        card.classList.add("open");
+      }
+    });
+    container.appendChild(toast);
+    setTimeout(function () {
+      toast.classList.add("closing");
+      setTimeout(function () { toast.remove(); }, 300);
+    }, 5000);
+  }
+ 
+  function buildReasonBits(txn) {
+    var bits = [];
+    if (txn.new_device) { bits.push("Used a device we have not seen before"); }
+    if (txn.new_location) { bits.push("Made from an unfamiliar location"); }
+    if (txn.odd_hour) { bits.push("Happened late at night"); }
+    if (txn.amount_deviation > 1) { bits.push("Amount was " + (txn.amount_deviation + 1).toFixed(1) + "x higher than usual"); }
+    if (txn.velocity > 2) { bits.push(txn.velocity + " purchases in the last hour"); }
+    return bits;
+  }
+ 
+  function buildTxnCard(txn, rank) {
+    var card = document.createElement("div");
+    card.className = "txn-card";
+    card.setAttribute("data-txn-id", txn.txn_id);
+    card.style.animationDelay = (rank * 0.05) + "s";
+ 
+    var header = document.createElement("div");
+    header.className = "txn-header";
+ 
+    var left = document.createElement("div");
+    left.className = "txn-left";
+ 
+    var rankBadge = document.createElement("div");
+    rankBadge.className = "rank-badge";
+    rankBadge.innerText = "#" + (rank + 1);
+ 
+    var riskIcon = document.createElement("div");
+    riskIcon.className = "risk-icon";
+    riskIcon.innerText = tierEmoji[txn.risk_tier] || "";
+ 
+    var idWrap = document.createElement("div");
+    var idLine = document.createElement("div");
+    idLine.className = "txn-id";
+    idLine.innerText = "Transaction " + txn.txn_id;
+    var chevron = document.createElement("span");
+    chevron.className = "chevron";
+    chevron.innerText = ">";
+    idLine.appendChild(chevron);
+    var amountLine = document.createElement("div");
+    amountLine.className = "txn-amount";
+    amountLine.innerText = "Rs." + txn.amount.toLocaleString();
+    idWrap.appendChild(idLine);
+    idWrap.appendChild(amountLine);
+ 
+    left.appendChild(rankBadge);
+    left.appendChild(riskIcon);
+    left.appendChild(idWrap);
+ 
+    var badge = document.createElement("span");
+    badge.className = "tier-badge";
+    badge.style.background = tierHex[txn.risk_tier] || "#8b949e";
+    badge.innerText = txn.risk_tier + " Risk";
+ 
+    header.appendChild(left);
+    header.appendChild(badge);
+ 
+    var details = document.createElement("div");
+    details.className = "txn-details";
+ 
+    var reasonBox = document.createElement("div");
+    reasonBox.className = "plain-reason";
+    reasonBox.innerText = txn.explanation;
+ 
+    var reasonList = document.createElement("div");
+    reasonList.className = "reason-icon-list";
+    buildReasonBits(txn).forEach(function (text) {
+      var item = document.createElement("div");
+      item.className = "reason-item";
+      item.innerText = text;
+      reasonList.appendChild(item);
+    });
+ 
+    var actionRow = document.createElement("div");
+    actionRow.className = "action-row";
+    var confirmBtn = document.createElement("button");
+    confirmBtn.className = "action-btn confirm";
+    confirmBtn.innerText = "This was me";
+    var reportBtn = document.createElement("button");
+    reportBtn.className = "action-btn report";
+    reportBtn.innerText = "This was not me";
+    actionRow.appendChild(confirmBtn);
+    actionRow.appendChild(reportBtn);
+ 
+    details.appendChild(reasonBox);
+    details.appendChild(reasonList);
+    details.appendChild(actionRow);
+ 
+    card.appendChild(header);
+    card.appendChild(details);
+ 
+    card.addEventListener("click", function (e) {
+      if (e.target === confirmBtn || e.target === reportBtn) { return; }
+      card.classList.toggle("open");
+    });
+    confirmBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      actionRow.innerHTML = "";
+      var msg = document.createElement("div");
+      msg.style.color = "var(--success)";
+      msg.style.fontSize = "13px";
+      msg.innerText = "Marked as confirmed by you";
+      actionRow.appendChild(msg);
+    });
+    reportBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      actionRow.innerHTML = "";
+      var msg = document.createElement("div");
+      msg.style.color = "var(--danger)";
+      msg.style.fontSize = "13px";
+      msg.innerText = "Reported - we recommend contacting your bank";
+      actionRow.appendChild(msg);
+    });
+ 
+    return card;
+  }
+ 
+  var scanInterval = null;
+  function startScanTicker(total) {
+    var ticker = document.getElementById("scanTicker");
+    var text = document.getElementById("scanText");
+    ticker.style.display = "flex";
+    var i = 0;
+    var messages = ["Checking device history", "Comparing to normal spending", "Checking location patterns", "Reviewing transaction timing"];
+    scanInterval = setInterval(function () {
+      i += Math.floor(Math.random() * 40) + 15;
+      if (i > total) { i = total; }
+      var msg = messages[Math.floor(Math.random() * messages.length)];
+      text.innerText = "Scanning transaction " + i + " of " + total + " - " + msg + "...";
+    }, 180);
+  }
+  function stopScanTicker() {
+    if (scanInterval) { clearInterval(scanInterval); scanInterval = null; }
+    document.getElementById("scanTicker").style.display = "none";
+  }
+ 
+  function fireConfetti() {
+    var canvas = document.getElementById("confettiCanvas");
+    canvas.style.display = "block";
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    var ctx = canvas.getContext("2d");
+    var colors = ["#e8a33d", "#4a9eff", "#3fb950", "#ff7a45"];
+    var particles = [];
+    for (var i = 0; i < 80; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: -20,
+        vx: (Math.random() - 0.5) * 4,
+        vy: Math.random() * 3 + 2,
+        size: Math.random() * 6 + 4,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        rotation: Math.random() * 360
+      });
+    }
+    var frame = 0;
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      frame++;
+      particles.forEach(function (p) {
+        p.x += p.vx; p.y += p.vy; p.vy += 0.05; p.rotation += 6;
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rotation * Math.PI / 180);
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+        ctx.restore();
+      });
+      if (frame < 110) {
+        requestAnimationFrame(animate);
+      } else {
+        canvas.style.display = "none";
+      }
+    }
+    animate();
+  }
+ 
+  function drawSparkline(scores) {
+    var canvas = document.getElementById("riskSparkline");
+    var ctx = canvas.getContext("2d");
+    var w = canvas.width, h = canvas.height;
+    ctx.clearRect(0, 0, w, h);
+    if (scores.length === 0) { return; }
+    var max = Math.max.apply(null, scores);
+    var barWidth = w / scores.length;
+    scores.forEach(function (s, i) {
+      var barHeight = (s / max) * (h - 10);
+      var barColor = s > 0.85 ? "#e5484d" : s > 0.6 ? "#ff9d3d" : s > 0.3 ? "#e8c93d" : "#3fb950";
+      ctx.fillStyle = barColor;
+      ctx.fillRect(i * barWidth + 1, h - barHeight, barWidth - 2, barHeight);
+    });
+  }
+ 
+  function runAnalysis() {
+    var btn = document.getElementById("runBtn");
+    var loading = document.getElementById("loadingText");
+    var skeleton = document.getElementById("skeletonWrap");
+    var threshold = document.getElementById("thresholdSlider").value;
+    var alertsOn = document.getElementById("alertToggle").checked;
+ 
+    btn.disabled = true;
+    loading.style.display = "block";
+    skeleton.style.display = "block";
+    startScanTicker(1000);
+    document.getElementById("verdictBanner").style.display = "none";
+    document.getElementById("statsGrid").style.display = "none";
+    document.getElementById("txnSection").style.display = "none";
+ 
+    fetch(API_URL + "/analyze?threshold=" + threshold)
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        var verdict = document.getElementById("verdictBanner");
+        var flagged = data.flagged_count;
+        if (flagged === 0) {
+          verdict.className = "verdict-banner safe";
+          document.getElementById("verdictEmoji").innerText = "OK";
+          document.getElementById("verdictTitle").innerText = "Everything looks safe";
+          document.getElementById("verdictSub").innerText = "We checked " + data.total_transactions + " transactions and found nothing suspicious.";
+          fireConfetti();
+        } else {
+          verdict.className = "verdict-banner warning";
+          document.getElementById("verdictEmoji").innerText = "!";
+          document.getElementById("verdictTitle").innerText = flagged + " transaction(s) need your attention";
+          document.getElementById("verdictSub").innerText = "Don't worry - nothing has been charged or blocked. Just review them below.";
+        }
+        verdict.style.display = "block";
+ 
+        animateCount(document.getElementById("flaggedCount"), data.flagged_count);
+        document.getElementById("totalTxns").innerText = data.total_transactions;
+        animateCount(document.getElementById("moneyProtected"), Math.round(data.money_protected), "Rs.");
+        animateCount(document.getElementById("safePct"), Math.round(data.safe_percentage), "", "%");
+ 
+        document.getElementById("precisionVal").innerText = (data.precision * 100).toFixed(1) + "%";
+        document.getElementById("recallVal").innerText = (data.recall * 100).toFixed(1) + "%";
+        document.getElementById("fpVal").innerText = data.false_positives;
+        document.getElementById("fnVal").innerText = data.false_negatives;
+ 
+        var txnList = document.getElementById("txnList");
+        txnList.innerHTML = "";
+        data.flagged_transactions.forEach(function (txn, i) {
+          var card = buildTxnCard(txn, i);
+          txnList.appendChild(card);
+        });
+ 
+        var scores = data.flagged_transactions.map(function (t) { return t.fraud_score; });
+        drawSparkline(scores);
+ 
+        stopScanTicker();
+        skeleton.style.display = "none";
+        document.getElementById("statsGrid").style.display = "grid";
+        if (data.flagged_transactions.length > 0) {
+          document.getElementById("txnSection").style.display = "block";
+        }
+ 
+        if (alertsOn) {
+          data.flagged_transactions.slice(0, 3).forEach(function (txn, i) {
+            setTimeout(function () { showToast(txn); }, i * 900);
+          });
+        }
+      })
+      .catch(function (err) {
+        alert("We couldn't reach the fraud checking service. Make sure the backend is running.");
+        console.error(err);
+        stopScanTicker();
+        skeleton.style.display = "none";
+      })
+      .finally(function () {
+        btn.disabled = false;
+        loading.style.display = "none";
+      });
+  }
+ 
+  function simulateTransaction() {
+    var payload = {
+      amount_deviation: parseFloat(document.getElementById("simAmount").value),
+      velocity: parseInt(document.getElementById("simVelocity").value),
+      new_device: document.getElementById("simDevice").checked ? 1 : 0,
+      new_location: document.getElementById("simLocation").checked ? 1 : 0,
+      odd_hour: document.getElementById("simHour").checked ? 1 : 0
+    };
+ 
+    var wrap = document.getElementById("simResultWrap");
+    wrap.style.display = "flex";
+    var explEl = document.getElementById("simExplanation");
+    explEl.innerHTML = "";
+    var loadingSpan = document.createElement("span");
+    loadingSpan.className = "loading";
+    loadingSpan.innerText = "Checking...";
+    explEl.appendChild(loadingSpan);
+ 
+    fetch(API_URL + "/predict", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        var color = tierHex[data.risk_tier] || "#8b949e";
+        var pct = data.fraud_score * 100;
+        var circumference = 289;
+        var offset = circumference - (pct / 100) * circumference;
+        var circle = document.getElementById("gaugeCircle");
+        circle.style.stroke = color;
+        circle.style.strokeDashoffset = offset;
+        animateCount(document.getElementById("gaugePct"), Math.round(pct), "", "%");
+        var badge = document.getElementById("simTierBadge");
+        badge.innerText = data.risk_tier + " Risk";
+        badge.style.background = color;
+ 
+        explEl.innerHTML = "";
+        if (data.explanation) {
+          explEl.innerText = data.explanation;
+        } else {
+          var span = document.createElement("span");
+          span.style.color = "var(--muted)";
+          span.innerText = "This looks like a totally normal transaction.";
+          explEl.appendChild(span);
+        }
+      })
+      .catch(function (err) {
+        explEl.innerHTML = "";
+        var span = document.createElement("span");
+        span.style.color = "var(--danger)";
+        span.innerText = "Could not reach the service.";
+        explEl.appendChild(span);
+        console.error(err);
+      });
+  }
+ 
+  document.getElementById("runBtn").addEventListener("click", runAnalysis);
+  document.getElementById("simBtn").addEventListener("click", simulateTransaction);
+</script>
+ 
+</body>
+</html>
