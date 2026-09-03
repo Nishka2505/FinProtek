@@ -62,7 +62,7 @@ def predict(txn: dict):
 
     return result
 
-   @app.get("/analyze")
+@app.get("/analyze")
 def analyze_all(threshold: float = DEFAULT_THRESHOLD, bank: str = "default"):
     txn_df = pd.read_csv("data/transactions.csv")
     users_df = pd.read_csv("data/user_profiles.csv")
