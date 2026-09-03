@@ -1,11 +1,12 @@
 # explain.py
 import os
+import time
 from dotenv import load_dotenv
 from groq import Groq
 
 load_dotenv()
-#client = Groq(api_key=os.getenv("GROQ_API_KEY"))
-client = Groq(api_key=os.getenv("GROQ_API_KEY"), timeout=8.0)
+client = Groq(api_key=os.getenv("GROQ_API_KEY"), timeout=15.0)
+
 def explain_flag(txn_row):
     prompt = f"""
 A financial transaction has been flagged as potentially fraudulent by a machine learning model.
@@ -27,14 +28,25 @@ Only use the numbers given above. Do not invent transaction amounts, names, or d
 Keep the whole response under 90 words.
 """
 
-    response = client.chat.completions.create(
-        model="openai/gpt-oss-20b",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.3,
-        max_tokens=300
-    )
+    last_error = None
+    for attempt in range(3):
+        try:
+            response = client.chat.completions.create(
+                model="openai/gpt-oss-20b",
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.3,
+                max_tokens=300
+            )
+            content = response.choices[0].message.content.strip()
+            if content:
+                return content
+            last_error = Exception("Empty response from model")
+        except Exception as e:
+            last_error = e
+            print(f"explain_flag attempt {attempt + 1} failed: {e}")
+            time.sleep(1.5)
 
-    return response.choices[0].message.content.strip()
+    raise last_error
 
 if __name__ == "__main__":
     sample_txn = {
