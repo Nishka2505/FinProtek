@@ -482,16 +482,17 @@
     }
   });
  
-  document.getElementById("connectBtn").addEventListener("click", function () {
-    if (bankConnected) { return; }
+   document.getElementById("connectBtn").addEventListener("click", function () {
     var btn = this;
     var bank = document.getElementById("bankSelect").value;
     btn.innerText = "Connecting...";
     btn.disabled = true;
+    btn.classList.remove("connected");
     setTimeout(function () {
       bankConnected = true;
       btn.innerText = "Connected";
       btn.classList.add("connected");
+      btn.disabled = false;
       var last4 = Math.floor(1000 + Math.random() * 9000);
       document.getElementById("bankStatusTitle").innerText = bank + " connected";
       document.getElementById("bankStatusSub").innerText = "Account ending in " + last4 + " - we are watching it now";
@@ -835,11 +836,16 @@
         explEl.innerHTML = "";
         if (data.explanation) {
           explEl.innerText = data.explanation;
-        } else {
+        } else if (data.flagged) {
           var span = document.createElement("span");
-          span.style.color = "var(--muted)";
-          span.innerText = "This looks like a totally normal transaction.";
+          span.style.color = "var(--danger)";
+          span.innerText = "This was flagged as high risk, but we could not generate an explanation right now.";
           explEl.appendChild(span);
+        } else {
+          var span2 = document.createElement("span");
+          span2.style.color = "var(--muted)";
+          span2.innerText = "This looks like a totally normal transaction.";
+          explEl.appendChild(span2);
         }
       })
       .catch(function (err) {

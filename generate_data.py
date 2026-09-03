@@ -11,9 +11,8 @@ np.random.seed(42)
 
 NUM_USERS = 100
 NUM_TRANSACTIONS = 1000
-FRAUD_RATE = 0.08  # ~8% of transactions will be fraud
+FRAUD_RATE = 0.08
 
-# Step 1: Create user profiles with a "normal" spending baseline
 users = []
 for i in range(NUM_USERS):
     users.append({
@@ -25,29 +24,32 @@ for i in range(NUM_USERS):
 
 users_df = pd.DataFrame(users)
 
-# Step 2: Generate transactions
 transactions = []
 start_time = datetime(2026, 8, 1, 0, 0, 0)
 
 for i in range(NUM_TRANSACTIONS):
     user = users_df.sample(1).iloc[0]
     is_fraud = random.random() < FRAUD_RATE
-
     txn_time = start_time + timedelta(minutes=random.randint(0, 30000))
 
     if is_fraud:
-        # Fraud pattern: high amount deviation, new device, new location, odd hour
-        amount = round(user["avg_amount"] * random.uniform(4, 10), 2)
-        device = f"device_unknown_{random.randint(1000,9999)}"
-        location = fake.city()
-        hour = random.choice([1, 2, 3, 4])
+        # Fraud: elevated but NOT guaranteed signals - creates realistic ambiguity
+        amount = round(user["avg_amount"] * random.uniform(1.5, 8), 2)
+        device = f"device_unknown_{random.randint(1000,9999)}" if random.random() < 0.7 else user["known_device"]
+        location = fake.city() if random.random() < 0.6 else user["home_location"]
+        if random.random() < 0.5:
+            hour = random.choice([0, 1, 2, 3, 4])
+        else:
+            hour = random.choice(range(6, 23))
         txn_time = txn_time.replace(hour=hour)
     else:
-        # Normal pattern: close to average, known device/location, normal hours
+        # Normal: occasionally has one "risky-looking" trait anyway (real life is messy)
         amount = round(user["avg_amount"] * random.uniform(0.7, 1.3), 2)
-        device = user["known_device"]
-        location = user["home_location"]
-        hour = random.choice(range(7, 23))
+        if random.random() < 0.08:
+            amount = round(amount * random.uniform(1.5, 2.2), 2)  # occasional big legit purchase
+        device = user["known_device"] if random.random() < 0.9 else f"device_new_{random.randint(1000,9999)}"
+        location = user["home_location"] if random.random() < 0.9 else fake.city()
+        hour = random.choice(range(7, 23)) if random.random() < 0.9 else random.choice([0, 1, 2, 3])
         txn_time = txn_time.replace(hour=hour)
 
     transactions.append({

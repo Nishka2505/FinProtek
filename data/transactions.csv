@@ -1,1001 +1,1001 @@
 txn_id,user_id,amount,timestamp,device_id,location,merchant_id,is_fraud
-t687,u46,22857.28,2026-08-01 04:05:00,device_unknown_5825,Jayfurt,m7,1
-t387,u55,15385.53,2026-08-01 04:15:00,device_unknown_6456,West Wayne,m17,1
-t613,u20,1315.21,2026-08-01 07:24:00,device_20_A,New Brittanymouth,m8,0
-t793,u55,3299.92,2026-08-01 07:34:00,device_55_A,Gilesstad,m3,0
-t598,u97,2445.31,2026-08-01 08:31:00,device_97_A,Flynnville,m2,0
-t330,u46,4089.42,2026-08-01 08:55:00,device_46_A,Pearsonville,m11,0
-t174,u73,541.3,2026-08-01 09:28:00,device_73_A,Jenniferbury,m8,0
-t439,u46,3994.79,2026-08-01 09:38:00,device_46_A,Pearsonville,m2,0
-t997,u18,2344.94,2026-08-01 10:18:00,device_18_A,Knoxfurt,m17,0
-t8,u32,1442.05,2026-08-01 10:43:00,device_32_A,North Jonathanland,m13,0
-t829,u53,4247.12,2026-08-01 11:04:00,device_53_A,South Mauricefurt,m2,0
-t993,u43,588.06,2026-08-01 11:19:00,device_43_A,West Thomaston,m2,0
-t891,u5,1483.94,2026-08-01 11:24:00,device_5_A,East Jeanettebury,m2,0
-t298,u55,2927.52,2026-08-01 12:57:00,device_55_A,Gilesstad,m7,0
-t258,u16,1000.69,2026-08-01 13:44:00,device_16_A,Lake Lauren,m13,0
-t982,u79,2174.23,2026-08-01 13:56:00,device_79_A,South Brittanyshire,m14,0
-t118,u10,3954.7,2026-08-01 14:07:00,device_10_A,Ricardostad,m5,0
-t653,u72,1242.71,2026-08-01 14:14:00,device_72_A,West Matthewfurt,m1,0
-t3,u35,3664.13,2026-08-01 14:16:00,device_35_A,West Bryanburgh,m17,0
-t967,u26,3125.9,2026-08-01 14:36:00,device_26_A,North Amanda,m9,0
-t1,u34,5461.29,2026-08-01 14:39:00,device_34_A,Butlerbury,m8,0
-t47,u30,915.49,2026-08-01 15:10:00,device_30_A,Clinemouth,m15,0
-t107,u35,6132.48,2026-08-01 16:13:00,device_35_A,West Bryanburgh,m13,0
-t180,u80,888.32,2026-08-01 16:24:00,device_80_A,East Jeremyview,m19,0
-t679,u34,4183.01,2026-08-01 17:14:00,device_34_A,Butlerbury,m9,0
-t595,u60,2537.73,2026-08-01 17:35:00,device_60_A,Port Joshuamouth,m5,0
-t426,u99,526.49,2026-08-01 18:14:00,device_99_A,Alexandershire,m8,0
-t557,u39,3471.1,2026-08-01 18:36:00,device_39_A,West Matthew,m3,0
-t749,u28,2871.09,2026-08-01 18:36:00,device_28_A,Richardsonview,m1,0
-t325,u59,760.79,2026-08-01 18:46:00,device_59_A,Alexanderborough,m9,0
-t947,u31,3571.77,2026-08-01 19:27:00,device_31_A,West Georgestad,m19,0
-t945,u65,1766.83,2026-08-01 19:47:00,device_65_A,Robertstad,m6,0
-t670,u7,966.4,2026-08-01 19:58:00,device_7_A,Lake Ashleyview,m19,0
-t609,u4,2877.78,2026-08-01 20:01:00,device_4_A,South Julie,m9,0
-t267,u44,4584.74,2026-08-01 20:13:00,device_44_A,Alexanderville,m6,0
-t901,u37,2316.34,2026-08-01 20:39:00,device_37_A,Thomasside,m17,0
-t112,u62,1291.44,2026-08-01 20:48:00,device_62_A,East Kristen,m5,0
-t200,u67,1405.62,2026-08-01 21:07:00,device_67_A,Shawnhaven,m10,0
-t289,u66,2496.83,2026-08-01 21:22:00,device_66_A,Lake Benjamin,m15,0
-t170,u95,4344.84,2026-08-01 21:37:00,device_95_A,South Williamshire,m14,0
-t820,u53,4326.88,2026-08-01 21:38:00,device_53_A,South Mauricefurt,m4,0
-t555,u81,5067.88,2026-08-01 21:43:00,device_81_A,Lake Jerryport,m18,0
-t239,u39,2635.95,2026-08-01 22:00:00,device_39_A,West Matthew,m13,0
-t877,u94,2515.28,2026-08-01 22:04:00,device_94_A,South Matthewland,m8,0
-t347,u93,4478.34,2026-08-01 22:09:00,device_93_A,Eatonfort,m17,0
-t954,u58,1113.78,2026-08-01 22:19:00,device_58_A,Port Anthony,m5,0
-t980,u54,5036.71,2026-08-01 22:32:00,device_54_A,Port Jay,m16,0
-t491,u83,16124.3,2026-08-02 01:36:00,device_unknown_5593,Michelleland,m6,1
-t643,u96,14118.07,2026-08-02 02:12:00,device_unknown_8265,East Michael,m3,1
-t717,u22,10722.57,2026-08-02 03:36:00,device_unknown_4262,Lake Katelyn,m12,1
-t370,u59,3481.36,2026-08-02 04:43:00,device_unknown_7809,Andreville,m15,1
-t753,u9,18554.55,2026-08-02 04:58:00,device_unknown_5764,New Christopher,m17,1
-t314,u97,2638.23,2026-08-02 07:34:00,device_97_A,Flynnville,m11,0
-t36,u72,1167.47,2026-08-02 08:09:00,device_72_A,West Matthewfurt,m11,0
-t265,u7,633.7,2026-08-02 08:48:00,device_7_A,Lake Ashleyview,m1,0
-t51,u26,4883.53,2026-08-02 09:45:00,device_26_A,North Amanda,m20,0
-t44,u34,4607.22,2026-08-02 10:10:00,device_34_A,Butlerbury,m2,0
-t803,u10,4629.94,2026-08-02 10:23:00,device_10_A,Ricardostad,m15,0
-t248,u54,3421.92,2026-08-02 10:37:00,device_54_A,Port Jay,m12,0
-t275,u90,2641.48,2026-08-02 10:42:00,device_90_A,West Julia,m17,0
-t152,u14,1551.27,2026-08-02 10:53:00,device_14_A,Allenmouth,m7,0
-t600,u68,4456.45,2026-08-02 11:00:00,device_68_A,Port David,m9,0
-t630,u67,1089.92,2026-08-02 11:00:00,device_67_A,Shawnhaven,m8,0
-t742,u70,6040.41,2026-08-02 11:31:00,device_70_A,Chapmanbury,m5,0
-t868,u46,4195.29,2026-08-02 11:46:00,device_46_A,Pearsonville,m18,0
-t336,u83,1906.22,2026-08-02 12:06:00,device_83_A,Port Jasonview,m18,0
-t840,u82,4193.6,2026-08-02 12:58:00,device_82_A,Francomouth,m18,0
-t601,u3,3819.7,2026-08-02 13:09:00,device_3_A,Port Kimhaven,m5,0
-t215,u92,2910.01,2026-08-02 14:07:00,device_92_A,West Philipport,m13,0
-t933,u2,4441.84,2026-08-02 14:53:00,device_2_A,Lorraineton,m8,0
-t844,u46,2808.74,2026-08-02 15:38:00,device_46_A,Pearsonville,m18,0
-t638,u35,5360.45,2026-08-02 15:44:00,device_35_A,West Bryanburgh,m6,0
-t283,u89,4138.65,2026-08-02 16:04:00,device_89_A,West Danielton,m3,0
-t819,u17,2082.83,2026-08-02 16:52:00,device_17_A,Port Derekfort,m7,0
-t16,u81,3623.74,2026-08-02 17:08:00,device_81_A,Lake Jerryport,m7,0
-t788,u70,5686.38,2026-08-02 17:53:00,device_70_A,Chapmanbury,m8,0
-t971,u17,2042.73,2026-08-02 19:02:00,device_17_A,Port Derekfort,m10,0
-t296,u25,2260.71,2026-08-02 19:16:00,device_25_A,Lake Allison,m11,0
-t680,u90,2375.82,2026-08-02 19:31:00,device_90_A,West Julia,m6,0
-t897,u20,1517.02,2026-08-02 19:35:00,device_20_A,New Brittanymouth,m5,0
-t665,u15,1218.23,2026-08-02 19:36:00,device_15_A,Strongfort,m19,0
-t456,u46,4467.87,2026-08-02 19:36:00,device_46_A,Pearsonville,m17,0
-t918,u32,1350.27,2026-08-02 19:42:00,device_32_A,North Jonathanland,m13,0
-t488,u47,1902.54,2026-08-02 20:09:00,device_47_A,New Kyle,m11,0
-t645,u67,908.23,2026-08-02 20:39:00,device_67_A,Shawnhaven,m13,0
-t519,u11,706.05,2026-08-02 20:46:00,device_11_A,North Johnbury,m16,0
-t154,u24,1705.84,2026-08-02 20:59:00,device_24_A,West Michele,m15,0
-t406,u10,3346.52,2026-08-02 21:09:00,device_10_A,Ricardostad,m9,0
-t383,u21,3031.49,2026-08-02 21:09:00,device_21_A,Thorntontown,m18,0
-t220,u42,2949.95,2026-08-02 21:31:00,device_42_A,Brandiberg,m10,0
-t147,u51,4140.89,2026-08-02 22:03:00,device_51_A,South Lauriemouth,m4,0
-t686,u38,879.15,2026-08-02 22:06:00,device_38_A,East Danielle,m5,0
-t521,u40,2404.88,2026-08-02 22:23:00,device_40_A,Josephfort,m19,0
-t379,u34,3483.63,2026-08-02 22:34:00,device_34_A,Butlerbury,m20,0
-t356,u33,702.02,2026-08-02 22:54:00,device_33_A,East Sarah,m17,0
-t960,u68,25097.22,2026-08-03 02:12:00,device_unknown_4259,Lake Danielland,m10,1
-t292,u3,27877.25,2026-08-03 03:36:00,device_unknown_7333,Peggyview,m9,1
-t381,u37,12320.01,2026-08-03 03:42:00,device_unknown_5333,Whitebury,m13,1
-t427,u30,4815.99,2026-08-03 04:33:00,device_unknown_3616,East Bobbymouth,m17,1
-t757,u79,1746.93,2026-08-03 07:39:00,device_79_A,South Brittanyshire,m19,0
-t758,u97,2623.99,2026-08-03 08:15:00,device_97_A,Flynnville,m13,0
-t772,u38,1116.06,2026-08-03 08:30:00,device_38_A,East Danielle,m10,0
-t221,u79,1656.39,2026-08-03 08:43:00,device_79_A,South Brittanyshire,m10,0
-t699,u99,445.8,2026-08-03 09:54:00,device_99_A,Alexandershire,m14,0
-t2,u61,2487.49,2026-08-03 09:58:00,device_61_A,Wallaceville,m19,0
-t236,u53,5413.42,2026-08-03 10:13:00,device_53_A,South Mauricefurt,m3,0
-t765,u98,2107.91,2026-08-03 10:17:00,device_98_A,Knightstad,m16,0
-t372,u73,606.94,2026-08-03 10:24:00,device_73_A,Jenniferbury,m11,0
-t20,u74,4809.48,2026-08-03 10:38:00,device_74_A,North Christopher,m5,0
-t194,u76,4371.13,2026-08-03 10:45:00,device_76_A,East Heidi,m15,0
-t900,u61,1700.09,2026-08-03 11:10:00,device_61_A,Wallaceville,m20,0
-t222,u26,3058.51,2026-08-03 11:25:00,device_26_A,North Amanda,m13,0
-t61,u94,3465.85,2026-08-03 11:27:00,device_94_A,South Matthewland,m9,0
-t890,u59,734.54,2026-08-03 12:50:00,device_59_A,Alexanderborough,m5,0
-t737,u6,1375.73,2026-08-03 12:52:00,device_6_A,Bookerchester,m11,0
-t119,u12,5051.3,2026-08-03 13:28:00,device_12_A,Molinafurt,m15,0
-t462,u49,3023.49,2026-08-03 13:29:00,device_49_A,Franklinfort,m2,0
-t244,u46,4218.27,2026-08-03 13:29:00,device_46_A,Pearsonville,m14,0
-t42,u61,1909.88,2026-08-03 13:40:00,device_61_A,Wallaceville,m18,0
-t558,u74,4859.14,2026-08-03 14:06:00,device_74_A,North Christopher,m7,0
-t797,u56,3525.66,2026-08-03 14:16:00,device_56_A,Christinachester,m1,0
-t627,u32,920.53,2026-08-03 14:48:00,device_32_A,North Jonathanland,m17,0
-t526,u79,1807.21,2026-08-03 14:51:00,device_79_A,South Brittanyshire,m15,0
-t373,u80,878.91,2026-08-03 14:54:00,device_80_A,East Jeremyview,m5,0
-t763,u42,2994.28,2026-08-03 15:08:00,device_42_A,Brandiberg,m20,0
-t337,u89,3360.55,2026-08-03 16:01:00,device_89_A,West Danielton,m10,0
-t121,u75,3854.64,2026-08-03 16:02:00,device_75_A,West Donna,m19,0
-t752,u70,4595.76,2026-08-03 16:05:00,device_70_A,Chapmanbury,m6,0
-t502,u8,3319.95,2026-08-03 16:11:00,device_8_A,Kochchester,m15,0
-t958,u73,509.06,2026-08-03 17:35:00,device_73_A,Jenniferbury,m9,0
-t935,u37,1757.31,2026-08-03 17:47:00,device_37_A,Thomasside,m3,0
-t246,u29,2809.8,2026-08-03 17:55:00,device_29_A,Timothyport,m9,0
-t187,u27,1400.45,2026-08-03 17:56:00,device_27_A,East Catherineville,m4,0
-t705,u41,1229.05,2026-08-03 18:09:00,device_41_A,East Laura,m14,0
-t689,u53,4184.12,2026-08-03 19:04:00,device_53_A,South Mauricefurt,m16,0
-t273,u29,2678.29,2026-08-03 19:48:00,device_29_A,Timothyport,m17,0
-t137,u67,994.14,2026-08-03 19:49:00,device_67_A,Shawnhaven,m8,0
-t782,u57,1107.11,2026-08-03 21:40:00,device_57_A,West Jessica,m2,0
-t228,u16,1682.37,2026-08-03 21:42:00,device_16_A,Lake Lauren,m3,0
-t946,u23,2030.5,2026-08-03 21:44:00,device_23_A,Mosston,m11,0
-t240,u67,1127.54,2026-08-03 21:57:00,device_67_A,Shawnhaven,m3,0
-t969,u24,1586.28,2026-08-03 22:11:00,device_24_A,West Michele,m18,0
-t540,u4,2738.54,2026-08-03 22:14:00,device_4_A,South Julie,m17,0
-t940,u70,6186.68,2026-08-03 22:28:00,device_70_A,Chapmanbury,m20,0
-t145,u82,3578.22,2026-08-03 22:57:00,device_82_A,Francomouth,m4,0
-t159,u6,10524.26,2026-08-04 04:36:00,device_unknown_5728,Bellburgh,m4,1
-t989,u89,3278.5,2026-08-04 07:05:00,device_89_A,West Danielton,m6,0
-t575,u70,4766.93,2026-08-04 07:16:00,device_70_A,Chapmanbury,m14,0
-t232,u35,5684.49,2026-08-04 07:35:00,device_35_A,West Bryanburgh,m9,0
-t309,u25,3123.52,2026-08-04 08:35:00,device_25_A,Lake Allison,m16,0
-t459,u83,2353.96,2026-08-04 08:50:00,device_83_A,Port Jasonview,m18,0
-t68,u49,2835.49,2026-08-04 08:52:00,device_49_A,Franklinfort,m10,0
-t104,u8,4942.46,2026-08-04 09:27:00,device_8_A,Kochchester,m14,0
-t660,u31,3215.39,2026-08-04 09:52:00,device_31_A,West Georgestad,m2,0
-t224,u15,1623.04,2026-08-04 10:23:00,device_15_A,Strongfort,m16,0
-t764,u40,2359.87,2026-08-04 10:54:00,device_40_A,Josephfort,m17,0
-t704,u12,5058.96,2026-08-04 10:56:00,device_12_A,Molinafurt,m4,0
-t311,u90,2267.12,2026-08-04 11:33:00,device_90_A,West Julia,m14,0
-t26,u74,3854.14,2026-08-04 12:28:00,device_74_A,North Christopher,m18,0
-t277,u33,676.66,2026-08-04 12:58:00,device_33_A,East Sarah,m20,0
-t991,u28,1994.7,2026-08-04 13:17:00,device_28_A,Richardsonview,m11,0
-t864,u95,2790.05,2026-08-04 14:05:00,device_95_A,South Williamshire,m8,0
-t92,u35,3462.75,2026-08-04 14:28:00,device_35_A,West Bryanburgh,m16,0
-t252,u38,1027.87,2026-08-04 14:30:00,device_38_A,East Danielle,m4,0
-t361,u17,1490.0,2026-08-04 14:55:00,device_17_A,Port Derekfort,m12,0
-t408,u84,601.72,2026-08-04 14:58:00,device_84_A,North Dianaport,m8,0
-t233,u71,5137.88,2026-08-04 15:01:00,device_71_A,Ericside,m6,0
-t199,u58,1159.86,2026-08-04 15:09:00,device_58_A,Port Anthony,m15,0
-t957,u61,1655.35,2026-08-04 15:12:00,device_61_A,Wallaceville,m16,0
-t24,u54,4401.03,2026-08-04 15:22:00,device_54_A,Port Jay,m17,0
-t851,u90,3013.6,2026-08-04 16:28:00,device_90_A,West Julia,m5,0
-t399,u3,3702.15,2026-08-04 17:34:00,device_3_A,Port Kimhaven,m18,0
-t843,u16,946.61,2026-08-04 17:58:00,device_16_A,Lake Lauren,m2,0
-t973,u10,2643.62,2026-08-04 18:10:00,device_10_A,Ricardostad,m11,0
-t201,u69,621.86,2026-08-04 18:16:00,device_69_A,Sharonland,m19,0
-t212,u79,1733.75,2026-08-04 18:55:00,device_79_A,South Brittanyshire,m17,0
-t394,u83,2017.96,2026-08-04 19:07:00,device_83_A,Port Jasonview,m5,0
-t588,u14,1676.0,2026-08-04 19:27:00,device_14_A,Allenmouth,m12,0
-t629,u23,1964.05,2026-08-04 19:54:00,device_23_A,Mosston,m3,0
-t889,u22,1227.36,2026-08-04 20:03:00,device_22_A,Smithland,m1,0
-t683,u78,886.85,2026-08-04 20:06:00,device_78_A,Pattersonburgh,m6,0
-t534,u78,748.71,2026-08-04 20:27:00,device_78_A,Pattersonburgh,m15,0
-t287,u10,4698.72,2026-08-04 21:23:00,device_10_A,Ricardostad,m4,0
-t411,u6,1134.84,2026-08-04 22:15:00,device_6_A,Bookerchester,m16,0
-t247,u21,3618.02,2026-08-04 22:21:00,device_21_A,Thorntontown,m3,0
-t787,u9,3215.73,2026-08-04 22:42:00,device_9_A,South Christina,m16,0
-t676,u23,2233.35,2026-08-04 22:50:00,device_23_A,Mosston,m13,0
-t674,u91,5707.08,2026-08-05 03:30:00,device_unknown_2110,New Deanna,m9,1
-t862,u45,9831.79,2026-08-05 03:40:00,device_unknown_8383,East Laurenfurt,m20,1
-t135,u42,12314.67,2026-08-05 04:20:00,device_unknown_7658,East Amandaberg,m18,1
-t318,u79,19038.56,2026-08-05 04:46:00,device_unknown_9991,Xaviershire,m4,1
-t415,u59,886.68,2026-08-05 08:00:00,device_59_A,Alexanderborough,m13,0
-t745,u3,3369.23,2026-08-05 08:34:00,device_3_A,Port Kimhaven,m1,0
-t49,u6,1540.01,2026-08-05 08:53:00,device_6_A,Bookerchester,m11,0
-t899,u43,645.27,2026-08-05 08:53:00,device_43_A,West Thomaston,m18,0
-t461,u78,748.35,2026-08-05 09:02:00,device_78_A,Pattersonburgh,m15,0
-t12,u35,5340.07,2026-08-05 09:25:00,device_35_A,West Bryanburgh,m20,0
-t826,u68,5302.05,2026-08-05 09:53:00,device_68_A,Port David,m6,0
-t987,u86,1535.27,2026-08-05 10:37:00,device_86_A,Allisonfurt,m15,0
-t746,u96,3148.67,2026-08-05 12:21:00,device_96_A,Delgadoville,m19,0
-t832,u48,2875.43,2026-08-05 12:25:00,device_48_A,Gonzalezville,m14,0
-t886,u54,3576.76,2026-08-05 12:30:00,device_54_A,Port Jay,m12,0
-t62,u3,4289.34,2026-08-05 13:01:00,device_3_A,Port Kimhaven,m9,0
-t766,u35,5653.42,2026-08-05 13:05:00,device_35_A,West Bryanburgh,m12,0
-t354,u94,3555.98,2026-08-05 14:45:00,device_94_A,South Matthewland,m16,0
-t650,u33,860.58,2026-08-05 14:55:00,device_33_A,East Sarah,m18,0
-t266,u82,3834.97,2026-08-05 15:21:00,device_82_A,Francomouth,m10,0
-t133,u78,760.62,2026-08-05 15:50:00,device_78_A,Pattersonburgh,m11,0
-t407,u22,926.13,2026-08-05 15:51:00,device_22_A,Smithland,m18,0
-t688,u15,1057.86,2026-08-05 16:01:00,device_15_A,Strongfort,m3,0
-t592,u85,2181.88,2026-08-05 16:01:00,device_85_A,North Adamview,m2,0
-t416,u51,6137.1,2026-08-05 16:45:00,device_51_A,South Lauriemouth,m2,0
-t998,u4,3141.88,2026-08-05 16:50:00,device_4_A,South Julie,m11,0
-t419,u72,1652.55,2026-08-05 17:18:00,device_72_A,West Matthewfurt,m6,0
-t936,u34,4702.88,2026-08-05 18:28:00,device_34_A,Butlerbury,m7,0
-t530,u34,4830.41,2026-08-05 18:58:00,device_34_A,Butlerbury,m16,0
-t113,u9,2340.21,2026-08-05 19:14:00,device_9_A,South Christina,m11,0
-t892,u22,1138.98,2026-08-05 19:19:00,device_22_A,Smithland,m20,0
-t801,u91,843.54,2026-08-05 19:59:00,device_91_A,New Lisaside,m7,0
-t842,u17,1911.43,2026-08-05 20:16:00,device_17_A,Port Derekfort,m3,0
-t898,u74,4226.4,2026-08-05 20:30:00,device_74_A,North Christopher,m5,0
-t647,u16,1146.39,2026-08-05 21:12:00,device_16_A,Lake Lauren,m5,0
-t661,u25,1817.13,2026-08-05 22:29:00,device_25_A,Lake Allison,m1,0
-t376,u61,2604.11,2026-08-05 22:40:00,device_61_A,Wallaceville,m17,0
-t10,u69,7217.22,2026-08-06 02:27:00,device_unknown_2307,Kellyburgh,m4,1
-t875,u15,11979.75,2026-08-06 02:27:00,device_unknown_3717,South Leonardfort,m15,1
-t37,u83,11279.57,2026-08-06 02:58:00,device_unknown_8953,Justinville,m18,1
-t552,u63,30559.59,2026-08-06 04:47:00,device_unknown_3755,New Christopher,m19,1
-t35,u55,3359.85,2026-08-06 07:40:00,device_55_A,Gilesstad,m3,0
-t978,u33,628.98,2026-08-06 07:53:00,device_33_A,East Sarah,m1,0
-t235,u49,3118.01,2026-08-06 07:56:00,device_49_A,Franklinfort,m6,0
-t626,u73,499.6,2026-08-06 08:04:00,device_73_A,Jenniferbury,m5,0
-t63,u47,2365.44,2026-08-06 08:08:00,device_47_A,New Kyle,m3,0
-t759,u46,4047.94,2026-08-06 08:41:00,device_46_A,Pearsonville,m20,0
-t656,u64,1810.46,2026-08-06 08:42:00,device_64_A,Meyerhaven,m8,0
-t319,u22,993.17,2026-08-06 08:46:00,device_22_A,Smithland,m8,0
-t451,u5,1230.76,2026-08-06 08:58:00,device_5_A,East Jeanettebury,m5,0
-t610,u59,793.14,2026-08-06 09:36:00,device_59_A,Alexanderborough,m16,0
-t583,u3,3527.79,2026-08-06 10:02:00,device_3_A,Port Kimhaven,m4,0
-t395,u50,957.52,2026-08-06 10:16:00,device_50_A,Garciabury,m7,0
-t226,u29,3841.06,2026-08-06 10:56:00,device_29_A,Timothyport,m12,0
-t323,u4,3329.38,2026-08-06 12:22:00,device_4_A,South Julie,m3,0
-t230,u94,3913.18,2026-08-06 13:01:00,device_94_A,South Matthewland,m3,0
-t140,u44,3546.78,2026-08-06 13:54:00,device_44_A,Alexanderville,m11,0
-t473,u73,487.01,2026-08-06 14:37:00,device_73_A,Jenniferbury,m16,0
-t938,u56,5305.06,2026-08-06 15:15:00,device_56_A,Christinachester,m7,0
-t79,u49,2389.3,2026-08-06 15:39:00,device_49_A,Franklinfort,m2,0
-t18,u64,2414.87,2026-08-06 15:41:00,device_64_A,Meyerhaven,m19,0
-t158,u2,5201.47,2026-08-06 15:46:00,device_2_A,Lorraineton,m5,0
-t738,u75,3361.25,2026-08-06 16:22:00,device_75_A,West Donna,m14,0
-t590,u46,3592.89,2026-08-06 16:31:00,device_46_A,Pearsonville,m1,0
-t401,u94,2624.55,2026-08-06 16:37:00,device_94_A,South Matthewland,m8,0
-t873,u23,2240.84,2026-08-06 16:57:00,device_23_A,Mosston,m5,0
-t34,u80,852.69,2026-08-06 17:23:00,device_80_A,East Jeremyview,m1,0
-t949,u74,3592.7,2026-08-06 17:30:00,device_74_A,North Christopher,m12,0
-t70,u45,1831.23,2026-08-06 18:16:00,device_45_A,West William,m18,0
-t883,u37,1889.14,2026-08-06 18:43:00,device_37_A,Thomasside,m12,0
-t343,u20,2113.09,2026-08-06 18:53:00,device_20_A,New Brittanymouth,m12,0
-t641,u4,2486.27,2026-08-06 19:23:00,device_4_A,South Julie,m12,0
-t424,u75,2591.69,2026-08-06 19:28:00,device_75_A,West Donna,m8,0
-t733,u46,4331.31,2026-08-06 19:40:00,device_46_A,Pearsonville,m13,0
-t785,u13,4199.95,2026-08-06 19:45:00,device_13_A,East Tamara,m5,0
-t169,u24,1920.8,2026-08-06 19:50:00,device_24_A,West Michele,m17,0
-t984,u89,3853.58,2026-08-06 20:28:00,device_89_A,West Danielton,m8,0
-t623,u87,2990.04,2026-08-06 20:52:00,device_87_A,Oliviaside,m1,0
-t977,u67,1341.51,2026-08-06 21:02:00,device_67_A,Shawnhaven,m10,0
-t75,u8,3605.06,2026-08-06 21:28:00,device_8_A,Kochchester,m12,0
-t711,u43,511.12,2026-08-06 21:29:00,device_43_A,West Thomaston,m11,0
-t245,u36,3923.82,2026-08-06 21:47:00,device_36_A,South Carolhaven,m13,0
-t735,u93,4362.14,2026-08-06 22:26:00,device_93_A,Eatonfort,m12,0
-t510,u67,1284.48,2026-08-06 22:40:00,device_67_A,Shawnhaven,m20,0
-t9,u46,31250.09,2026-08-07 02:06:00,device_unknown_6925,Bowersfort,m3,1
-t730,u20,14201.02,2026-08-07 03:59:00,device_unknown_5536,West Timothyfurt,m10,1
-t498,u11,5156.64,2026-08-07 04:16:00,device_unknown_8381,Wrightmouth,m8,1
-t709,u77,4916.62,2026-08-07 07:40:00,device_77_A,Hunterburgh,m11,0
-t5,u15,1562.95,2026-08-07 07:55:00,device_15_A,Strongfort,m6,0
-t1000,u74,3415.86,2026-08-07 08:11:00,device_74_A,North Christopher,m7,0
-t195,u77,4931.85,2026-08-07 08:32:00,device_77_A,Hunterburgh,m11,0
-t340,u18,3100.85,2026-08-07 08:56:00,device_18_A,Knoxfurt,m3,0
-t500,u61,2651.25,2026-08-07 09:18:00,device_61_A,Wallaceville,m3,0
-t503,u15,1003.6,2026-08-07 09:19:00,device_15_A,Strongfort,m6,0
-t509,u95,3931.8,2026-08-07 09:42:00,device_95_A,South Williamshire,m12,0
-t300,u93,4734.36,2026-08-07 10:32:00,device_93_A,Eatonfort,m17,0
-t867,u39,3551.07,2026-08-07 10:49:00,device_39_A,West Matthew,m6,0
-t520,u2,4038.6,2026-08-07 11:23:00,device_2_A,Lorraineton,m14,0
-t564,u57,1096.03,2026-08-07 11:27:00,device_57_A,West Jessica,m5,0
-t962,u79,2067.14,2026-08-07 11:28:00,device_79_A,South Brittanyshire,m6,0
-t951,u4,3099.54,2026-08-07 11:42:00,device_4_A,South Julie,m19,0
-t572,u4,2883.04,2026-08-07 11:52:00,device_4_A,South Julie,m19,0
-t153,u99,673.53,2026-08-07 12:31:00,device_99_A,Alexandershire,m8,0
-t143,u64,1761.14,2026-08-07 12:47:00,device_64_A,Meyerhaven,m10,0
-t666,u90,2345.57,2026-08-07 12:48:00,device_90_A,West Julia,m14,0
-t926,u51,4064.49,2026-08-07 13:00:00,device_51_A,South Lauriemouth,m15,0
-t85,u68,4244.07,2026-08-07 13:28:00,device_68_A,Port David,m14,0
-t632,u59,591.07,2026-08-07 13:31:00,device_59_A,Alexanderborough,m5,0
-t402,u49,3441.84,2026-08-07 13:32:00,device_49_A,Franklinfort,m16,0
-t937,u37,1514.7,2026-08-07 13:57:00,device_37_A,Thomasside,m16,0
-t429,u8,4048.28,2026-08-07 14:07:00,device_8_A,Kochchester,m8,0
-t579,u55,3623.17,2026-08-07 14:50:00,device_55_A,Gilesstad,m14,0
-t789,u95,2898.46,2026-08-07 14:54:00,device_95_A,South Williamshire,m18,0
-t621,u22,1289.82,2026-08-07 14:58:00,device_22_A,Smithland,m15,0
-t160,u98,2714.41,2026-08-07 15:04:00,device_98_A,Knightstad,m17,0
-t562,u89,3924.61,2026-08-07 15:49:00,device_89_A,West Danielton,m17,0
-t725,u92,4183.11,2026-08-07 15:49:00,device_92_A,West Philipport,m14,0
-t213,u54,5424.29,2026-08-07 15:50:00,device_54_A,Port Jay,m16,0
-t849,u72,1483.37,2026-08-07 16:34:00,device_72_A,West Matthewfurt,m15,0
-t425,u71,5058.0,2026-08-07 16:48:00,device_71_A,Ericside,m19,0
-t214,u22,1294.55,2026-08-07 17:11:00,device_22_A,Smithland,m4,0
-t896,u25,2043.46,2026-08-07 17:27:00,device_25_A,Lake Allison,m15,0
-t547,u38,736.75,2026-08-07 17:44:00,device_38_A,East Danielle,m15,0
-t452,u18,2405.0,2026-08-07 17:58:00,device_18_A,Knoxfurt,m19,0
-t90,u21,3283.5,2026-08-07 17:59:00,device_21_A,Thorntontown,m3,0
-t468,u20,1680.89,2026-08-07 18:35:00,device_20_A,New Brittanymouth,m10,0
-t544,u66,2265.94,2026-08-07 18:46:00,device_66_A,Lake Benjamin,m5,0
-t225,u95,2856.46,2026-08-07 18:46:00,device_95_A,South Williamshire,m7,0
-t57,u82,2576.04,2026-08-07 18:50:00,device_82_A,Francomouth,m3,0
-t568,u61,2511.79,2026-08-07 18:56:00,device_61_A,Wallaceville,m15,0
-t190,u91,937.61,2026-08-07 19:44:00,device_91_A,New Lisaside,m3,0
-t84,u24,2157.81,2026-08-07 20:00:00,device_24_A,West Michele,m11,0
-t196,u72,1275.82,2026-08-07 20:13:00,device_72_A,West Matthewfurt,m5,0
-t374,u68,5208.18,2026-08-07 20:29:00,device_68_A,Port David,m8,0
-t165,u68,3324.46,2026-08-07 20:54:00,device_68_A,Port David,m16,0
-t990,u96,2345.12,2026-08-07 21:04:00,device_96_A,Delgadoville,m1,0
-t767,u48,2261.52,2026-08-07 22:18:00,device_48_A,Gonzalezville,m7,0
-t777,u60,2359.59,2026-08-07 22:27:00,device_60_A,Port Joshuamouth,m14,0
-t710,u73,465.32,2026-08-07 22:30:00,device_73_A,Jenniferbury,m4,0
-t988,u87,4238.29,2026-08-07 22:37:00,device_87_A,Oliviaside,m7,0
-t316,u4,3993.85,2026-08-07 22:40:00,device_4_A,South Julie,m5,0
-t396,u64,13711.74,2026-08-08 02:19:00,device_unknown_7765,Taylormouth,m14,1
-t272,u17,9403.84,2026-08-08 03:22:00,device_unknown_8538,Port Ryanmouth,m3,1
-t964,u60,10545.27,2026-08-08 03:39:00,device_unknown_6191,North Mackenzie,m9,1
-t684,u93,20533.02,2026-08-08 04:49:00,device_unknown_4112,Port Pennyside,m18,1
-t624,u35,5240.55,2026-08-08 07:11:00,device_35_A,West Bryanburgh,m11,0
-t732,u56,5152.57,2026-08-08 07:32:00,device_56_A,Christinachester,m16,0
-t569,u87,3969.26,2026-08-08 09:44:00,device_87_A,Oliviaside,m15,0
-t241,u23,1932.56,2026-08-08 09:54:00,device_23_A,Mosston,m5,0
-t837,u32,1177.15,2026-08-08 10:16:00,device_32_A,North Jonathanland,m13,0
-t754,u16,1272.57,2026-08-08 11:30:00,device_16_A,Lake Lauren,m11,0
-t448,u26,3198.69,2026-08-08 13:02:00,device_26_A,North Amanda,m4,0
-t492,u46,2469.65,2026-08-08 13:45:00,device_46_A,Pearsonville,m19,0
-t834,u83,1822.91,2026-08-08 13:48:00,device_83_A,Port Jasonview,m20,0
-t6,u62,1491.69,2026-08-08 13:49:00,device_62_A,East Kristen,m11,0
-t637,u68,3242.68,2026-08-08 14:01:00,device_68_A,Port David,m12,0
-t589,u37,2197.48,2026-08-08 14:45:00,device_37_A,Thomasside,m9,0
-t720,u13,3849.2,2026-08-08 15:00:00,device_13_A,East Tamara,m3,0
-t403,u73,543.9,2026-08-08 15:29:00,device_73_A,Jenniferbury,m10,0
-t259,u60,1560.28,2026-08-08 16:10:00,device_60_A,Port Joshuamouth,m11,0
-t830,u77,4201.53,2026-08-08 16:11:00,device_77_A,Hunterburgh,m16,0
-t739,u43,604.34,2026-08-08 16:56:00,device_43_A,West Thomaston,m15,0
-t389,u51,3878.35,2026-08-08 16:57:00,device_51_A,South Lauriemouth,m19,0
-t634,u71,3752.13,2026-08-08 18:30:00,device_71_A,Ericside,m7,0
-t658,u31,3828.11,2026-08-08 18:40:00,device_31_A,West Georgestad,m19,0
-t497,u27,1486.78,2026-08-08 19:00:00,device_27_A,East Catherineville,m11,0
-t541,u1,2312.58,2026-08-08 19:09:00,device_1_A,North Matthew,m19,0
-t776,u61,1821.1,2026-08-08 19:10:00,device_61_A,Wallaceville,m13,0
-t963,u60,1871.86,2026-08-08 19:15:00,device_60_A,Port Joshuamouth,m3,0
-t512,u27,1685.18,2026-08-08 19:26:00,device_27_A,East Catherineville,m11,0
-t182,u13,3819.12,2026-08-08 19:29:00,device_13_A,East Tamara,m15,0
-t114,u19,2205.49,2026-08-08 19:30:00,device_19_A,Port Danielview,m9,0
-t516,u88,3118.47,2026-08-08 19:58:00,device_88_A,East Lisa,m12,0
-t73,u70,5778.15,2026-08-08 20:25:00,device_70_A,Chapmanbury,m8,0
-t496,u93,2872.88,2026-08-08 20:53:00,device_93_A,Eatonfort,m8,0
-t866,u60,2409.29,2026-08-08 21:04:00,device_60_A,Port Joshuamouth,m15,0
-t743,u51,4598.16,2026-08-08 21:08:00,device_51_A,South Lauriemouth,m5,0
-t809,u38,1204.74,2026-08-08 21:14:00,device_38_A,East Danielle,m5,0
-t515,u100,862.19,2026-08-08 22:17:00,device_100_A,West Darryl,m19,0
-t523,u39,29383.31,2026-08-09 01:21:00,device_unknown_9796,North Marymouth,m4,1
-t28,u83,18443.04,2026-08-09 02:14:00,device_unknown_6038,Port Alexisport,m2,1
-t614,u92,23362.6,2026-08-09 02:46:00,device_unknown_3458,New Amy,m2,1
-t878,u58,7468.05,2026-08-09 03:45:00,device_unknown_4387,Johnside,m13,1
-t505,u54,33159.67,2026-08-09 04:17:00,device_unknown_6315,West Amy,m1,1
-t695,u51,43332.59,2026-08-09 04:24:00,device_unknown_7858,Craigberg,m19,1
-t304,u72,11234.87,2026-08-09 04:57:00,device_unknown_4891,Lindsaybury,m20,1
-t106,u46,4326.98,2026-08-09 07:42:00,device_46_A,Pearsonville,m19,0
-t324,u3,2809.84,2026-08-09 07:56:00,device_3_A,Port Kimhaven,m13,0
-t817,u1,1720.36,2026-08-09 08:00:00,device_1_A,North Matthew,m7,0
-t487,u25,2633.02,2026-08-09 08:59:00,device_25_A,Lake Allison,m1,0
-t345,u46,3364.25,2026-08-09 09:10:00,device_46_A,Pearsonville,m19,0
-t854,u51,4971.54,2026-08-09 09:13:00,device_51_A,South Lauriemouth,m10,0
-t602,u8,4625.87,2026-08-09 09:23:00,device_8_A,Kochchester,m10,0
-t203,u21,3943.05,2026-08-09 10:05:00,device_21_A,Thorntontown,m8,0
-t501,u4,3599.61,2026-08-09 11:31:00,device_4_A,South Julie,m13,0
-t781,u17,1993.97,2026-08-09 11:50:00,device_17_A,Port Derekfort,m16,0
-t646,u44,5096.72,2026-08-09 12:01:00,device_44_A,Alexanderville,m12,0
-t86,u80,1130.08,2026-08-09 12:03:00,device_80_A,East Jeremyview,m20,0
-t334,u24,1941.12,2026-08-09 12:09:00,device_24_A,West Michele,m16,0
-t542,u27,1688.46,2026-08-09 12:13:00,device_27_A,East Catherineville,m10,0
-t611,u39,2624.39,2026-08-09 12:40:00,device_39_A,West Matthew,m12,0
-t721,u5,877.27,2026-08-09 13:06:00,device_5_A,East Jeanettebury,m8,0
-t537,u91,729.49,2026-08-09 13:21:00,device_91_A,New Lisaside,m7,0
-t208,u58,1148.93,2026-08-09 13:24:00,device_58_A,Port Anthony,m20,0
-t122,u75,3452.62,2026-08-09 13:58:00,device_75_A,West Donna,m3,0
-t795,u14,1739.63,2026-08-09 14:26:00,device_14_A,Allenmouth,m15,0
-t506,u37,2184.12,2026-08-09 14:47:00,device_37_A,Thomasside,m19,0
-t346,u59,660.48,2026-08-09 15:24:00,device_59_A,Alexanderborough,m8,0
-t948,u50,1421.97,2026-08-09 15:28:00,device_50_A,Garciabury,m6,0
-t335,u50,1670.92,2026-08-09 15:37:00,device_50_A,Garciabury,m3,0
-t204,u53,4939.97,2026-08-09 16:02:00,device_53_A,South Mauricefurt,m1,0
-t282,u98,2434.6,2026-08-09 16:12:00,device_98_A,Knightstad,m15,0
-t669,u24,1899.59,2026-08-09 16:38:00,device_24_A,West Michele,m5,0
-t385,u78,769.81,2026-08-09 17:07:00,device_78_A,Pattersonburgh,m18,0
-t823,u60,1865.67,2026-08-09 17:39:00,device_60_A,Port Joshuamouth,m18,0
-t326,u13,4981.02,2026-08-09 18:01:00,device_13_A,East Tamara,m8,0
-t7,u93,2974.15,2026-08-09 18:29:00,device_93_A,Eatonfort,m20,0
-t651,u95,4640.76,2026-08-09 18:53:00,device_95_A,South Williamshire,m16,0
-t499,u53,4534.43,2026-08-09 19:01:00,device_53_A,South Mauricefurt,m3,0
-t443,u83,1927.62,2026-08-09 19:53:00,device_83_A,Port Jasonview,m13,0
-t691,u93,3616.09,2026-08-09 21:19:00,device_93_A,Eatonfort,m2,0
-t40,u35,4623.17,2026-08-09 21:29:00,device_35_A,West Bryanburgh,m2,0
-t58,u61,1958.91,2026-08-09 21:48:00,device_61_A,Wallaceville,m18,0
-t965,u96,2348.47,2026-08-09 21:58:00,device_96_A,Delgadoville,m12,0
-t994,u54,3362.59,2026-08-09 22:18:00,device_54_A,Port Jay,m6,0
-t132,u72,1257.36,2026-08-09 22:58:00,device_72_A,West Matthewfurt,m11,0
-t677,u34,3629.27,2026-08-09 22:59:00,device_34_A,Butlerbury,m19,0
-t639,u18,26117.74,2026-08-10 01:51:00,device_unknown_5093,Port Ginaland,m15,1
-t82,u4,12808.25,2026-08-10 02:08:00,device_unknown_9821,Kimmouth,m12,1
-t934,u94,3852.59,2026-08-10 07:14:00,device_94_A,South Matthewland,m9,0
-t254,u42,3293.31,2026-08-10 07:21:00,device_42_A,Brandiberg,m20,0
-t367,u70,5291.13,2026-08-10 07:30:00,device_70_A,Chapmanbury,m16,0
-t87,u36,4256.8,2026-08-10 07:46:00,device_36_A,South Carolhaven,m10,0
-t846,u28,2700.97,2026-08-10 07:52:00,device_28_A,Richardsonview,m13,0
-t161,u56,3478.26,2026-08-10 08:04:00,device_56_A,Christinachester,m14,0
-t604,u20,1393.37,2026-08-10 08:17:00,device_20_A,New Brittanymouth,m10,0
-t168,u16,1574.67,2026-08-10 08:42:00,device_16_A,Lake Lauren,m15,0
-t915,u2,5598.38,2026-08-10 08:45:00,device_2_A,Lorraineton,m6,0
-t148,u63,4208.38,2026-08-10 08:50:00,device_63_A,Brewerfort,m5,0
-t437,u17,1820.64,2026-08-10 08:52:00,device_17_A,Port Derekfort,m18,0
-t790,u35,5767.22,2026-08-10 09:14:00,device_35_A,West Bryanburgh,m15,0
-t77,u44,4118.77,2026-08-10 09:36:00,device_44_A,Alexanderville,m9,0
-t357,u97,3405.66,2026-08-10 09:36:00,device_97_A,Flynnville,m5,0
-t712,u19,2597.68,2026-08-10 09:36:00,device_19_A,Port Danielview,m7,0
-t66,u25,2645.58,2026-08-10 10:34:00,device_25_A,Lake Allison,m3,0
-t761,u21,3144.64,2026-08-10 10:36:00,device_21_A,Thorntontown,m18,0
-t513,u75,4377.59,2026-08-10 11:10:00,device_75_A,West Donna,m10,0
-t460,u95,4105.78,2026-08-10 11:28:00,device_95_A,South Williamshire,m13,0
-t189,u24,2626.83,2026-08-10 11:54:00,device_24_A,West Michele,m3,0
-t71,u15,1692.98,2026-08-10 11:56:00,device_15_A,Strongfort,m8,0
-t197,u48,2952.66,2026-08-10 12:02:00,device_48_A,Gonzalezville,m6,0
-t535,u12,5243.33,2026-08-10 12:12:00,device_12_A,Molinafurt,m14,0
-t895,u48,3012.16,2026-08-10 12:20:00,device_48_A,Gonzalezville,m20,0
-t983,u28,2636.35,2026-08-10 12:43:00,device_28_A,Richardsonview,m13,0
-t341,u30,650.88,2026-08-10 12:50:00,device_30_A,Clinemouth,m1,0
-t423,u51,5357.0,2026-08-10 12:54:00,device_51_A,South Lauriemouth,m5,0
-t382,u67,828.72,2026-08-10 13:46:00,device_67_A,Shawnhaven,m12,0
-t471,u34,3469.82,2026-08-10 14:03:00,device_34_A,Butlerbury,m5,0
-t694,u94,3880.29,2026-08-10 14:05:00,device_94_A,South Matthewland,m18,0
-t556,u18,2178.81,2026-08-10 14:11:00,device_18_A,Knoxfurt,m10,0
-t833,u12,3673.58,2026-08-10 14:19:00,device_12_A,Molinafurt,m7,0
-t808,u21,4189.33,2026-08-10 14:38:00,device_21_A,Thorntontown,m9,0
-t485,u73,511.94,2026-08-10 14:44:00,device_73_A,Jenniferbury,m8,0
-t910,u20,1880.78,2026-08-10 15:19:00,device_20_A,New Brittanymouth,m13,0
-t909,u76,4124.35,2026-08-10 15:41:00,device_76_A,East Heidi,m9,0
-t457,u82,3122.93,2026-08-10 16:22:00,device_82_A,Francomouth,m13,0
-t920,u57,634.53,2026-08-10 16:44:00,device_57_A,West Jessica,m7,0
-t616,u46,4349.99,2026-08-10 17:19:00,device_46_A,Pearsonville,m9,0
-t80,u8,3990.61,2026-08-10 17:19:00,device_8_A,Kochchester,m14,0
-t88,u59,824.14,2026-08-10 17:46:00,device_59_A,Alexanderborough,m15,0
-t950,u1,1805.86,2026-08-10 18:31:00,device_1_A,North Matthew,m12,0
-t313,u43,479.25,2026-08-10 18:35:00,device_43_A,West Thomaston,m8,0
-t109,u33,785.9,2026-08-10 19:01:00,device_33_A,East Sarah,m11,0
-t707,u59,553.19,2026-08-10 19:04:00,device_59_A,Alexanderborough,m2,0
-t545,u72,1474.88,2026-08-10 19:24:00,device_72_A,West Matthewfurt,m14,0
-t599,u14,1461.3,2026-08-10 20:20:00,device_14_A,Allenmouth,m14,0
-t17,u90,3230.84,2026-08-10 21:04:00,device_90_A,West Julia,m5,0
-t43,u82,2677.23,2026-08-10 21:24:00,device_82_A,Francomouth,m8,0
-t262,u26,3998.59,2026-08-10 21:34:00,device_26_A,North Amanda,m14,0
-t202,u5,1339.34,2026-08-10 21:43:00,device_5_A,East Jeanettebury,m10,0
-t550,u1,2460.98,2026-08-10 21:59:00,device_1_A,North Matthew,m16,0
-t571,u14,1739.23,2026-08-10 22:38:00,device_14_A,Allenmouth,m9,0
-t911,u29,3264.84,2026-08-10 22:40:00,device_29_A,Timothyport,m6,0
-t317,u74,4040.99,2026-08-11 07:11:00,device_74_A,North Christopher,m3,0
-t884,u2,5888.2,2026-08-11 07:17:00,device_2_A,Lorraineton,m17,0
-t768,u86,1763.77,2026-08-11 07:30:00,device_86_A,Allisonfurt,m1,0
-t22,u59,715.81,2026-08-11 07:37:00,device_59_A,Alexanderborough,m4,0
-t879,u58,1698.28,2026-08-11 08:17:00,device_58_A,Port Anthony,m11,0
-t885,u66,2351.83,2026-08-11 09:14:00,device_66_A,Lake Benjamin,m17,0
-t905,u96,3156.29,2026-08-11 09:34:00,device_96_A,Delgadoville,m10,0
-t740,u61,1646.77,2026-08-11 09:58:00,device_61_A,Wallaceville,m16,0
-t635,u76,3247.49,2026-08-11 10:02:00,device_76_A,East Heidi,m3,0
-t527,u27,1627.06,2026-08-11 11:53:00,device_27_A,East Catherineville,m12,0
-t177,u58,1169.43,2026-08-11 11:53:00,device_58_A,Port Anthony,m13,0
-t698,u77,3191.38,2026-08-11 12:14:00,device_77_A,Hunterburgh,m7,0
-t914,u29,3703.64,2026-08-11 12:54:00,device_29_A,Timothyport,m4,0
-t586,u96,2479.03,2026-08-11 13:21:00,device_96_A,Delgadoville,m5,0
-t620,u35,3414.91,2026-08-11 13:26:00,device_35_A,West Bryanburgh,m10,0
-t100,u56,4509.17,2026-08-11 14:14:00,device_56_A,Christinachester,m9,0
-t836,u32,1069.92,2026-08-11 14:23:00,device_32_A,North Jonathanland,m2,0
-t155,u69,730.84,2026-08-11 14:38:00,device_69_A,Sharonland,m10,0
-t974,u42,3505.84,2026-08-11 15:08:00,device_42_A,Brandiberg,m18,0
-t649,u40,1827.25,2026-08-11 15:36:00,device_40_A,Josephfort,m13,0
-t692,u28,2414.57,2026-08-11 15:59:00,device_28_A,Richardsonview,m19,0
-t511,u59,537.62,2026-08-11 16:03:00,device_59_A,Alexanderborough,m1,0
-t281,u75,3553.23,2026-08-11 16:05:00,device_75_A,West Donna,m9,0
-t839,u19,2424.4,2026-08-11 16:20:00,device_19_A,Port Danielview,m7,0
-t771,u67,1466.7,2026-08-11 16:26:00,device_67_A,Shawnhaven,m9,0
-t166,u22,1024.85,2026-08-11 17:41:00,device_22_A,Smithland,m11,0
-t430,u98,1919.54,2026-08-11 18:09:00,device_98_A,Knightstad,m14,0
-t11,u83,2150.97,2026-08-11 18:37:00,device_83_A,Port Jasonview,m6,0
-t696,u53,4157.16,2026-08-11 19:06:00,device_53_A,South Mauricefurt,m2,0
-t903,u63,4964.09,2026-08-11 19:18:00,device_63_A,Brewerfort,m12,0
-t528,u71,3031.93,2026-08-11 20:39:00,device_71_A,Ericside,m3,0
-t441,u50,957.65,2026-08-11 20:48:00,device_50_A,Garciabury,m6,0
-t131,u71,3364.2,2026-08-11 21:11:00,device_71_A,Ericside,m19,0
-t188,u49,2249.24,2026-08-11 21:27:00,device_49_A,Franklinfort,m1,0
-t479,u36,3822.99,2026-08-11 22:02:00,device_36_A,South Carolhaven,m16,0
-t171,u29,19535.56,2026-08-12 04:08:00,device_unknown_9167,Rojasmouth,m2,1
-t792,u28,3228.12,2026-08-12 07:37:00,device_28_A,Richardsonview,m4,0
-t715,u68,3871.64,2026-08-12 07:46:00,device_68_A,Port David,m6,0
-t321,u51,5145.4,2026-08-12 07:58:00,device_51_A,South Lauriemouth,m17,0
-t731,u95,4601.61,2026-08-12 08:30:00,device_95_A,South Williamshire,m20,0
-t919,u8,3834.35,2026-08-12 08:32:00,device_8_A,Kochchester,m6,0
-t476,u32,1027.1,2026-08-12 08:41:00,device_32_A,North Jonathanland,m17,0
-t747,u68,4813.2,2026-08-12 09:22:00,device_68_A,Port David,m5,0
-t362,u4,3950.79,2026-08-12 09:23:00,device_4_A,South Julie,m9,0
-t924,u11,420.3,2026-08-12 09:45:00,device_11_A,North Johnbury,m3,0
-t594,u14,1576.12,2026-08-12 09:50:00,device_14_A,Allenmouth,m17,0
-t718,u45,1561.59,2026-08-12 10:51:00,device_45_A,West William,m1,0
-t364,u73,569.25,2026-08-12 11:28:00,device_73_A,Jenniferbury,m6,0
-t667,u56,5064.5,2026-08-12 12:04:00,device_56_A,Christinachester,m18,0
-t508,u35,3816.0,2026-08-12 12:18:00,device_35_A,West Bryanburgh,m14,0
-t308,u18,2908.54,2026-08-12 12:39:00,device_18_A,Knoxfurt,m7,0
-t719,u89,4745.95,2026-08-12 12:56:00,device_89_A,West Danielton,m16,0
-t435,u5,1160.13,2026-08-12 13:10:00,device_5_A,East Jeanettebury,m19,0
-t81,u34,3669.96,2026-08-12 13:18:00,device_34_A,Butlerbury,m9,0
-t483,u22,890.15,2026-08-12 13:23:00,device_22_A,Smithland,m20,0
-t622,u49,3844.33,2026-08-12 13:26:00,device_49_A,Franklinfort,m18,0
-t755,u88,3084.5,2026-08-12 13:42:00,device_88_A,East Lisa,m6,0
-t378,u90,2557.61,2026-08-12 14:02:00,device_90_A,West Julia,m7,0
-t101,u12,4819.63,2026-08-12 14:41:00,device_12_A,Molinafurt,m9,0
-t173,u13,3281.54,2026-08-12 14:43:00,device_13_A,East Tamara,m6,0
-t880,u30,765.85,2026-08-12 15:44:00,device_30_A,Clinemouth,m9,0
-t942,u73,650.22,2026-08-12 15:53:00,device_73_A,Jenniferbury,m16,0
-t128,u61,2877.17,2026-08-12 15:56:00,device_61_A,Wallaceville,m20,0
-t822,u85,2223.43,2026-08-12 16:01:00,device_85_A,North Adamview,m2,0
-t25,u4,3984.71,2026-08-12 16:15:00,device_4_A,South Julie,m17,0
-t142,u5,1040.88,2026-08-12 16:26:00,device_5_A,East Jeanettebury,m4,0
-t78,u67,1065.89,2026-08-12 17:12:00,device_67_A,Shawnhaven,m1,0
-t652,u60,1780.2,2026-08-12 17:41:00,device_60_A,Port Joshuamouth,m13,0
-t728,u56,6041.37,2026-08-12 18:21:00,device_56_A,Christinachester,m18,0
-t874,u7,574.33,2026-08-12 18:45:00,device_7_A,Lake Ashleyview,m17,0
-t46,u5,1188.63,2026-08-12 19:13:00,device_5_A,East Jeanettebury,m2,0
-t741,u42,2105.95,2026-08-12 19:19:00,device_42_A,Brandiberg,m17,0
-t618,u57,1157.67,2026-08-12 19:40:00,device_57_A,West Jessica,m3,0
-t966,u74,5334.21,2026-08-12 20:30:00,device_74_A,North Christopher,m6,0
-t522,u44,5758.74,2026-08-12 20:40:00,device_44_A,Alexanderville,m18,0
-t469,u62,2116.38,2026-08-12 21:03:00,device_62_A,East Kristen,m4,0
-t331,u93,3683.94,2026-08-12 22:28:00,device_93_A,Eatonfort,m9,0
-t480,u26,29482.79,2026-08-13 01:39:00,device_unknown_1194,New Shane,m17,1
-t144,u40,11806.84,2026-08-13 01:42:00,device_unknown_1745,South Stephen,m18,1
-t355,u63,31439.35,2026-08-13 02:34:00,device_unknown_8657,Martinview,m20,1
-t116,u44,19802.8,2026-08-13 02:35:00,device_unknown_6733,Gordontown,m3,1
-t217,u89,21301.14,2026-08-13 03:02:00,device_unknown_7038,North Amychester,m19,1
-t472,u86,18864.66,2026-08-13 03:10:00,device_unknown_7841,New Ianfort,m5,1
-t417,u52,30376.15,2026-08-13 03:10:00,device_unknown_6489,East Breanna,m15,1
-t328,u35,29223.62,2026-08-13 04:11:00,device_unknown_3868,South Robertmouth,m16,1
-t835,u40,2962.47,2026-08-13 07:33:00,device_40_A,Josephfort,m4,0
-t481,u24,2764.19,2026-08-13 07:35:00,device_24_A,West Michele,m17,0
-t956,u33,963.25,2026-08-13 08:00:00,device_33_A,East Sarah,m13,0
-t853,u71,3119.76,2026-08-13 08:08:00,device_71_A,Ericside,m1,0
-t105,u100,965.36,2026-08-13 08:20:00,device_100_A,West Darryl,m7,0
-t786,u26,4982.07,2026-08-13 08:55:00,device_26_A,North Amanda,m1,0
-t260,u23,1919.42,2026-08-13 08:58:00,device_23_A,Mosston,m5,0
-t847,u40,1745.26,2026-08-13 09:05:00,device_40_A,Josephfort,m19,0
-t859,u63,3146.14,2026-08-13 09:11:00,device_63_A,Brewerfort,m9,0
-t45,u82,3971.15,2026-08-13 09:13:00,device_82_A,Francomouth,m8,0
-t149,u12,6175.48,2026-08-13 09:23:00,device_12_A,Molinafurt,m8,0
-t681,u32,1603.34,2026-08-13 09:45:00,device_32_A,North Jonathanland,m11,0
-t29,u18,3628.74,2026-08-13 09:51:00,device_18_A,Knoxfurt,m16,0
-t310,u99,774.49,2026-08-13 10:51:00,device_99_A,Alexandershire,m10,0
-t876,u12,6174.27,2026-08-13 11:18:00,device_12_A,Molinafurt,m16,0
-t445,u51,4551.09,2026-08-13 11:24:00,device_51_A,South Lauriemouth,m8,0
-t418,u94,3069.9,2026-08-13 11:42:00,device_94_A,South Matthewland,m17,0
-t344,u79,1520.23,2026-08-13 11:47:00,device_79_A,South Brittanyshire,m15,0
-t103,u35,3625.99,2026-08-13 11:59:00,device_35_A,West Bryanburgh,m8,0
-t455,u97,3619.89,2026-08-13 12:02:00,device_97_A,Flynnville,m14,0
-t141,u94,3844.3,2026-08-13 12:39:00,device_94_A,South Matthewland,m7,0
-t561,u93,3408.18,2026-08-13 12:41:00,device_93_A,Eatonfort,m11,0
-t13,u5,1367.34,2026-08-13 12:42:00,device_5_A,East Jeanettebury,m15,0
-t780,u88,3729.61,2026-08-13 12:43:00,device_88_A,East Lisa,m20,0
-t517,u41,860.19,2026-08-13 12:56:00,device_41_A,East Laura,m18,0
-t828,u56,3990.88,2026-08-13 12:58:00,device_56_A,Christinachester,m19,0
-t825,u16,1514.93,2026-08-13 13:31:00,device_16_A,Lake Lauren,m7,0
-t231,u72,1149.25,2026-08-13 13:40:00,device_72_A,West Matthewfurt,m8,0
-t906,u7,719.65,2026-08-13 13:56:00,device_7_A,Lake Ashleyview,m1,0
-t551,u95,2852.04,2026-08-13 14:46:00,device_95_A,South Williamshire,m10,0
-t458,u54,4454.8,2026-08-13 14:46:00,device_54_A,Port Jay,m10,0
-t959,u76,3910.94,2026-08-13 15:01:00,device_76_A,East Heidi,m12,0
-t702,u31,2896.57,2026-08-13 15:29:00,device_31_A,West Georgestad,m17,0
-t348,u87,2915.57,2026-08-13 15:44:00,device_87_A,Oliviaside,m15,0
-t253,u58,1272.11,2026-08-13 15:47:00,device_58_A,Port Anthony,m19,0
-t912,u8,4354.94,2026-08-13 16:03:00,device_8_A,Kochchester,m19,0
-t928,u76,2810.57,2026-08-13 16:05:00,device_76_A,East Heidi,m11,0
-t352,u2,4899.11,2026-08-13 16:22:00,device_2_A,Lorraineton,m6,0
-t363,u74,3605.31,2026-08-13 16:49:00,device_74_A,North Christopher,m20,0
-t172,u91,808.33,2026-08-13 16:56:00,device_91_A,New Lisaside,m15,0
-t368,u54,3955.46,2026-08-13 16:57:00,device_54_A,Port Jay,m16,0
-t23,u53,5439.4,2026-08-13 17:15:00,device_53_A,South Mauricefurt,m4,0
-t831,u41,959.83,2026-08-13 17:27:00,device_41_A,East Laura,m17,0
-t27,u81,5484.77,2026-08-13 17:38:00,device_81_A,Lake Jerryport,m16,0
-t249,u93,2887.67,2026-08-13 17:51:00,device_93_A,Eatonfort,m4,0
-t268,u47,2135.22,2026-08-13 18:51:00,device_47_A,New Kyle,m3,0
-t447,u99,586.42,2026-08-13 19:20:00,device_99_A,Alexandershire,m8,0
-t881,u45,1338.78,2026-08-13 19:23:00,device_45_A,West William,m12,0
-t494,u33,669.29,2026-08-13 19:59:00,device_33_A,East Sarah,m18,0
-t504,u57,927.72,2026-08-13 20:11:00,device_57_A,West Jessica,m4,0
-t31,u36,3306.41,2026-08-13 20:15:00,device_36_A,South Carolhaven,m7,0
-t4,u28,2305.56,2026-08-13 20:30:00,device_28_A,Richardsonview,m8,0
-t986,u6,1424.69,2026-08-13 20:30:00,device_6_A,Bookerchester,m7,0
-t243,u41,920.06,2026-08-13 20:45:00,device_41_A,East Laura,m4,0
-t98,u45,1759.84,2026-08-13 21:14:00,device_45_A,West William,m20,0
-t307,u57,1159.3,2026-08-13 21:31:00,device_57_A,West Jessica,m10,0
-t139,u45,1495.52,2026-08-13 21:35:00,device_45_A,West William,m9,0
-t279,u98,2801.88,2026-08-13 21:52:00,device_98_A,Knightstad,m19,0
-t129,u22,1313.55,2026-08-13 21:54:00,device_22_A,Smithland,m14,0
-t398,u32,1134.32,2026-08-13 22:19:00,device_32_A,North Jonathanland,m17,0
-t581,u63,22657.08,2026-08-14 01:13:00,device_unknown_8291,New Misty,m1,1
-t664,u17,15379.21,2026-08-14 01:22:00,device_unknown_3320,North Jacqueline,m17,1
-t671,u9,18939.43,2026-08-14 01:59:00,device_unknown_4619,Port Albertstad,m16,1
-t50,u52,27361.28,2026-08-14 02:02:00,device_unknown_9701,West Michelle,m2,1
-t450,u5,5050.49,2026-08-14 02:22:00,device_unknown_1797,Port Karlahaven,m2,1
-t921,u57,6344.39,2026-08-14 02:24:00,device_unknown_4795,Port Danielton,m2,1
-t59,u8,5674.52,2026-08-14 07:03:00,device_8_A,Kochchester,m18,0
-t682,u73,648.68,2026-08-14 07:07:00,device_73_A,Jenniferbury,m14,0
-t392,u4,2825.4,2026-08-14 07:46:00,device_4_A,South Julie,m20,0
-t617,u42,2520.09,2026-08-14 08:08:00,device_42_A,Brandiberg,m6,0
-t124,u18,3385.94,2026-08-14 08:54:00,device_18_A,Knoxfurt,m12,0
-t397,u100,1234.17,2026-08-14 08:56:00,device_100_A,West Darryl,m5,0
-t432,u19,2990.86,2026-08-14 09:23:00,device_19_A,Port Danielview,m17,0
-t162,u61,1912.19,2026-08-14 09:42:00,device_61_A,Wallaceville,m8,0
-t917,u97,2741.71,2026-08-14 09:48:00,device_97_A,Flynnville,m9,0
-t633,u59,538.46,2026-08-14 10:19:00,device_59_A,Alexanderborough,m6,0
-t729,u45,1447.47,2026-08-14 10:37:00,device_45_A,West William,m16,0
-t251,u2,4240.51,2026-08-14 10:54:00,device_2_A,Lorraineton,m19,0
-t388,u49,3658.45,2026-08-14 11:05:00,device_49_A,Franklinfort,m11,0
-t543,u61,1688.7,2026-08-14 11:18:00,device_61_A,Wallaceville,m11,0
-t178,u23,1823.62,2026-08-14 11:20:00,device_23_A,Mosston,m3,0
-t662,u59,577.5,2026-08-14 11:23:00,device_59_A,Alexanderborough,m11,0
-t804,u69,1064.16,2026-08-14 11:50:00,device_69_A,Sharonland,m16,0
-t655,u62,2236.98,2026-08-14 12:56:00,device_62_A,East Kristen,m4,0
-t927,u67,797.08,2026-08-14 12:58:00,device_67_A,Shawnhaven,m14,0
-t734,u41,1180.15,2026-08-14 13:24:00,device_41_A,East Laura,m11,0
-t668,u80,1197.29,2026-08-14 14:10:00,device_80_A,East Jeremyview,m19,0
-t724,u1,2579.94,2026-08-14 14:18:00,device_1_A,North Matthew,m9,0
-t130,u38,808.96,2026-08-14 14:34:00,device_38_A,East Danielle,m3,0
-t19,u54,4253.49,2026-08-14 14:41:00,device_54_A,Port Jay,m5,0
-t198,u16,1620.21,2026-08-14 14:51:00,device_16_A,Lake Lauren,m16,0
-t134,u95,4448.49,2026-08-14 15:34:00,device_95_A,South Williamshire,m18,0
-t810,u29,3545.8,2026-08-14 16:03:00,device_29_A,Timothyport,m18,0
-t238,u20,1314.48,2026-08-14 16:55:00,device_20_A,New Brittanymouth,m15,0
-t286,u14,1588.13,2026-08-14 17:12:00,device_14_A,Allenmouth,m20,0
-t371,u8,3457.55,2026-08-14 17:19:00,device_8_A,Kochchester,m12,0
-t290,u92,2950.05,2026-08-14 18:02:00,device_92_A,West Philipport,m10,0
-t138,u75,3391.59,2026-08-14 18:36:00,device_75_A,West Donna,m14,0
-t559,u82,3679.87,2026-08-14 20:05:00,device_82_A,Francomouth,m6,0
-t815,u77,4139.01,2026-08-14 20:17:00,device_77_A,Hunterburgh,m18,0
-t566,u69,901.85,2026-08-14 20:21:00,device_69_A,Sharonland,m13,0
-t944,u72,1083.24,2026-08-14 20:56:00,device_72_A,West Matthewfurt,m16,0
-t342,u1,2418.95,2026-08-14 21:48:00,device_1_A,North Matthew,m2,0
-t930,u99,522.28,2026-08-14 21:58:00,device_99_A,Alexandershire,m13,0
-t349,u9,2792.68,2026-08-14 22:09:00,device_9_A,South Christina,m7,0
-t894,u70,6401.87,2026-08-14 22:14:00,device_70_A,Chapmanbury,m6,0
-t146,u91,903.83,2026-08-14 22:30:00,device_91_A,New Lisaside,m15,0
-t791,u96,2637.31,2026-08-14 22:57:00,device_96_A,Delgadoville,m15,0
-t56,u25,25499.43,2026-08-15 01:14:00,device_unknown_2638,Lake Janetside,m18,1
-t332,u54,23297.31,2026-08-15 01:17:00,device_unknown_6848,Kingburgh,m11,1
-t625,u45,10415.92,2026-08-15 01:58:00,device_unknown_6038,Pachecomouth,m7,1
-t193,u10,29882.86,2026-08-15 02:41:00,device_unknown_5708,West Lisa,m3,1
-t783,u24,12645.61,2026-08-15 02:42:00,device_unknown_9598,Lake Kristaborough,m11,1
-t525,u100,7947.97,2026-08-15 03:16:00,device_unknown_7547,New Desireeport,m14,1
-t648,u11,4564.36,2026-08-15 04:09:00,device_unknown_5835,Smithmouth,m14,1
-t908,u27,7317.83,2026-08-15 04:28:00,device_unknown_6175,East Gary,m12,1
-t229,u27,1515.58,2026-08-15 07:27:00,device_27_A,East Catherineville,m2,0
-t205,u15,1235.8,2026-08-15 07:28:00,device_15_A,Strongfort,m19,0
-t117,u80,739.66,2026-08-15 07:56:00,device_80_A,East Jeremyview,m8,0
-t567,u7,895.96,2026-08-15 09:02:00,device_7_A,Lake Ashleyview,m13,0
-t916,u61,1581.47,2026-08-15 09:16:00,device_61_A,Wallaceville,m5,0
-t261,u14,1062.33,2026-08-15 09:25:00,device_14_A,Allenmouth,m9,0
-t384,u94,3353.25,2026-08-15 10:22:00,device_94_A,South Matthewland,m5,0
-t605,u33,907.2,2026-08-15 10:23:00,device_33_A,East Sarah,m1,0
-t271,u1,2077.51,2026-08-15 10:36:00,device_1_A,North Matthew,m13,0
-t218,u65,2230.27,2026-08-15 10:43:00,device_65_A,Robertstad,m8,0
-t814,u18,2556.46,2026-08-15 10:49:00,device_18_A,Knoxfurt,m12,0
-t478,u32,1063.14,2026-08-15 11:26:00,device_32_A,North Jonathanland,m1,0
-t293,u40,3171.92,2026-08-15 11:34:00,device_40_A,Josephfort,m11,0
-t856,u49,3584.43,2026-08-15 11:45:00,device_49_A,Franklinfort,m6,0
-t813,u82,4247.08,2026-08-15 12:02:00,device_82_A,Francomouth,m17,0
-t420,u43,559.39,2026-08-15 12:03:00,device_43_A,West Thomaston,m1,0
-t546,u46,3559.43,2026-08-15 12:04:00,device_46_A,Pearsonville,m18,0
-t524,u6,1320.76,2026-08-15 12:08:00,device_6_A,Bookerchester,m20,0
-t922,u47,1332.22,2026-08-15 12:43:00,device_47_A,New Kyle,m3,0
-t65,u28,3624.16,2026-08-15 12:56:00,device_28_A,Richardsonview,m15,0
-t794,u63,4578.34,2026-08-15 13:05:00,device_63_A,Brewerfort,m15,0
-t841,u3,2804.82,2026-08-15 13:23:00,device_3_A,Port Kimhaven,m14,0
-t587,u99,683.16,2026-08-15 13:27:00,device_99_A,Alexandershire,m3,0
-t591,u48,3480.79,2026-08-15 13:34:00,device_48_A,Gonzalezville,m17,0
-t857,u23,2179.12,2026-08-15 13:54:00,device_23_A,Mosston,m4,0
-t393,u49,3462.67,2026-08-15 14:02:00,device_49_A,Franklinfort,m2,0
-t751,u36,4717.75,2026-08-15 14:15:00,device_36_A,South Carolhaven,m12,0
-t14,u28,3131.75,2026-08-15 14:31:00,device_28_A,Richardsonview,m11,0
-t642,u39,2685.8,2026-08-15 15:05:00,device_39_A,West Matthew,m3,0
-t893,u73,373.26,2026-08-15 16:13:00,device_73_A,Jenniferbury,m3,0
-t380,u81,4837.77,2026-08-15 16:18:00,device_81_A,Lake Jerryport,m18,0
-t976,u81,4750.98,2026-08-15 16:24:00,device_81_A,Lake Jerryport,m12,0
-t861,u13,3569.69,2026-08-15 16:58:00,device_13_A,East Tamara,m20,0
-t280,u14,1301.13,2026-08-15 17:04:00,device_14_A,Allenmouth,m5,0
-t807,u7,807.31,2026-08-15 17:05:00,device_7_A,Lake Ashleyview,m17,0
-t327,u93,2990.51,2026-08-15 17:06:00,device_93_A,Eatonfort,m5,0
-t53,u69,625.93,2026-08-15 17:15:00,device_69_A,Sharonland,m9,0
-t219,u7,936.91,2026-08-15 17:21:00,device_7_A,Lake Ashleyview,m20,0
-t55,u91,913.59,2026-08-15 17:31:00,device_91_A,New Lisaside,m3,0
-t242,u9,3369.18,2026-08-15 17:44:00,device_9_A,South Christina,m13,0
-t865,u35,4659.64,2026-08-15 18:58:00,device_35_A,West Bryanburgh,m5,0
-t227,u43,599.23,2026-08-15 19:09:00,device_43_A,West Thomaston,m9,0
-t302,u18,2227.97,2026-08-15 19:31:00,device_18_A,Knoxfurt,m5,0
-t111,u53,4824.55,2026-08-15 19:50:00,device_53_A,South Mauricefurt,m19,0
-t41,u21,2469.45,2026-08-15 19:54:00,device_21_A,Thorntontown,m11,0
-t422,u87,4684.49,2026-08-15 20:49:00,device_87_A,Oliviaside,m17,0
-t748,u23,1737.79,2026-08-15 20:58:00,device_23_A,Mosston,m16,0
-t358,u87,2816.61,2026-08-15 21:48:00,device_87_A,Oliviaside,m17,0
-t210,u24,1554.86,2026-08-15 21:59:00,device_24_A,West Michele,m2,0
-t706,u91,1029.19,2026-08-15 22:36:00,device_91_A,New Lisaside,m2,0
-t449,u95,25862.08,2026-08-16 02:33:00,device_unknown_1256,Laramouth,m7,1
-t659,u59,4298.57,2026-08-16 02:35:00,device_unknown_3328,South Joshua,m16,1
-t762,u78,659.79,2026-08-16 07:18:00,device_78_A,Pattersonburgh,m10,0
-t760,u52,3050.37,2026-08-16 07:31:00,device_52_A,Maryfurt,m2,0
-t585,u16,1041.32,2026-08-16 07:48:00,device_16_A,Lake Lauren,m20,0
-t67,u49,3677.63,2026-08-16 08:23:00,device_49_A,Franklinfort,m12,0
-t440,u34,3521.47,2026-08-16 08:30:00,device_34_A,Butlerbury,m3,0
-t636,u97,2517.24,2026-08-16 08:40:00,device_97_A,Flynnville,m7,0
-t463,u24,2283.95,2026-08-16 08:54:00,device_24_A,West Michele,m3,0
-t570,u74,3814.89,2026-08-16 09:48:00,device_74_A,North Christopher,m18,0
-t156,u62,2092.42,2026-08-16 09:55:00,device_62_A,East Kristen,m8,0
-t297,u66,3300.18,2026-08-16 09:58:00,device_66_A,Lake Benjamin,m14,0
-t95,u45,1170.69,2026-08-16 10:32:00,device_45_A,West William,m14,0
-t773,u20,1607.07,2026-08-16 10:36:00,device_20_A,New Brittanymouth,m4,0
-t784,u15,1476.85,2026-08-16 10:52:00,device_15_A,Strongfort,m14,0
-t507,u76,3509.99,2026-08-16 11:16:00,device_76_A,East Heidi,m9,0
-t60,u71,3029.63,2026-08-16 11:17:00,device_71_A,Ericside,m9,0
-t181,u2,4748.51,2026-08-16 11:24:00,device_2_A,Lorraineton,m15,0
-t444,u29,3877.34,2026-08-16 11:25:00,device_29_A,Timothyport,m12,0
-t295,u3,4163.05,2026-08-16 11:27:00,device_3_A,Port Kimhaven,m20,0
-t563,u86,2334.6,2026-08-16 11:59:00,device_86_A,Allisonfurt,m14,0
-t482,u37,1792.83,2026-08-16 12:06:00,device_37_A,Thomasside,m4,0
-t799,u50,1017.26,2026-08-16 12:26:00,device_50_A,Garciabury,m16,0
-t578,u33,984.79,2026-08-16 12:54:00,device_33_A,East Sarah,m2,0
-t968,u55,3668.63,2026-08-16 13:40:00,device_55_A,Gilesstad,m6,0
-t453,u64,2507.58,2026-08-16 14:17:00,device_64_A,Meyerhaven,m10,0
-t533,u20,2136.48,2026-08-16 14:48:00,device_20_A,New Brittanymouth,m17,0
-t821,u72,1594.56,2026-08-16 14:55:00,device_72_A,West Matthewfurt,m18,0
-t576,u79,2632.17,2026-08-16 16:03:00,device_79_A,South Brittanyshire,m6,0
-t125,u22,1040.14,2026-08-16 17:16:00,device_22_A,Smithland,m1,0
-t514,u18,2347.81,2026-08-16 17:43:00,device_18_A,Knoxfurt,m6,0
-t83,u32,1587.32,2026-08-16 17:45:00,device_32_A,North Jonathanland,m4,0
-t353,u41,1135.85,2026-08-16 18:24:00,device_41_A,East Laura,m17,0
-t294,u9,2515.48,2026-08-16 18:25:00,device_9_A,South Christina,m10,0
-t863,u87,3974.29,2026-08-16 18:43:00,device_87_A,Oliviaside,m11,0
-t690,u81,3765.84,2026-08-16 19:00:00,device_81_A,Lake Jerryport,m6,0
-t94,u73,488.31,2026-08-16 19:18:00,device_73_A,Jenniferbury,m8,0
-t404,u81,4497.58,2026-08-16 19:31:00,device_81_A,Lake Jerryport,m12,0
-t727,u5,1216.97,2026-08-16 19:50:00,device_5_A,East Jeanettebury,m19,0
-t722,u85,1565.2,2026-08-16 20:06:00,device_85_A,North Adamview,m17,0
-t223,u43,831.29,2026-08-16 20:10:00,device_43_A,West Thomaston,m19,0
-t454,u90,2658.44,2026-08-16 20:33:00,device_90_A,West Julia,m10,0
-t678,u84,656.59,2026-08-16 21:16:00,device_84_A,North Dianaport,m3,0
-t961,u31,3254.22,2026-08-16 21:39:00,device_31_A,West Georgestad,m3,0
-t33,u83,2167.91,2026-08-16 21:49:00,device_83_A,Port Jasonview,m17,0
-t975,u62,1761.64,2026-08-16 21:59:00,device_62_A,East Kristen,m19,0
-t474,u20,1634.07,2026-08-16 22:01:00,device_20_A,New Brittanymouth,m16,0
-t606,u95,2805.58,2026-08-16 22:06:00,device_95_A,South Williamshire,m12,0
-t136,u51,4793.37,2026-08-16 22:09:00,device_51_A,South Lauriemouth,m15,0
-t264,u82,3658.76,2026-08-16 22:23:00,device_82_A,Francomouth,m17,0
-t48,u85,2420.6,2026-08-16 22:25:00,device_85_A,North Adamview,m5,0
-t89,u95,3287.5,2026-08-16 22:58:00,device_95_A,South Williamshire,m6,0
-t824,u16,7299.92,2026-08-17 02:08:00,device_unknown_8259,New Jeffreyberg,m12,1
-t805,u26,17308.58,2026-08-17 04:04:00,device_unknown_8091,Loveton,m17,1
-t518,u93,26561.25,2026-08-17 04:09:00,device_unknown_4434,East Adamview,m10,1
-t269,u8,3190.07,2026-08-17 07:15:00,device_8_A,Kochchester,m15,0
-t538,u13,5032.51,2026-08-17 09:20:00,device_13_A,East Tamara,m19,0
-t869,u49,3646.38,2026-08-17 09:36:00,device_49_A,Franklinfort,m3,0
-t744,u17,1510.62,2026-08-17 09:51:00,device_17_A,Port Derekfort,m16,0
-t433,u95,3640.18,2026-08-17 10:21:00,device_95_A,South Williamshire,m2,0
-t999,u63,3067.57,2026-08-17 10:42:00,device_63_A,Brewerfort,m9,0
-t904,u38,1169.43,2026-08-17 10:53:00,device_38_A,East Danielle,m14,0
-t913,u98,2275.77,2026-08-17 11:17:00,device_98_A,Knightstad,m4,0
-t410,u8,4324.97,2026-08-17 11:46:00,device_8_A,Kochchester,m1,0
-t972,u4,2780.36,2026-08-17 11:49:00,device_4_A,South Julie,m5,0
-t475,u53,5564.49,2026-08-17 12:11:00,device_53_A,South Mauricefurt,m5,0
-t580,u48,2150.43,2026-08-17 13:18:00,device_48_A,Gonzalezville,m16,0
-t536,u50,1423.03,2026-08-17 13:42:00,device_50_A,Garciabury,m15,0
-t811,u84,897.7,2026-08-17 13:46:00,device_84_A,North Dianaport,m7,0
-t467,u45,1369.41,2026-08-17 14:21:00,device_45_A,West William,m18,0
-t565,u83,1776.73,2026-08-17 14:30:00,device_83_A,Port Jasonview,m13,0
-t603,u43,832.88,2026-08-17 14:39:00,device_43_A,West Thomaston,m2,0
-t54,u26,3583.62,2026-08-17 15:08:00,device_26_A,North Amanda,m13,0
-t176,u51,4255.81,2026-08-17 15:21:00,device_51_A,South Lauriemouth,m14,0
-t102,u99,535.4,2026-08-17 15:41:00,device_99_A,Alexandershire,m11,0
-t685,u92,3798.91,2026-08-17 16:39:00,device_92_A,West Philipport,m10,0
-t529,u28,2209.04,2026-08-17 16:45:00,device_28_A,Richardsonview,m11,0
-t211,u73,408.78,2026-08-17 16:57:00,device_73_A,Jenniferbury,m11,0
-t860,u87,3966.18,2026-08-17 17:16:00,device_87_A,Oliviaside,m12,0
-t531,u64,2353.95,2026-08-17 17:18:00,device_64_A,Meyerhaven,m3,0
-t470,u58,1356.62,2026-08-17 17:32:00,device_58_A,Port Anthony,m7,0
-t365,u78,1034.17,2026-08-17 17:33:00,device_78_A,Pattersonburgh,m19,0
-t672,u40,1852.29,2026-08-17 18:03:00,device_40_A,Josephfort,m11,0
-t812,u30,619.94,2026-08-17 18:08:00,device_30_A,Clinemouth,m5,0
-t838,u25,2219.74,2026-08-17 18:23:00,device_25_A,Lake Allison,m17,0
-t925,u12,5827.09,2026-08-17 18:34:00,device_12_A,Molinafurt,m12,0
-t855,u10,4578.89,2026-08-17 18:55:00,device_10_A,Ricardostad,m7,0
-t339,u32,1548.74,2026-08-17 18:56:00,device_32_A,North Jonathanland,m20,0
-t185,u58,1724.72,2026-08-17 19:08:00,device_58_A,Port Anthony,m13,0
-t675,u79,1480.79,2026-08-17 19:26:00,device_79_A,South Brittanyshire,m15,0
-t827,u91,1046.8,2026-08-17 19:27:00,device_91_A,New Lisaside,m2,0
-t322,u53,3716.7,2026-08-17 20:25:00,device_53_A,South Mauricefurt,m1,0
-t800,u55,3654.8,2026-08-17 20:29:00,device_55_A,Gilesstad,m4,0
-t338,u81,4189.63,2026-08-17 21:56:00,device_81_A,Lake Jerryport,m12,0
-t888,u39,2748.72,2026-08-17 22:21:00,device_39_A,West Matthew,m16,0
-t466,u68,3166.22,2026-08-17 22:56:00,device_68_A,Port David,m8,0
-t970,u33,5059.26,2026-08-18 01:01:00,device_unknown_2363,East Kirsten,m9,1
-t693,u32,10365.52,2026-08-18 01:49:00,device_unknown_2584,Markberg,m12,1
-t723,u95,38910.86,2026-08-18 04:08:00,device_unknown_1145,Scottton,m5,1
-t574,u15,1584.52,2026-08-18 07:06:00,device_15_A,Strongfort,m4,0
-t206,u10,4227.49,2026-08-18 08:03:00,device_10_A,Ricardostad,m20,0
-t871,u92,3910.0,2026-08-18 08:05:00,device_92_A,West Philipport,m18,0
-t573,u45,1508.45,2026-08-18 08:31:00,device_45_A,West William,m2,0
-t15,u47,1395.75,2026-08-18 08:47:00,device_47_A,New Kyle,m11,0
-t291,u64,1901.21,2026-08-18 08:57:00,device_64_A,Meyerhaven,m11,0
-t597,u14,1430.22,2026-08-18 09:33:00,device_14_A,Allenmouth,m1,0
-t495,u81,5014.59,2026-08-18 09:39:00,device_81_A,Lake Jerryport,m17,0
-t907,u78,586.8,2026-08-18 10:07:00,device_78_A,Pattersonburgh,m17,0
-t553,u24,2142.59,2026-08-18 10:17:00,device_24_A,West Michele,m19,0
-t612,u58,1052.67,2026-08-18 10:20:00,device_58_A,Port Anthony,m8,0
-t770,u8,4428.68,2026-08-18 10:43:00,device_8_A,Kochchester,m9,0
-t120,u52,3674.38,2026-08-18 10:49:00,device_52_A,Maryfurt,m6,0
-t237,u20,1660.66,2026-08-18 10:54:00,device_20_A,New Brittanymouth,m15,0
-t30,u95,4047.24,2026-08-18 11:23:00,device_95_A,South Williamshire,m5,0
-t209,u49,3352.6,2026-08-18 11:38:00,device_49_A,Franklinfort,m4,0
-t278,u95,4339.71,2026-08-18 12:35:00,device_95_A,South Williamshire,m16,0
-t157,u9,3765.09,2026-08-18 13:15:00,device_9_A,South Christina,m14,0
-t750,u58,1658.22,2026-08-18 13:20:00,device_58_A,Port Anthony,m1,0
-t32,u5,1367.92,2026-08-18 13:28:00,device_5_A,East Jeanettebury,m10,0
-t560,u63,3484.84,2026-08-18 13:37:00,device_63_A,Brewerfort,m2,0
-t421,u3,3327.37,2026-08-18 13:51:00,device_3_A,Port Kimhaven,m6,0
-t464,u34,5020.64,2026-08-18 13:59:00,device_34_A,Butlerbury,m16,0
-t299,u52,3955.25,2026-08-18 14:25:00,device_52_A,Maryfurt,m5,0
-t150,u38,892.27,2026-08-18 14:29:00,device_38_A,East Danielle,m17,0
-t305,u20,2118.83,2026-08-18 14:48:00,device_20_A,New Brittanymouth,m18,0
-t943,u20,2262.45,2026-08-18 15:23:00,device_20_A,New Brittanymouth,m13,0
-t608,u38,1097.99,2026-08-18 15:28:00,device_38_A,East Danielle,m4,0
-t607,u58,1649.33,2026-08-18 15:36:00,device_58_A,Port Anthony,m6,0
-t400,u94,3693.21,2026-08-18 15:36:00,device_94_A,South Matthewland,m20,0
-t818,u53,3765.94,2026-08-18 16:00:00,device_53_A,South Mauricefurt,m9,0
-t91,u3,3190.43,2026-08-18 16:13:00,device_3_A,Port Kimhaven,m8,0
-t981,u66,2819.33,2026-08-18 16:16:00,device_66_A,Lake Benjamin,m20,0
-t446,u86,1401.11,2026-08-18 16:58:00,device_86_A,Allisonfurt,m15,0
-t256,u11,524.71,2026-08-18 17:22:00,device_11_A,North Johnbury,m12,0
-t179,u73,636.46,2026-08-18 17:26:00,device_73_A,Jenniferbury,m17,0
-t931,u23,1535.13,2026-08-18 17:30:00,device_23_A,Mosston,m15,0
-t802,u46,2835.03,2026-08-18 17:45:00,device_46_A,Pearsonville,m4,0
-t412,u48,3630.91,2026-08-18 17:49:00,device_48_A,Gonzalezville,m10,0
-t992,u90,3096.62,2026-08-18 18:06:00,device_90_A,West Julia,m15,0
-t979,u67,1370.94,2026-08-18 18:07:00,device_67_A,Shawnhaven,m10,0
-t263,u27,1408.89,2026-08-18 18:17:00,device_27_A,East Catherineville,m14,0
-t554,u90,2692.86,2026-08-18 18:18:00,device_90_A,West Julia,m18,0
-t74,u49,3317.69,2026-08-18 19:00:00,device_49_A,Franklinfort,m2,0
-t386,u37,1471.47,2026-08-18 19:18:00,device_37_A,Thomasside,m17,0
-t996,u36,4670.78,2026-08-18 19:30:00,device_36_A,South Carolhaven,m15,0
-t923,u76,3552.41,2026-08-18 19:48:00,device_76_A,East Heidi,m13,0
-t442,u5,1304.15,2026-08-18 20:14:00,device_5_A,East Jeanettebury,m12,0
-t93,u16,985.64,2026-08-18 20:41:00,device_16_A,Lake Lauren,m19,0
-t796,u49,3172.9,2026-08-18 22:06:00,device_49_A,Franklinfort,m12,0
-t654,u90,2279.94,2026-08-18 22:11:00,device_90_A,West Julia,m17,0
-t164,u20,2088.92,2026-08-18 22:45:00,device_20_A,New Brittanymouth,m17,0
-t845,u11,3179.98,2026-08-19 04:42:00,device_unknown_5237,North William,m13,1
-t532,u22,1270.34,2026-08-19 07:28:00,device_22_A,Smithland,m11,0
-t640,u21,2550.21,2026-08-19 07:31:00,device_21_A,Thorntontown,m2,0
-t438,u49,2619.49,2026-08-19 07:41:00,device_49_A,Franklinfort,m13,0
-t64,u22,976.61,2026-08-19 07:56:00,device_22_A,Smithland,m11,0
-t255,u33,884.75,2026-08-19 07:59:00,device_33_A,East Sarah,m6,0
-t486,u57,1085.7,2026-08-19 08:13:00,device_57_A,West Jessica,m3,0
-t405,u98,1909.78,2026-08-19 08:25:00,device_98_A,Knightstad,m10,0
-t285,u68,4699.05,2026-08-19 08:26:00,device_68_A,Port David,m15,0
-t858,u99,639.2,2026-08-19 08:43:00,device_99_A,Alexandershire,m18,0
-t69,u32,1626.43,2026-08-19 08:47:00,device_32_A,North Jonathanland,m12,0
-t716,u25,2094.01,2026-08-19 08:53:00,device_25_A,Lake Allison,m8,0
-t115,u44,4375.84,2026-08-19 09:20:00,device_44_A,Alexanderville,m16,0
-t216,u100,1019.4,2026-08-19 09:24:00,device_100_A,West Darryl,m13,0
-t21,u53,5239.71,2026-08-19 09:34:00,device_53_A,South Mauricefurt,m13,0
-t320,u55,3425.65,2026-08-19 09:34:00,device_55_A,Gilesstad,m4,0
-t39,u95,3748.0,2026-08-19 10:00:00,device_95_A,South Williamshire,m4,0
-t123,u42,2936.59,2026-08-19 10:36:00,device_42_A,Brandiberg,m10,0
-t644,u27,1657.72,2026-08-19 10:56:00,device_27_A,East Catherineville,m2,0
-t778,u71,3180.35,2026-08-19 11:13:00,device_71_A,Ericside,m2,0
-t127,u44,4481.02,2026-08-19 11:35:00,device_44_A,Alexanderville,m14,0
-t186,u83,2371.83,2026-08-19 11:45:00,device_83_A,Port Jasonview,m16,0
-t303,u80,1139.59,2026-08-19 12:01:00,device_80_A,East Jeremyview,m15,0
-t714,u11,434.83,2026-08-19 12:23:00,device_11_A,North Johnbury,m3,0
-t657,u57,838.09,2026-08-19 12:28:00,device_57_A,West Jessica,m6,0
-t110,u81,4132.29,2026-08-19 12:53:00,device_81_A,Lake Jerryport,m15,0
-t306,u95,4646.61,2026-08-19 13:36:00,device_95_A,South Williamshire,m12,0
-t887,u23,1399.09,2026-08-19 14:09:00,device_23_A,Mosston,m14,0
-t76,u75,4500.93,2026-08-19 14:21:00,device_75_A,West Donna,m1,0
-t756,u75,3467.5,2026-08-19 14:27:00,device_75_A,West Donna,m8,0
-t700,u41,1129.26,2026-08-19 15:13:00,device_41_A,East Laura,m11,0
-t929,u45,1677.78,2026-08-19 15:30:00,device_45_A,West William,m18,0
-t952,u93,2981.58,2026-08-19 15:39:00,device_93_A,Eatonfort,m8,0
-t985,u24,2677.13,2026-08-19 15:53:00,device_24_A,West Michele,m10,0
-t798,u69,902.48,2026-08-19 16:13:00,device_69_A,Sharonland,m18,0
-t207,u68,5106.51,2026-08-19 16:50:00,device_68_A,Port David,m8,0
-t369,u24,2387.12,2026-08-19 16:55:00,device_24_A,West Michele,m15,0
-t663,u20,2184.53,2026-08-19 17:13:00,device_20_A,New Brittanymouth,m2,0
-t391,u11,420.76,2026-08-19 17:30:00,device_11_A,North Johnbury,m4,0
-t351,u86,2177.63,2026-08-19 17:38:00,device_86_A,Allisonfurt,m12,0
-t939,u8,3737.32,2026-08-19 18:59:00,device_8_A,Kochchester,m5,0
-t493,u68,4634.42,2026-08-19 19:12:00,device_68_A,Port David,m3,0
-t484,u100,899.44,2026-08-19 19:12:00,device_100_A,West Darryl,m3,0
-t333,u18,2634.81,2026-08-19 19:32:00,device_18_A,Knoxfurt,m15,0
-t126,u35,4816.85,2026-08-19 20:06:00,device_35_A,West Bryanburgh,m12,0
-t582,u8,3396.66,2026-08-19 20:15:00,device_8_A,Kochchester,m5,0
-t72,u49,3512.17,2026-08-19 20:50:00,device_49_A,Franklinfort,m1,0
-t96,u67,1445.8,2026-08-19 21:09:00,device_67_A,Shawnhaven,m2,0
-t329,u20,1413.86,2026-08-19 21:11:00,device_20_A,New Brittanymouth,m2,0
-t549,u41,976.11,2026-08-19 22:12:00,device_41_A,East Laura,m14,0
-t390,u41,1055.29,2026-08-19 22:21:00,device_41_A,East Laura,m19,0
-t593,u66,3744.75,2026-08-19 22:30:00,device_66_A,Lake Benjamin,m13,0
-t850,u20,1985.13,2026-08-19 22:59:00,device_20_A,New Brittanymouth,m6,0
-t257,u86,9540.77,2026-08-20 01:03:00,device_unknown_7566,Patrickfurt,m5,1
-t848,u62,7633.87,2026-08-20 01:15:00,device_unknown_9238,Helenport,m10,1
-t477,u47,8459.37,2026-08-20 01:24:00,device_unknown_1794,Port Michael,m14,1
-t274,u47,11152.96,2026-08-20 02:25:00,device_unknown_6562,Hudsonside,m11,1
-t52,u60,10627.59,2026-08-20 02:40:00,device_unknown_2964,Robinsonborough,m19,1
-t366,u9,13365.71,2026-08-20 03:44:00,device_unknown_1744,Davidside,m7,1
-t941,u70,35816.46,2026-08-20 04:05:00,device_unknown_1692,Port Eduardo,m12,1
-t234,u87,2706.78,2026-08-20 07:11:00,device_87_A,Oliviaside,m12,0
-t163,u49,3600.52,2026-08-20 07:32:00,device_49_A,Franklinfort,m9,0
-t548,u61,2058.83,2026-08-20 07:41:00,device_61_A,Wallaceville,m16,0
-t816,u72,1329.29,2026-08-20 07:44:00,device_72_A,West Matthewfurt,m17,0
-t870,u60,1972.45,2026-08-20 07:59:00,device_60_A,Port Joshuamouth,m19,0
-t301,u44,5249.44,2026-08-20 08:05:00,device_44_A,Alexanderville,m11,0
-t184,u90,3058.95,2026-08-20 08:29:00,device_90_A,West Julia,m11,0
-t489,u68,5278.35,2026-08-20 08:33:00,device_68_A,Port David,m8,0
-t288,u25,2312.55,2026-08-20 09:19:00,device_25_A,Lake Allison,m17,0
-t97,u51,3758.3,2026-08-20 11:18:00,device_51_A,South Lauriemouth,m15,0
-t953,u39,3323.26,2026-08-20 11:39:00,device_39_A,West Matthew,m5,0
-t414,u37,2360.9,2026-08-20 12:23:00,device_37_A,Thomasside,m14,0
-t359,u85,2274.43,2026-08-20 12:28:00,device_85_A,North Adamview,m5,0
-t736,u66,2359.56,2026-08-20 12:42:00,device_66_A,Lake Benjamin,m10,0
-t350,u28,2094.87,2026-08-20 12:45:00,device_28_A,Richardsonview,m15,0
-t108,u28,2677.32,2026-08-20 14:25:00,device_28_A,Richardsonview,m16,0
-t183,u94,2460.51,2026-08-20 14:55:00,device_94_A,South Matthewland,m19,0
-t726,u41,953.93,2026-08-20 15:04:00,device_41_A,East Laura,m7,0
-t619,u96,2366.53,2026-08-20 16:58:00,device_96_A,Delgadoville,m11,0
-t315,u7,859.46,2026-08-20 17:18:00,device_7_A,Lake Ashleyview,m5,0
-t955,u49,3192.25,2026-08-20 17:52:00,device_49_A,Franklinfort,m16,0
-t596,u95,4132.21,2026-08-20 18:11:00,device_95_A,South Williamshire,m18,0
-t539,u99,627.99,2026-08-20 18:13:00,device_99_A,Alexandershire,m11,0
-t577,u49,2558.83,2026-08-20 18:44:00,device_49_A,Franklinfort,m9,0
-t284,u61,1696.18,2026-08-20 19:06:00,device_61_A,Wallaceville,m15,0
-t191,u90,2899.58,2026-08-20 19:29:00,device_90_A,West Julia,m11,0
-t995,u81,3726.58,2026-08-20 19:35:00,device_81_A,Lake Jerryport,m1,0
-t631,u74,3706.78,2026-08-20 19:42:00,device_74_A,North Christopher,m11,0
-t703,u2,3380.19,2026-08-20 20:01:00,device_2_A,Lorraineton,m4,0
-t250,u46,3826.71,2026-08-20 20:06:00,device_46_A,Pearsonville,m2,0
-t779,u41,834.76,2026-08-20 20:07:00,device_41_A,East Laura,m19,0
-t167,u42,2173.08,2026-08-20 20:26:00,device_42_A,Brandiberg,m16,0
-t902,u25,1853.14,2026-08-20 20:46:00,device_25_A,Lake Allison,m8,0
-t270,u30,629.5,2026-08-20 20:49:00,device_30_A,Clinemouth,m19,0
-t490,u57,1001.85,2026-08-20 22:06:00,device_57_A,West Jessica,m9,0
-t409,u61,16162.23,2026-08-21 01:21:00,device_unknown_4814,Adamsport,m4,1
-t377,u33,701.66,2026-08-21 07:05:00,device_33_A,East Sarah,m3,0
-t465,u39,3220.35,2026-08-21 07:21:00,device_39_A,West Matthew,m7,0
-t932,u22,1186.47,2026-08-21 07:37:00,device_22_A,Smithland,m16,0
-t192,u66,3400.05,2026-08-21 08:39:00,device_66_A,Lake Benjamin,m20,0
-t436,u16,1333.57,2026-08-21 08:54:00,device_16_A,Lake Lauren,m15,0
-t628,u45,1537.17,2026-08-21 09:06:00,device_45_A,West William,m19,0
-t701,u56,5505.63,2026-08-21 09:15:00,device_56_A,Christinachester,m13,0
-t360,u57,1096.66,2026-08-21 10:22:00,device_57_A,West Jessica,m17,0
-t175,u46,2673.94,2026-08-21 10:34:00,device_46_A,Pearsonville,m5,0
-t434,u14,1460.32,2026-08-21 11:05:00,device_14_A,Allenmouth,m6,0
-t774,u54,3293.34,2026-08-21 11:13:00,device_54_A,Port Jay,m6,0
-t697,u67,1145.6,2026-08-21 11:46:00,device_67_A,Shawnhaven,m4,0
-t806,u25,2057.98,2026-08-21 12:04:00,device_25_A,Lake Allison,m5,0
-t431,u63,4155.29,2026-08-21 13:30:00,device_63_A,Brewerfort,m8,0
-t708,u58,1242.2,2026-08-21 14:01:00,device_58_A,Port Anthony,m2,0
-t413,u56,5397.92,2026-08-21 14:51:00,device_56_A,Christinachester,m18,0
-t775,u28,2708.89,2026-08-21 15:31:00,device_28_A,Richardsonview,m3,0
-t882,u58,1660.07,2026-08-21 15:33:00,device_58_A,Port Anthony,m13,0
-t428,u77,4455.68,2026-08-21 16:51:00,device_77_A,Hunterburgh,m4,0
-t673,u33,1012.99,2026-08-21 17:30:00,device_33_A,East Sarah,m15,0
-t375,u77,3159.98,2026-08-21 17:46:00,device_77_A,Hunterburgh,m19,0
-t852,u75,4595.56,2026-08-21 18:24:00,device_75_A,West Donna,m1,0
-t276,u83,2318.7,2026-08-21 18:45:00,device_83_A,Port Jasonview,m5,0
-t584,u44,4038.86,2026-08-21 19:08:00,device_44_A,Alexanderville,m5,0
-t615,u22,1272.53,2026-08-21 20:08:00,device_22_A,Smithland,m8,0
-t151,u79,2040.48,2026-08-21 20:09:00,device_79_A,South Brittanyshire,m10,0
-t99,u31,3243.22,2026-08-21 21:09:00,device_31_A,West Georgestad,m6,0
-t312,u75,3066.98,2026-08-21 21:15:00,device_75_A,West Donna,m12,0
-t872,u91,1348.83,2026-08-21 22:14:00,device_91_A,New Lisaside,m5,0
-t769,u40,1900.85,2026-08-21 22:16:00,device_40_A,Josephfort,m5,0
-t713,u19,2918.77,2026-08-21 22:51:00,device_19_A,Port Danielview,m17,0
-t38,u80,1064.95,2026-08-21 22:53:00,device_80_A,East Jeremyview,m8,0
+t320,u55,2701.54,2026-08-01 00:42:00,device_55_A,Lake Robert,m18,0
+t562,u89,4079.46,2026-08-01 02:02:00,device_89_A,South Robertton,m2,0
+t429,u8,6286.97,2026-08-01 02:48:00,device_8_A,Williamside,m5,0
+t937,u37,1323.94,2026-08-01 03:16:00,device_37_A,Johnshire,m12,0
+t395,u50,7423.02,2026-08-01 04:15:00,device_unknown_6641,Josephport,m19,1
+t801,u91,799.26,2026-08-01 07:54:00,device_91_A,New Lindsayborough,m15,0
+t583,u3,4072.96,2026-08-01 07:55:00,device_3_A,Hannahmouth,m20,0
+t833,u12,4931.07,2026-08-01 07:59:00,device_12_A,Mercadoside,m5,0
+t535,u12,6120.27,2026-08-01 08:08:00,device_12_A,Mercadoside,m12,0
+t694,u94,3922.17,2026-08-01 08:28:00,device_94_A,Brownberg,m11,0
+t1,u34,5461.29,2026-08-01 09:39:00,device_34_A,North Kyle,m19,0
+t719,u89,5282.38,2026-08-01 09:54:00,device_89_A,South Robertton,m10,0
+t783,u24,2182.17,2026-08-01 10:15:00,device_24_A,Lake Richardton,m11,0
+t978,u33,742.22,2026-08-01 10:47:00,device_33_A,South Timothy,m7,0
+t678,u84,1017.7,2026-08-01 10:52:00,device_84_A,Josephside,m15,0
+t533,u20,2174.66,2026-08-01 10:54:00,device_20_A,Robertsland,m2,0
+t92,u35,4997.25,2026-08-01 11:28:00,device_new_2858,Colemanhaven,m16,0
+t818,u53,5345.08,2026-08-01 12:25:00,device_53_A,Cynthiamouth,m14,0
+t39,u95,3205.71,2026-08-01 14:32:00,device_95_A,Sandrabury,m9,0
+t153,u99,563.74,2026-08-01 14:57:00,device_99_A,Patrickmouth,m5,0
+t992,u90,2918.95,2026-08-01 15:11:00,device_90_A,Johnsonfort,m2,0
+t927,u67,955.91,2026-08-01 15:42:00,device_new_8270,Kelleytown,m11,0
+t82,u4,2679.37,2026-08-01 15:49:00,device_4_A,Port Cynthia,m19,0
+t655,u62,10633.29,2026-08-01 15:51:00,device_unknown_9015,Davisfurt,m16,1
+t416,u51,3703.69,2026-08-01 16:42:00,device_51_A,Melissamouth,m17,0
+t879,u58,1496.98,2026-08-01 17:01:00,device_58_A,North Kimberlyside,m13,0
+t13,u5,1332.11,2026-08-01 17:16:00,device_5_A,Derricktown,m4,0
+t490,u57,1006.45,2026-08-01 17:18:00,device_57_A,East Dale,m3,0
+t738,u75,3880.65,2026-08-01 17:22:00,device_75_A,Waltermouth,m13,0
+t546,u46,3963.43,2026-08-01 18:24:00,device_46_A,New Adrian,m14,0
+t612,u58,1021.54,2026-08-01 18:31:00,device_58_A,North Kimberlyside,m20,0
+t484,u100,902.57,2026-08-01 18:41:00,device_new_2422,Douglastown,m13,0
+t167,u42,2950.39,2026-08-01 18:46:00,device_42_A,New Ryanshire,m8,0
+t899,u43,654.67,2026-08-01 19:17:00,device_43_A,South William,m18,0
+t548,u61,2005.23,2026-08-01 19:29:00,device_61_A,Port Steven,m15,0
+t146,u91,762.16,2026-08-01 19:32:00,device_91_A,New Lindsayborough,m15,0
+t250,u46,3542.8,2026-08-01 20:08:00,device_new_1280,New Adrian,m6,0
+t2,u61,1700.77,2026-08-01 20:16:00,device_61_A,Port Steven,m8,0
+t312,u75,4867.03,2026-08-01 20:31:00,device_75_A,Waltermouth,m14,0
+t588,u14,1100.2,2026-08-01 20:34:00,device_14_A,North Monica,m18,0
+t586,u96,2994.83,2026-08-01 20:42:00,device_96_A,South Davidstad,m6,0
+t869,u49,2742.44,2026-08-01 21:12:00,device_49_A,Elainefurt,m2,0
+t862,u45,2155.82,2026-08-01 21:37:00,device_45_A,Christianberg,m1,0
+t772,u38,821.25,2026-08-01 21:42:00,device_38_A,South Jeremyland,m3,0
+t556,u18,2572.76,2026-08-01 22:25:00,device_18_A,Davidview,m20,0
+t170,u95,4662.66,2026-08-01 22:55:00,device_95_A,Sandrabury,m9,0
+t139,u45,11824.2,2026-08-02 00:31:00,device_unknown_7626,Christianberg,m13,1
+t1000,u74,3976.25,2026-08-02 01:48:00,device_74_A,New Jonathanport,m18,0
+t255,u33,4715.78,2026-08-02 02:36:00,device_unknown_9897,Port John,m1,1
+t810,u29,11698.76,2026-08-02 02:46:00,device_unknown_4714,North Jacquelinefort,m11,1
+t580,u48,2880.9,2026-08-02 03:35:00,device_48_A,Port Brittany,m18,0
+t948,u50,5267.78,2026-08-02 03:48:00,device_unknown_6605,Morganmouth,m4,1
+t123,u42,2689.42,2026-08-02 08:42:00,device_42_A,New Ryanshire,m17,0
+t152,u14,1289.23,2026-08-02 09:16:00,device_14_A,North Monica,m14,0
+t145,u82,3243.21,2026-08-02 09:17:00,device_82_A,Mosleystad,m10,0
+t679,u34,9935.22,2026-08-02 09:22:00,device_new_3174,North Kyle,m1,0
+t554,u90,3293.1,2026-08-02 09:30:00,device_90_A,Johnsonfort,m4,0
+t582,u8,4185.59,2026-08-02 10:01:00,device_8_A,Williamside,m5,0
+t415,u59,686.25,2026-08-02 10:03:00,device_59_A,New Jimmystad,m16,0
+t36,u72,10655.79,2026-08-02 10:05:00,device_unknown_3442,Mitchellberg,m14,1
+t577,u49,3297.58,2026-08-02 10:47:00,device_49_A,Elainefurt,m6,0
+t509,u95,4338.1,2026-08-02 11:02:00,device_95_A,Sandrabury,m5,0
+t315,u7,5718.03,2026-08-02 11:05:00,device_unknown_1901,Robertsstad,m4,1
+t996,u36,3106.45,2026-08-02 11:21:00,device_new_1175,Willieland,m16,0
+t550,u1,2248.57,2026-08-02 11:55:00,device_1_A,Kennedystad,m16,0
+t6,u62,2087.99,2026-08-02 12:34:00,device_62_A,Calderonfort,m12,0
+t576,u79,1719.87,2026-08-02 12:55:00,device_79_A,Johnhaven,m14,0
+t313,u43,709.96,2026-08-02 13:00:00,device_43_A,South William,m5,0
+t919,u8,4175.3,2026-08-02 13:02:00,device_8_A,Williamside,m18,0
+t604,u20,1379.37,2026-08-02 13:11:00,device_20_A,Robertsland,m11,0
+t537,u91,1315.11,2026-08-02 13:33:00,device_91_A,New Lindsayborough,m7,0
+t90,u21,2643.5,2026-08-02 13:36:00,device_21_A,West Daniel,m9,0
+t799,u50,1629.26,2026-08-02 13:51:00,device_50_A,Lake Sarah,m16,0
+t995,u81,5560.95,2026-08-02 14:28:00,device_81_A,West Marcus,m3,0
+t861,u13,3296.84,2026-08-02 15:31:00,device_13_A,East Antonio,m7,0
+t226,u29,3077.41,2026-08-02 16:23:00,device_29_A,Johnville,m1,0
+t191,u90,6634.67,2026-08-02 16:43:00,device_unknown_8609,Armstrongland,m11,1
+t745,u3,3945.19,2026-08-02 16:44:00,device_3_A,Hannahmouth,m17,0
+t396,u64,2514.48,2026-08-02 17:39:00,device_64_A,Thomasview,m14,0
+t50,u52,3881.42,2026-08-02 19:46:00,device_52_A,Albertburgh,m8,0
+t414,u37,2152.98,2026-08-02 19:53:00,device_37_A,Johnshire,m13,0
+t808,u21,3579.43,2026-08-02 20:04:00,device_21_A,West Daniel,m16,0
+t236,u53,6067.47,2026-08-02 20:36:00,device_53_A,Cynthiamouth,m14,0
+t327,u93,5035.99,2026-08-02 20:42:00,device_93_A,East Josephmouth,m12,0
+t489,u68,3820.57,2026-08-02 20:53:00,device_68_A,New Susanshire,m12,0
+t890,u59,549.17,2026-08-02 21:17:00,device_59_A,New Jimmystad,m17,0
+t608,u38,706.21,2026-08-02 21:22:00,device_38_A,Sarahhaven,m20,0
+t646,u44,7049.65,2026-08-02 21:24:00,device_new_5230,Griffithhaven,m3,0
+t668,u80,6820.96,2026-08-03 00:32:00,device_unknown_8772,Alyssamouth,m2,1
+t722,u85,2263.64,2026-08-03 01:07:00,device_85_A,Lake Debbieville,m18,0
+t942,u73,570.32,2026-08-03 01:24:00,device_73_A,Margaretchester,m14,0
+t904,u38,730.46,2026-08-03 01:28:00,device_38_A,Sarahhaven,m5,0
+t813,u82,8545.66,2026-08-03 02:34:00,device_unknown_4365,Mosleystad,m15,1
+t322,u53,4733.54,2026-08-03 03:12:00,device_53_A,Cynthiamouth,m3,0
+t913,u98,14808.15,2026-08-03 04:37:00,device_unknown_8606,Reevesfurt,m8,1
+t89,u95,14068.81,2026-08-03 06:05:00,device_unknown_7622,Sandrabury,m18,1
+t493,u68,5146.05,2026-08-03 08:28:00,device_68_A,New Susanshire,m16,0
+t467,u45,1737.9,2026-08-03 08:50:00,device_45_A,Christianberg,m6,0
+t356,u33,590.2,2026-08-03 09:11:00,device_33_A,South Timothy,m11,0
+t725,u92,3753.51,2026-08-03 09:14:00,device_92_A,Simpsonville,m11,0
+t307,u57,946.49,2026-08-03 09:15:00,device_new_6152,East Dale,m8,0
+t666,u90,2825.29,2026-08-03 10:04:00,device_90_A,Johnsonfort,m17,0
+t401,u94,3320.73,2026-08-03 10:08:00,device_94_A,Brownberg,m17,0
+t724,u1,1766.94,2026-08-03 10:36:00,device_1_A,Kennedystad,m11,0
+t4,u28,2575.95,2026-08-03 10:49:00,device_28_A,North Matthew,m13,0
+t601,u3,5757.68,2026-08-03 11:17:00,device_3_A,Hannahmouth,m7,0
+t757,u79,1880.43,2026-08-03 11:41:00,device_79_A,Port Joanbury,m12,0
+t115,u44,3599.47,2026-08-03 11:43:00,device_44_A,Mooremouth,m13,0
+t402,u49,2574.26,2026-08-03 13:17:00,device_49_A,Elainefurt,m12,0
+t442,u5,962.19,2026-08-03 13:24:00,device_5_A,Derricktown,m14,0
+t685,u92,4041.32,2026-08-03 14:01:00,device_92_A,Simpsonville,m11,0
+t569,u87,6454.12,2026-08-03 14:18:00,device_87_A,Lake Joyport,m8,0
+t633,u59,705.88,2026-08-03 15:15:00,device_59_A,New Jimmystad,m1,0
+t893,u73,404.74,2026-08-03 15:44:00,device_73_A,Margaretchester,m10,0
+t909,u76,3539.07,2026-08-03 16:10:00,device_76_A,Lake Adamborough,m3,0
+t590,u46,3630.42,2026-08-03 16:41:00,device_46_A,New Adrian,m14,0
+t360,u57,642.62,2026-08-03 16:58:00,device_57_A,East Dale,m13,0
+t519,u11,669.15,2026-08-03 17:17:00,device_11_A,Lake Ashley,m14,0
+t329,u20,1524.58,2026-08-03 17:23:00,device_20_A,Robertsland,m11,0
+t141,u94,2559.75,2026-08-03 17:48:00,device_94_A,Brownberg,m8,0
+t406,u10,4463.21,2026-08-03 17:52:00,device_10_A,Salazarville,m12,0
+t182,u13,5481.91,2026-08-03 18:16:00,device_13_A,East Antonio,m15,0
+t251,u2,4848.12,2026-08-03 19:36:00,device_2_A,Michaelport,m3,0
+t472,u86,1484.1,2026-08-03 20:10:00,device_new_9835,South Mary,m17,0
+t843,u16,1358.54,2026-08-03 20:14:00,device_16_A,East Danielle,m6,0
+t499,u53,6087.28,2026-08-03 20:37:00,device_53_A,Cynthiamouth,m13,0
+t174,u73,392.61,2026-08-03 21:01:00,device_73_A,Margaretchester,m12,0
+t716,u25,3040.58,2026-08-03 21:39:00,device_25_A,Port Scottberg,m20,0
+t98,u45,1666.8,2026-08-03 21:56:00,device_45_A,Christianberg,m1,0
+t497,u27,1252.05,2026-08-03 22:01:00,device_27_A,New Annefort,m20,0
+t756,u75,2963.43,2026-08-03 22:20:00,device_75_A,Waltermouth,m18,0
+t664,u17,2100.94,2026-08-03 22:40:00,device_17_A,Mosleytown,m5,0
+t674,u91,2307.03,2026-08-04 02:32:00,device_unknown_7852,South Karenshire,m20,1
+t397,u100,892.52,2026-08-04 03:04:00,device_100_A,Gwendolynburgh,m1,0
+t773,u20,12971.33,2026-08-04 03:44:00,device_20_A,West Emma,m14,1
+t695,u51,4492.31,2026-08-04 03:47:00,device_51_A,Melissamouth,m16,0
+t188,u49,2376.21,2026-08-04 07:12:00,device_new_6531,Elainefurt,m3,0
+t319,u22,962.02,2026-08-04 07:54:00,device_22_A,Aguilarton,m2,0
+t673,u33,772.63,2026-08-04 08:29:00,device_33_A,South Timothy,m19,0
+t271,u1,2360.27,2026-08-04 09:00:00,device_1_A,Kennedystad,m15,0
+t860,u87,3900.78,2026-08-04 09:06:00,device_87_A,Lake Joyport,m19,0
+t225,u95,3559.99,2026-08-04 09:51:00,device_95_A,Sandrabury,m17,0
+t999,u63,4672.19,2026-08-04 11:02:00,device_63_A,West Danaville,m17,0
+t689,u53,4717.34,2026-08-04 11:48:00,device_53_A,Cynthiamouth,m16,0
+t435,u5,1262.65,2026-08-04 11:53:00,device_5_A,Derricktown,m11,0
+t235,u49,3822.85,2026-08-04 12:14:00,device_49_A,Elainefurt,m14,0
+t14,u28,2735.92,2026-08-04 12:22:00,device_28_A,North Matthew,m17,0
+t279,u98,2178.13,2026-08-04 12:27:00,device_98_A,Melaniemouth,m14,0
+t931,u23,2291.84,2026-08-04 13:17:00,device_23_A,Port Jamesville,m8,0
+t971,u17,1955.62,2026-08-04 13:23:00,device_17_A,Mosleytown,m1,0
+t316,u4,19354.59,2026-08-04 14:56:00,device_unknown_6680,West Jamesland,m6,1
+t510,u67,813.35,2026-08-04 15:10:00,device_67_A,Kelleytown,m18,0
+t557,u39,3997.95,2026-08-04 15:11:00,device_39_A,Lindseymouth,m6,0
+t292,u3,4058.37,2026-08-04 15:38:00,device_3_A,Hannahmouth,m20,0
+t110,u81,3596.95,2026-08-04 15:55:00,device_81_A,West Marcus,m6,0
+t692,u28,3486.52,2026-08-04 16:03:00,device_28_A,North Matthew,m2,0
+t776,u61,2880.66,2026-08-04 17:13:00,device_61_A,Port Steven,m15,0
+t737,u6,1206.8,2026-08-04 18:21:00,device_6_A,Smithshire,m10,0
+t128,u61,2501.15,2026-08-04 18:21:00,device_61_A,Port Steven,m5,0
+t142,u5,896.54,2026-08-04 18:49:00,device_5_A,Derricktown,m5,0
+t649,u40,4134.06,2026-08-04 19:17:00,device_40_A,Joneschester,m19,0
+t765,u98,2059.76,2026-08-04 20:11:00,device_98_A,Melaniemouth,m11,0
+t26,u74,3866.8,2026-08-04 20:54:00,device_74_A,New Jonathanport,m18,0
+t854,u51,9700.38,2026-08-04 22:01:00,device_new_3843,Melissamouth,m13,0
+t213,u54,3182.78,2026-08-04 22:04:00,device_new_7666,West Sharonmouth,m16,0
+t162,u61,1626.02,2026-08-04 22:08:00,device_61_A,Port Steven,m15,0
+t455,u97,3159.63,2026-08-04 22:20:00,device_97_A,Williamville,m18,0
+t736,u66,2611.07,2026-08-04 22:26:00,device_66_A,Donaldfort,m16,0
+t607,u58,1026.42,2026-08-04 22:32:00,device_58_A,North Kimberlyside,m2,0
+t460,u95,3205.2,2026-08-04 22:57:00,device_95_A,North Betty,m12,0
+t143,u64,1797.12,2026-08-04 22:58:00,device_64_A,Thomasview,m15,0
+t443,u83,2034.1,2026-08-05 01:16:00,device_new_8130,Patriciachester,m1,0
+t103,u35,8197.69,2026-08-05 01:20:00,device_35_A,Colemanhaven,m8,0
+t491,u83,1961.06,2026-08-05 01:28:00,device_83_A,Patriciachester,m16,0
+t857,u23,1754.31,2026-08-05 02:23:00,device_23_A,Port Jamesville,m7,0
+t767,u48,2658.8,2026-08-05 07:20:00,device_48_A,Port Brittany,m18,0
+t353,u41,3275.53,2026-08-05 07:30:00,device_unknown_5205,Baileytown,m13,1
+t598,u97,2984.76,2026-08-05 07:44:00,device_new_6793,Williamville,m11,0
+t34,u80,1154.77,2026-08-05 08:01:00,device_80_A,South Cynthia,m3,0
+t970,u33,888.38,2026-08-05 08:32:00,device_33_A,South Timothy,m10,0
+t558,u74,27643.17,2026-08-05 08:36:00,device_unknown_1869,Aliciaville,m13,1
+t523,u39,3520.69,2026-08-05 08:50:00,device_39_A,Noahborough,m18,0
+t83,u32,1210.43,2026-08-05 09:02:00,device_32_A,Amandaberg,m2,0
+t306,u95,4274.39,2026-08-05 09:21:00,device_95_A,Sandrabury,m4,0
+t788,u70,12644.56,2026-08-05 10:43:00,device_70_A,Davidberg,m4,1
+t545,u72,1590.19,2026-08-05 10:44:00,device_72_A,South Chelsey,m20,0
+t216,u100,1243.68,2026-08-05 10:45:00,device_new_1613,Gwendolynburgh,m11,0
+t452,u18,3248.7,2026-08-05 10:48:00,device_18_A,Davidview,m10,0
+t285,u68,4077.02,2026-08-05 11:26:00,device_new_3838,New Susanshire,m6,0
+t119,u12,5278.19,2026-08-05 11:50:00,device_12_A,Mercadoside,m19,0
+t347,u93,4909.39,2026-08-05 11:55:00,device_93_A,East Josephmouth,m4,0
+t809,u38,971.56,2026-08-05 12:22:00,device_38_A,Sarahhaven,m17,0
+t392,u4,5152.12,2026-08-05 12:34:00,device_4_A,Port Cynthia,m16,0
+t889,u22,1095.3,2026-08-05 12:51:00,device_22_A,Aguilarton,m12,0
+t647,u16,1413.03,2026-08-05 13:35:00,device_16_A,East Danielle,m20,0
+t241,u23,2317.76,2026-08-05 13:46:00,device_new_8846,Brianaport,m13,0
+t44,u34,4068.0,2026-08-05 13:48:00,device_34_A,New Christian,m12,0
+t63,u47,2289.97,2026-08-05 13:52:00,device_47_A,Tranport,m15,0
+t483,u22,1364.93,2026-08-05 14:09:00,device_22_A,Aguilarton,m20,0
+t929,u45,1703.77,2026-08-05 14:24:00,device_45_A,Christianberg,m20,0
+t211,u73,431.03,2026-08-05 14:51:00,device_new_5450,Margaretchester,m8,0
+t498,u11,592.19,2026-08-05 15:26:00,device_11_A,Lake Ashley,m15,0
+t468,u20,1828.61,2026-08-05 16:19:00,device_new_1305,Robertsland,m3,0
+t76,u75,3244.16,2026-08-05 16:59:00,device_75_A,Waltermouth,m5,0
+t670,u7,1125.88,2026-08-05 17:03:00,device_7_A,Timothyberg,m14,0
+t764,u40,2674.42,2026-08-05 17:20:00,device_40_A,Joneschester,m19,0
+t48,u85,1912.15,2026-08-05 17:42:00,device_new_3780,Lake Debbieville,m3,0
+t336,u83,2469.39,2026-08-05 17:59:00,device_83_A,North Laura,m4,0
+t485,u73,530.44,2026-08-05 18:23:00,device_73_A,Margaretchester,m12,0
+t983,u28,2209.03,2026-08-05 18:42:00,device_28_A,North Matthew,m9,0
+t806,u25,2686.55,2026-08-05 19:59:00,device_new_8675,Port Scottberg,m14,0
+t137,u67,1316.09,2026-08-05 20:21:00,device_67_A,Kelleytown,m6,0
+t718,u45,2569.14,2026-08-05 20:36:00,device_45_A,Christianberg,m2,0
+t802,u46,3052.79,2026-08-05 20:57:00,device_46_A,New Adrian,m14,0
+t877,u94,3280.92,2026-08-05 21:25:00,device_94_A,Brownberg,m20,0
+t880,u30,1277.5,2026-08-05 21:37:00,device_30_A,Lake Matthew,m7,0
+t729,u45,6160.53,2026-08-05 21:43:00,device_unknown_7623,West Debra,m9,1
+t394,u83,12430.08,2026-08-05 22:54:00,device_83_A,Patriciachester,m7,1
+t974,u42,11126.53,2026-08-06 00:32:00,device_unknown_3826,New Ryanshire,m15,1
+t310,u99,614.24,2026-08-06 02:39:00,device_99_A,Robertburgh,m5,0
+t959,u76,4156.92,2026-08-06 03:41:00,device_76_A,Lake Adamborough,m3,0
+t780,u88,8635.13,2026-08-06 07:07:00,device_unknown_2900,Davidberg,m15,1
+t220,u42,1920.99,2026-08-06 07:28:00,device_42_A,New Ryanshire,m9,0
+t399,u3,4411.44,2026-08-06 07:41:00,device_3_A,Hannahmouth,m2,0
+t464,u34,4816.84,2026-08-06 07:43:00,device_34_A,North Kyle,m17,0
+t325,u59,556.02,2026-08-06 07:52:00,device_59_A,New Jimmystad,m11,0
+t584,u44,3811.88,2026-08-06 07:54:00,device_44_A,Mooremouth,m8,0
+t507,u76,4148.05,2026-08-06 10:08:00,device_76_A,Lake Adamborough,m4,0
+t868,u46,4407.84,2026-08-06 10:17:00,device_46_A,New Adrian,m3,0
+t882,u58,2331.16,2026-08-06 10:19:00,device_new_1343,North Kimberlyside,m11,0
+t524,u6,1188.44,2026-08-06 10:20:00,device_6_A,Port Jasonstad,m8,0
+t555,u81,5564.86,2026-08-06 10:44:00,device_81_A,West Marcus,m10,0
+t362,u4,3078.48,2026-08-06 10:47:00,device_4_A,Port Cynthia,m3,0
+t55,u91,895.97,2026-08-06 11:03:00,device_91_A,New Lindsayborough,m7,0
+t543,u61,1864.22,2026-08-06 11:10:00,device_61_A,Derrickfurt,m4,0
+t284,u61,1986.42,2026-08-06 11:17:00,device_61_A,Port Steven,m19,0
+t847,u40,5845.74,2026-08-06 11:39:00,device_40_A,Joneschester,m10,0
+t108,u28,2994.82,2026-08-06 11:40:00,device_28_A,North Matthew,m4,0
+t330,u46,2592.95,2026-08-06 12:34:00,device_46_A,New Adrian,m15,0
+t104,u8,4291.11,2026-08-06 12:42:00,device_8_A,Williamside,m3,0
+t640,u21,3554.62,2026-08-06 13:27:00,device_21_A,West Daniel,m17,0
+t755,u88,3570.79,2026-08-06 14:01:00,device_88_A,Davidberg,m14,0
+t334,u24,1626.16,2026-08-06 14:27:00,device_24_A,Lake Richardton,m5,0
+t845,u11,548.37,2026-08-06 14:51:00,device_11_A,Lake Ashley,m16,0
+t112,u62,2092.97,2026-08-06 15:12:00,device_new_6992,Calderonfort,m18,0
+t388,u49,2703.17,2026-08-06 15:22:00,device_49_A,Elainefurt,m19,0
+t386,u37,2079.89,2026-08-06 16:26:00,device_37_A,Michaelton,m6,0
+t707,u59,848.32,2026-08-06 16:37:00,device_new_8742,New Jimmystad,m14,0
+t825,u16,1426.3,2026-08-06 16:51:00,device_16_A,East Danielle,m19,0
+t611,u39,2813.97,2026-08-06 17:13:00,device_39_A,Noahborough,m11,0
+t20,u74,8761.85,2026-08-06 17:40:00,device_74_A,New Jonathanport,m3,0
+t127,u44,4354.48,2026-08-06 17:47:00,device_44_A,Mooremouth,m9,0
+t841,u3,4544.47,2026-08-06 17:57:00,device_3_A,Hannahmouth,m13,0
+t377,u33,732.07,2026-08-06 18:07:00,device_33_A,South Timothy,m12,0
+t492,u46,3973.12,2026-08-06 18:15:00,device_46_A,New Adrian,m5,0
+t538,u13,4424.39,2026-08-06 18:51:00,device_13_A,East Antonio,m15,0
+t502,u8,4030.91,2026-08-06 18:52:00,device_new_5222,Williamside,m20,0
+t774,u54,3367.13,2026-08-06 18:56:00,device_54_A,Cookshire,m20,0
+t339,u32,1379.35,2026-08-06 19:13:00,device_32_A,New Jade,m5,0
+t866,u60,1606.79,2026-08-06 20:31:00,device_60_A,North Brent,m1,0
+t54,u26,4855.75,2026-08-06 21:01:00,device_26_A,Port Elizabethport,m3,0
+t672,u40,1845.93,2026-08-06 21:30:00,device_40_A,Joneschester,m6,0
+t288,u25,12747.4,2026-08-06 21:47:00,device_unknown_8492,New Andrewmouth,m18,1
+t177,u58,1612.85,2026-08-06 21:53:00,device_58_A,North Kimberlyside,m12,0
+t752,u70,5799.74,2026-08-06 22:07:00,device_70_A,Olivialand,m1,0
+t989,u89,4165.32,2026-08-06 22:21:00,device_new_3879,South Robertton,m4,0
+t318,u79,2382.3,2026-08-06 22:36:00,device_79_A,Johnhaven,m19,0
+t208,u58,1198.68,2026-08-06 22:37:00,device_new_5876,North Kimberlyside,m11,0
+t164,u20,2860.37,2026-08-06 22:46:00,device_20_A,Robertsland,m20,0
+t600,u68,3897.5,2026-08-07 01:16:00,device_68_A,New Susanshire,m17,0
+t693,u32,1233.85,2026-08-07 01:18:00,device_new_9770,New Jade,m6,0
+t372,u73,465.32,2026-08-07 01:30:00,device_73_A,Margaretchester,m5,0
+t324,u3,4339.34,2026-08-07 01:58:00,device_3_A,Markchester,m18,0
+t186,u83,1588.83,2026-08-07 02:05:00,device_83_A,Patriciachester,m3,0
+t680,u90,2092.32,2026-08-07 03:28:00,device_90_A,Johnsonfort,m5,0
+t662,u59,1701.14,2026-08-07 04:34:00,device_unknown_7060,Michealstad,m2,1
+t949,u74,26629.82,2026-08-07 06:18:00,device_unknown_1685,East Samuelshire,m13,1
+t5,u15,9083.96,2026-08-07 07:06:00,device_unknown_6925,Port Stephaniestad,m8,1
+t513,u75,2599.91,2026-08-07 07:47:00,device_75_A,Waltermouth,m16,0
+t895,u48,3389.58,2026-08-07 07:55:00,device_48_A,Port Brittany,m16,0
+t793,u55,3844.37,2026-08-07 08:03:00,device_55_A,Lake Robert,m17,0
+t8,u32,1639.6,2026-08-07 08:25:00,device_32_A,New Jade,m8,0
+t154,u24,2592.66,2026-08-07 08:32:00,device_24_A,Lake Richardton,m11,0
+t892,u22,1226.07,2026-08-07 09:03:00,device_22_A,Aguilarton,m9,0
+t403,u73,417.9,2026-08-07 09:18:00,device_new_8875,Margaretchester,m4,0
+t703,u2,3814.32,2026-08-07 09:37:00,device_2_A,Michaelport,m5,0
+t711,u43,600.21,2026-08-07 09:54:00,device_new_1798,South William,m17,0
+t686,u38,941.53,2026-08-07 10:00:00,device_38_A,Sarahhaven,m16,0
+t24,u54,4425.22,2026-08-07 10:07:00,device_54_A,West Sharonmouth,m2,0
+t262,u26,3070.7,2026-08-07 10:19:00,device_26_A,Port Elizabethport,m1,0
+t744,u17,2425.59,2026-08-07 10:22:00,device_17_A,Mosleytown,m19,0
+t470,u58,1106.41,2026-08-07 10:27:00,device_new_2127,North Kimberlyside,m1,0
+t851,u90,1909.12,2026-08-07 10:38:00,device_90_A,Johnsonfort,m5,0
+t669,u24,1774.24,2026-08-07 10:40:00,device_24_A,Lake Richardton,m2,0
+t101,u12,6316.45,2026-08-07 10:56:00,device_12_A,Mercadoside,m15,0
+t43,u82,2389.25,2026-08-07 10:58:00,device_82_A,Mosleystad,m13,0
+t93,u16,1332.37,2026-08-07 11:23:00,device_16_A,East Howard,m13,0
+t486,u57,750.71,2026-08-07 12:00:00,device_57_A,East Dale,m14,0
+t782,u57,726.11,2026-08-07 13:09:00,device_57_A,East Dale,m19,0
+t385,u78,712.93,2026-08-07 13:26:00,device_78_A,Loganfurt,m11,0
+t750,u58,1503.01,2026-08-07 13:45:00,device_58_A,North Kimberlyside,m1,0
+t302,u18,3249.39,2026-08-07 13:50:00,device_18_A,Davidview,m16,0
+t91,u3,3653.1,2026-08-07 14:18:00,device_3_A,Lake Michael,m6,0
+t605,u33,686.5,2026-08-07 15:30:00,device_33_A,South Timothy,m4,0
+t852,u75,4516.3,2026-08-07 17:37:00,device_75_A,Waltermouth,m9,0
+t405,u98,4305.81,2026-08-07 17:40:00,device_98_A,Melaniemouth,m14,0
+t3,u35,11857.94,2026-08-07 17:55:00,device_35_A,Colemanhaven,m4,0
+t234,u87,3179.79,2026-08-07 17:58:00,device_87_A,Lake Joyport,m8,0
+t627,u32,1199.56,2026-08-07 18:02:00,device_32_A,Lake Nicholasburgh,m4,0
+t222,u26,3712.75,2026-08-07 18:07:00,device_new_8834,Port Elizabethport,m14,0
+t66,u25,3088.74,2026-08-07 18:42:00,device_25_A,West Jermaineview,m18,0
+t585,u16,1420.56,2026-08-07 18:53:00,device_16_A,East Danielle,m2,0
+t259,u60,12948.71,2026-08-07 19:16:00,device_unknown_4737,West Amandaton,m6,1
+t84,u24,2271.16,2026-08-07 19:59:00,device_new_8195,Lake Richardton,m9,0
+t102,u99,1569.95,2026-08-07 20:32:00,device_99_A,Bondton,m19,0
+t883,u37,1821.6,2026-08-07 20:36:00,device_37_A,Johnshire,m3,0
+t903,u63,7137.74,2026-08-07 20:58:00,device_63_A,West Danaville,m13,0
+t587,u99,655.34,2026-08-07 21:18:00,device_99_A,Bondton,m19,0
+t702,u31,2933.04,2026-08-07 21:27:00,device_31_A,Millerborough,m14,0
+t81,u34,5229.12,2026-08-07 21:31:00,device_34_A,North Kyle,m20,0
+t21,u53,5207.08,2026-08-07 22:05:00,device_53_A,Bethside,m8,0
+t905,u96,2611.35,2026-08-08 01:10:00,device_96_A,Port Monicastad,m17,0
+t844,u46,9328.19,2026-08-08 01:39:00,device_46_A,Mooreburgh,m14,1
+t358,u87,10729.54,2026-08-08 01:49:00,device_unknown_9849,West Andrewview,m4,1
+t245,u36,3467.51,2026-08-08 02:09:00,device_36_A,Alyssachester,m9,0
+t699,u99,450.36,2026-08-08 02:14:00,device_99_A,Bondton,m7,0
+t837,u32,955.07,2026-08-08 02:36:00,device_32_A,New Jade,m18,0
+t541,u1,2327.59,2026-08-08 02:38:00,device_1_A,Kennedystad,m12,0
+t297,u66,3086.8,2026-08-08 02:44:00,device_66_A,Donaldfort,m3,0
+t157,u9,4100.37,2026-08-08 03:00:00,device_new_4178,Port Lisastad,m15,0
+t938,u56,5041.82,2026-08-08 03:06:00,device_56_A,West Kristenfurt,m19,0
+t777,u60,2211.75,2026-08-08 03:17:00,device_60_A,North Brent,m9,0
+t609,u4,3802.3,2026-08-08 03:29:00,device_4_A,Port Cynthia,m19,0
+t440,u34,4430.47,2026-08-08 07:16:00,device_34_A,North Kyle,m17,0
+t199,u58,1429.87,2026-08-08 08:11:00,device_58_A,North Kimberlyside,m2,0
+t525,u100,698.77,2026-08-08 08:13:00,device_100_A,Gwendolynburgh,m19,0
+t61,u94,2730.74,2026-08-08 09:30:00,device_94_A,Hillmouth,m16,0
+t872,u91,1132.18,2026-08-08 10:28:00,device_91_A,New Lindsayborough,m4,0
+t293,u40,3193.64,2026-08-08 10:45:00,device_40_A,Amystad,m5,0
+t579,u55,3557.56,2026-08-08 10:59:00,device_55_A,Lake Robert,m15,0
+t717,u22,905.92,2026-08-08 11:48:00,device_22_A,Aguilarton,m8,0
+t269,u8,4070.74,2026-08-08 12:58:00,device_8_A,Williamside,m18,0
+t955,u49,2832.17,2026-08-08 13:14:00,device_new_2645,Elainefurt,m5,0
+t682,u73,534.59,2026-08-08 13:48:00,device_73_A,Margaretchester,m3,0
+t71,u15,1143.94,2026-08-08 13:52:00,device_15_A,East Joseph,m3,0
+t779,u41,1198.28,2026-08-08 14:19:00,device_new_8208,Baileytown,m6,0
+t37,u83,1827.51,2026-08-08 14:21:00,device_new_1653,Patriciachester,m4,0
+t65,u28,2942.03,2026-08-08 14:22:00,device_28_A,Lake Desiree,m4,0
+t96,u67,1020.14,2026-08-08 14:29:00,device_67_A,North Hollystad,m19,0
+t865,u35,3406.74,2026-08-08 14:42:00,device_35_A,Colemanhaven,m14,0
+t594,u14,7485.36,2026-08-08 14:57:00,device_unknown_1185,North Monica,m3,1
+t444,u29,3717.19,2026-08-08 15:09:00,device_29_A,Johnville,m14,0
+t494,u33,789.09,2026-08-08 15:15:00,device_33_A,South Timothy,m13,0
+t207,u68,4224.0,2026-08-08 15:57:00,device_68_A,New Susanshire,m20,0
+t425,u71,5097.25,2026-08-08 16:14:00,device_71_A,Daisyland,m18,0
+t969,u24,2048.64,2026-08-08 16:16:00,device_24_A,Lake Richardton,m10,0
+t739,u43,848.01,2026-08-08 16:29:00,device_43_A,South William,m19,0
+t735,u93,4754.24,2026-08-08 16:47:00,device_93_A,East Josephmouth,m6,0
+t125,u22,2032.71,2026-08-08 16:54:00,device_22_A,Aguilarton,m15,0
+t140,u44,12017.91,2026-08-08 17:22:00,device_44_A,Laurenhaven,m3,1
+t683,u78,2055.93,2026-08-08 18:20:00,device_78_A,Loganfurt,m15,0
+t963,u60,1447.72,2026-08-08 18:44:00,device_60_A,Amyton,m5,0
+t88,u59,627.99,2026-08-08 19:01:00,device_59_A,New Jimmystad,m18,0
+t151,u79,1582.5,2026-08-08 19:03:00,device_new_6082,Dustinmouth,m5,0
+t835,u40,3374.34,2026-08-08 19:24:00,device_40_A,Joneschester,m16,0
+t437,u17,1897.57,2026-08-08 19:35:00,device_17_A,Mosleytown,m3,0
+t105,u100,1273.86,2026-08-08 19:43:00,device_new_5097,Gwendolynburgh,m16,0
+t960,u68,5027.07,2026-08-08 19:45:00,device_68_A,New Susanshire,m13,0
+t258,u16,970.42,2026-08-08 19:53:00,device_16_A,East Danielle,m11,0
+t466,u68,4653.03,2026-08-08 20:20:00,device_68_A,New Susanshire,m1,0
+t205,u15,5565.58,2026-08-08 21:19:00,device_unknown_4340,Nicoleview,m2,1
+t630,u67,1211.08,2026-08-08 22:39:00,device_67_A,Kelleytown,m19,0
+t591,u48,2430.73,2026-08-08 22:50:00,device_48_A,Crystalborough,m17,0
+t201,u69,666.3,2026-08-08 22:57:00,device_69_A,West Robin,m19,0
+t231,u72,1664.72,2026-08-09 00:08:00,device_72_A,South Chelsey,m2,0
+t113,u9,3537.37,2026-08-09 00:17:00,device_9_A,Port Lisastad,m8,0
+t195,u77,19001.44,2026-08-09 00:45:00,device_77_A,Davidsonchester,m10,1
+t229,u27,1355.35,2026-08-09 01:53:00,device_27_A,New Annefort,m12,0
+t901,u37,1381.04,2026-08-09 02:20:00,device_37_A,Johnshire,m3,0
+t651,u95,5050.97,2026-08-09 02:56:00,device_95_A,Sandrabury,m11,0
+t504,u57,959.48,2026-08-09 03:06:00,device_new_3745,East Dale,m20,0
+t333,u18,4586.21,2026-08-09 03:16:00,device_18_A,Davidview,m18,0
+t521,u40,1842.73,2026-08-09 07:18:00,device_40_A,Joneschester,m4,0
+t131,u71,3056.58,2026-08-09 07:44:00,device_71_A,Daisyland,m20,0
+t134,u95,3520.74,2026-08-09 08:05:00,device_new_2391,Sandrabury,m3,0
+t544,u66,7398.56,2026-08-09 08:14:00,device_unknown_5093,Tylermouth,m19,1
+t876,u12,6237.2,2026-08-09 08:25:00,device_12_A,Mercadoside,m14,0
+t758,u97,7405.96,2026-08-09 08:50:00,device_97_A,Williamville,m8,0
+t257,u86,2171.87,2026-08-09 09:31:00,device_86_A,South Mary,m17,0
+t988,u87,4712.19,2026-08-09 10:08:00,device_87_A,Lake Joyport,m13,0
+t951,u4,3510.31,2026-08-09 10:16:00,device_4_A,Port Cynthia,m1,0
+t267,u44,5429.72,2026-08-09 11:28:00,device_44_A,Mooremouth,m10,0
+t237,u20,1467.12,2026-08-09 11:35:00,device_20_A,Robertsland,m15,0
+t684,u93,3609.1,2026-08-09 11:39:00,device_93_A,East Josephmouth,m11,0
+t408,u84,875.57,2026-08-09 11:39:00,device_84_A,Josephside,m2,0
+t564,u57,909.39,2026-08-09 11:44:00,device_57_A,East Dale,m14,0
+t743,u51,6232.86,2026-08-09 13:25:00,device_51_A,Richmondbury,m10,0
+t946,u23,1473.21,2026-08-09 13:36:00,device_23_A,Port Jamesville,m6,0
+t759,u46,3082.95,2026-08-09 14:05:00,device_46_A,New Adrian,m15,0
+t619,u96,2910.84,2026-08-09 16:58:00,device_96_A,Port Monicastad,m14,0
+t441,u50,1343.28,2026-08-09 17:46:00,device_50_A,Lindafurt,m17,0
+t570,u74,3117.53,2026-08-09 18:12:00,device_74_A,New Jonathanport,m6,0
+t106,u46,3631.58,2026-08-09 19:16:00,device_new_5837,New Adrian,m9,0
+t253,u58,1280.07,2026-08-09 20:07:00,device_58_A,North Kimberlyside,m11,0
+t726,u41,912.95,2026-08-09 20:08:00,device_41_A,West Henryton,m10,0
+t67,u49,2194.62,2026-08-09 20:22:00,device_49_A,Elainefurt,m12,0
+t314,u97,3000.23,2026-08-09 20:23:00,device_97_A,Williamville,m8,0
+t122,u75,4321.3,2026-08-09 20:38:00,device_75_A,Waltermouth,m17,0
+t156,u62,10148.05,2026-08-09 20:57:00,device_unknown_8277,Calderonfort,m8,1
+t706,u91,907.03,2026-08-09 22:29:00,device_91_A,New Lindsayborough,m18,0
+t410,u8,4691.63,2026-08-09 22:50:00,device_8_A,Williamside,m16,0
+t918,u32,1884.36,2026-08-10 00:17:00,device_32_A,New Jade,m6,0
+t482,u37,1998.68,2026-08-10 01:48:00,device_37_A,Johnshire,m16,0
+t849,u72,1780.16,2026-08-10 02:25:00,device_72_A,South Chelsey,m6,0
+t290,u92,2824.67,2026-08-10 03:11:00,device_92_A,Simpsonville,m9,0
+t56,u25,9317.79,2026-08-10 04:36:00,device_unknown_2020,Kevinport,m1,1
+t677,u34,4997.41,2026-08-10 07:09:00,device_34_A,North Kyle,m14,0
+t32,u5,1442.79,2026-08-10 07:18:00,device_5_A,Port Melissachester,m18,0
+t940,u70,5639.64,2026-08-10 07:34:00,device_70_A,Olivialand,m5,0
+t400,u94,2924.66,2026-08-10 07:36:00,device_94_A,Brownberg,m10,0
+t891,u5,1166.85,2026-08-10 07:42:00,device_5_A,Derricktown,m6,0
+t817,u1,2733.56,2026-08-10 07:46:00,device_new_9456,Kennedystad,m15,0
+t72,u49,2939.91,2026-08-10 07:57:00,device_49_A,Elainefurt,m3,0
+t338,u81,3523.33,2026-08-10 08:00:00,device_81_A,West Marcus,m20,0
+t232,u35,5179.45,2026-08-10 08:57:00,device_35_A,Colemanhaven,m15,0
+t794,u63,4008.6,2026-08-10 09:03:00,device_63_A,West Danaville,m17,0
+t943,u20,1542.07,2026-08-10 09:07:00,device_new_7271,Robertsland,m4,0
+t681,u32,1027.79,2026-08-10 09:22:00,device_32_A,New Jade,m13,0
+t252,u38,916.41,2026-08-10 09:44:00,device_38_A,Sarahhaven,m2,0
+t335,u50,1229.76,2026-08-10 09:46:00,device_50_A,Lindafurt,m1,0
+t331,u93,3030.7,2026-08-10 10:00:00,device_93_A,East Josephmouth,m3,0
+t914,u29,2482.53,2026-08-10 10:03:00,device_29_A,Johnville,m6,0
+t812,u30,836.22,2026-08-10 10:06:00,device_30_A,East Charles,m18,0
+t354,u94,3877.38,2026-08-10 10:11:00,device_94_A,Brownberg,m16,0
+t161,u56,4654.03,2026-08-10 10:31:00,device_new_7142,West Kristenfurt,m11,0
+t926,u51,5613.74,2026-08-10 11:01:00,device_51_A,Melissamouth,m13,0
+t791,u96,2935.52,2026-08-10 11:04:00,device_96_A,Juanland,m16,0
+t539,u99,755.51,2026-08-10 12:14:00,device_99_A,Bondton,m18,0
+t746,u96,2989.05,2026-08-10 12:25:00,device_96_A,Port Monicastad,m1,0
+t771,u67,1376.65,2026-08-10 12:33:00,device_new_5636,Kelleytown,m14,0
+t714,u11,535.85,2026-08-10 13:00:00,device_11_A,Lake Ashley,m18,0
+t126,u35,3680.07,2026-08-10 13:56:00,device_35_A,Colemanhaven,m14,0
+t411,u6,2270.27,2026-08-10 14:36:00,device_6_A,Port Jasonstad,m11,0
+t932,u22,1279.95,2026-08-10 14:47:00,device_22_A,Aguilarton,m10,0
+t287,u10,4151.12,2026-08-10 14:59:00,device_10_A,Salazarville,m10,0
+t10,u69,1028.32,2026-08-10 15:04:00,device_69_A,West Robin,m19,0
+t568,u61,2871.4,2026-08-10 15:07:00,device_61_A,Port Steven,m5,0
+t935,u37,2268.16,2026-08-10 15:24:00,device_new_9801,Johnshire,m13,0
+t631,u74,3801.61,2026-08-10 16:55:00,device_74_A,New Jonathanport,m19,0
+t298,u55,2650.38,2026-08-10 17:12:00,device_55_A,Lake Robert,m18,0
+t920,u57,693.86,2026-08-10 17:40:00,device_57_A,East Dale,m1,0
+t652,u60,1439.83,2026-08-10 17:47:00,device_60_A,North Brent,m3,0
+t778,u71,3457.36,2026-08-10 17:53:00,device_71_A,Daisyland,m14,0
+t184,u90,6834.69,2026-08-10 18:36:00,device_90_A,Johnsonfort,m5,0
+t552,u63,3781.21,2026-08-10 18:52:00,device_63_A,West Danaville,m7,0
+t829,u53,5829.81,2026-08-10 19:02:00,device_53_A,Cynthiamouth,m9,0
+t99,u31,3953.7,2026-08-10 19:54:00,device_31_A,Millerborough,m3,0
+t871,u92,3115.57,2026-08-10 20:31:00,device_92_A,Simpsonville,m20,0
+t73,u70,5509.56,2026-08-10 20:51:00,device_70_A,Olivialand,m18,0
+t133,u78,618.03,2026-08-10 20:52:00,device_new_2503,Loganfurt,m15,0
+t248,u54,3542.14,2026-08-10 21:13:00,device_54_A,West Sharonmouth,m12,0
+t528,u71,7995.15,2026-08-10 21:35:00,device_71_A,Daisyland,m18,0
+t47,u30,1240.63,2026-08-10 21:46:00,device_30_A,Lake Matthew,m15,0
+t176,u51,4464.29,2026-08-10 21:50:00,device_51_A,New Anthony,m2,0
+t172,u91,1189.73,2026-08-10 22:27:00,device_91_A,Andrewfurt,m12,0
+t617,u42,2023.76,2026-08-10 22:37:00,device_42_A,New Ryanshire,m2,0
+t727,u5,2041.99,2026-08-10 22:43:00,device_5_A,Derricktown,m4,0
+t785,u13,29295.4,2026-08-11 00:20:00,device_unknown_8439,East Antonio,m11,1
+t589,u37,4442.21,2026-08-11 01:07:00,device_unknown_5496,Lynchfort,m7,1
+t243,u41,796.49,2026-08-11 02:30:00,device_41_A,Baileytown,m11,0
+t933,u2,6119.15,2026-08-11 02:48:00,device_2_A,Michaelport,m13,0
+t973,u10,6509.92,2026-08-11 03:47:00,device_10_A,Salazarville,m8,0
+t228,u16,952.96,2026-08-11 03:48:00,device_16_A,East Danielle,m12,0
+t364,u73,547.75,2026-08-11 08:19:00,device_73_A,Margaretchester,m17,0
+t481,u24,2697.64,2026-08-11 08:35:00,device_24_A,Lake Richardton,m13,0
+t965,u96,2146.24,2026-08-11 08:55:00,device_96_A,Port Monicastad,m20,0
+t283,u89,4808.81,2026-08-11 09:03:00,device_89_A,South Robertton,m5,0
+t87,u36,5170.76,2026-08-11 09:30:00,device_36_A,Alyssachester,m16,0
+t603,u43,610.59,2026-08-11 09:52:00,device_43_A,South William,m11,0
+t465,u39,5580.11,2026-08-11 10:14:00,device_39_A,Noahborough,m8,0
+t688,u15,991.8,2026-08-11 12:03:00,device_15_A,West Reginald,m9,0
+t850,u20,5932.15,2026-08-11 12:20:00,device_unknown_7228,Robertsland,m19,1
+t848,u62,1291.4,2026-08-11 12:33:00,device_62_A,Josephberg,m8,0
+t941,u70,6258.06,2026-08-11 12:44:00,device_70_A,Olivialand,m1,0
+t921,u57,747.37,2026-08-11 13:33:00,device_57_A,East Dale,m14,0
+t218,u65,1921.17,2026-08-11 13:37:00,device_65_A,West Rachel,m6,0
+t936,u34,4149.57,2026-08-11 13:43:00,device_34_A,North Kyle,m5,0
+t957,u61,1801.11,2026-08-11 13:56:00,device_61_A,Port Steven,m6,0
+t917,u97,4257.51,2026-08-11 14:28:00,device_97_A,Lake James,m7,0
+t826,u68,3712.83,2026-08-11 14:28:00,device_68_A,New Susanshire,m12,0
+t193,u10,3128.78,2026-08-11 14:32:00,device_10_A,Salazarville,m6,0
+t462,u49,7108.3,2026-08-11 15:17:00,device_49_A,Brendaton,m9,0
+t636,u97,3239.07,2026-08-11 15:23:00,device_97_A,Williamville,m4,0
+t383,u21,2401.95,2026-08-11 16:05:00,device_21_A,West Daniel,m7,0
+t696,u53,5941.3,2026-08-11 16:09:00,device_new_9948,Ericville,m16,0
+t907,u78,1273.77,2026-08-11 16:19:00,device_78_A,Lake Matthewton,m13,0
+t542,u27,2719.87,2026-08-11 16:23:00,device_27_A,New Annefort,m1,0
+t304,u72,1035.2,2026-08-11 16:53:00,device_72_A,South Chelsey,m5,0
+t874,u7,863.99,2026-08-11 16:54:00,device_7_A,Timothyberg,m19,0
+t690,u81,8176.8,2026-08-11 17:24:00,device_81_A,West Marcus,m14,0
+t526,u79,2351.97,2026-08-11 17:33:00,device_79_A,Johnhaven,m2,0
+t597,u14,1703.54,2026-08-11 17:34:00,device_14_A,North Monica,m18,0
+t906,u7,1054.0,2026-08-11 17:39:00,device_7_A,Timothyberg,m19,0
+t637,u68,16817.02,2026-08-11 18:24:00,device_unknown_9724,Port Curtis,m16,1
+t514,u18,2517.36,2026-08-11 18:32:00,device_18_A,Davidview,m7,0
+t276,u83,1517.1,2026-08-11 18:39:00,device_new_2901,Patriciachester,m10,0
+t272,u17,1961.32,2026-08-11 18:43:00,device_new_7853,Mosleytown,m18,0
+t704,u12,6290.06,2026-08-11 19:12:00,device_12_A,Hudsonshire,m3,0
+t376,u61,1642.56,2026-08-11 19:16:00,device_61_A,Port Steven,m4,0
+t530,u34,4185.2,2026-08-11 19:25:00,device_34_A,North Kyle,m6,0
+t540,u4,4024.75,2026-08-11 20:56:00,device_4_A,North Mathew,m14,0
+t337,u89,8217.36,2026-08-11 21:45:00,device_89_A,North Andreachester,m1,1
+t934,u94,2919.32,2026-08-11 22:04:00,device_94_A,Brownberg,m1,0
+t561,u93,4066.4,2026-08-11 22:07:00,device_93_A,Mossberg,m13,0
+t286,u14,1559.81,2026-08-11 22:18:00,device_new_8939,North Monica,m14,0
+t592,u85,1890.88,2026-08-12 00:49:00,device_85_A,Lake Debbieville,m4,0
+t629,u23,2239.19,2026-08-12 00:49:00,device_23_A,Port Jamesville,m18,0
+t75,u8,3808.05,2026-08-12 01:26:00,device_8_A,Williamside,m10,0
+t173,u13,3651.69,2026-08-12 01:35:00,device_13_A,East Antonio,m18,0
+t459,u83,1500.4,2026-08-12 01:45:00,device_83_A,Patriciachester,m17,0
+t571,u14,1432.69,2026-08-12 02:23:00,device_14_A,North Monica,m14,0
+t431,u63,4950.78,2026-08-12 03:01:00,device_63_A,West Danaville,m14,0
+t658,u31,3532.44,2026-08-12 07:00:00,device_new_1750,Millerborough,m6,0
+t85,u68,3956.41,2026-08-12 07:40:00,device_68_A,New Susanshire,m3,0
+t595,u60,2022.9,2026-08-12 07:43:00,device_60_A,North Brent,m6,0
+t27,u81,3475.95,2026-08-12 08:47:00,device_new_9883,West Marcus,m19,0
+t180,u80,837.67,2026-08-12 09:15:00,device_80_A,South Cynthia,m11,0
+t247,u21,2636.6,2026-08-12 09:41:00,device_new_1962,West Daniel,m2,0
+t728,u56,5090.63,2026-08-12 10:26:00,device_56_A,West Kristenfurt,m6,0
+t423,u51,5683.29,2026-08-12 10:37:00,device_51_A,Melissamouth,m13,0
+t532,u22,1307.52,2026-08-12 10:43:00,device_22_A,Aguilarton,m17,0
+t602,u8,5011.13,2026-08-12 11:02:00,device_8_A,Williamside,m7,0
+t95,u45,2875.75,2026-08-12 11:17:00,device_45_A,Christianberg,m15,0
+t365,u78,983.4,2026-08-12 12:15:00,device_78_A,Loganfurt,m6,0
+t206,u10,3039.03,2026-08-12 12:16:00,device_10_A,Salazarville,m15,0
+t560,u63,5438.77,2026-08-12 12:43:00,device_63_A,West Danaville,m7,0
+t246,u29,4052.01,2026-08-12 12:51:00,device_29_A,Johnville,m5,0
+t814,u18,3260.65,2026-08-12 13:11:00,device_18_A,Davidview,m15,0
+t179,u73,530.44,2026-08-12 13:32:00,device_73_A,Margaretchester,m20,0
+t831,u41,1182.09,2026-08-12 13:44:00,device_41_A,Baileytown,m15,0
+t375,u77,3740.54,2026-08-12 13:46:00,device_77_A,East Jerry,m2,0
+t930,u99,548.64,2026-08-12 13:47:00,device_99_A,Bondton,m2,0
+t346,u59,976.89,2026-08-12 13:50:00,device_59_A,New Jimmystad,m5,0
+t309,u25,2075.51,2026-08-12 14:16:00,device_25_A,Port Scottberg,m16,0
+t551,u95,3720.04,2026-08-12 14:26:00,device_95_A,Port Alexanderburgh,m3,0
+t731,u95,3996.53,2026-08-12 14:37:00,device_95_A,Sandrabury,m5,0
+t864,u95,3889.77,2026-08-12 15:03:00,device_95_A,Sandrabury,m14,0
+t42,u61,2113.67,2026-08-12 15:12:00,device_61_A,South Dominic,m6,0
+t842,u17,4108.5,2026-08-12 15:24:00,device_17_A,Mosleytown,m3,0
+t966,u74,5396.27,2026-08-12 16:21:00,device_new_8836,New Jonathanport,m13,0
+t382,u67,1474.02,2026-08-12 16:21:00,device_67_A,Kelleytown,m10,0
+t613,u20,1379.19,2026-08-12 16:24:00,device_20_A,Robertsland,m18,0
+t770,u8,3391.17,2026-08-12 16:52:00,device_8_A,Williamside,m16,0
+t149,u12,4930.99,2026-08-12 17:12:00,device_12_A,Mercadoside,m20,0
+t742,u70,3755.32,2026-08-12 17:42:00,device_70_A,Olivialand,m6,0
+t265,u7,599.63,2026-08-12 18:18:00,device_7_A,Timothyberg,m9,0
+t701,u56,5885.1,2026-08-12 18:22:00,device_56_A,West Kristenfurt,m13,0
+t676,u23,2209.01,2026-08-12 20:10:00,device_23_A,Port Jamesville,m8,0
+t790,u35,4686.73,2026-08-12 20:23:00,device_35_A,Colemanhaven,m12,0
+t911,u29,3672.17,2026-08-12 21:28:00,device_29_A,Johnville,m1,0
+t747,u68,5004.31,2026-08-12 21:55:00,device_68_A,Kingside,m9,0
+t846,u28,2619.96,2026-08-12 22:28:00,device_28_A,North Matthew,m1,0
+t567,u7,5836.67,2026-08-13 00:04:00,device_unknown_6203,Timothyberg,m11,1
+t62,u3,6975.43,2026-08-13 00:35:00,device_3_A,New Christinabury,m1,1
+t638,u35,12726.3,2026-08-13 00:41:00,device_35_A,Colemanhaven,m4,0
+t18,u64,1682.37,2026-08-13 01:15:00,device_64_A,Daviston,m10,0
+t623,u87,3521.27,2026-08-13 01:20:00,device_87_A,Lake Joyport,m5,0
+t38,u80,1256.83,2026-08-13 01:46:00,device_80_A,South Cynthia,m6,0
+t700,u41,7366.68,2026-08-13 03:02:00,device_unknown_2431,Baileytown,m11,1
+t198,u16,1150.16,2026-08-13 03:17:00,device_16_A,East Danielle,m12,0
+t230,u94,2831.6,2026-08-13 03:24:00,device_new_1056,Brownberg,m18,0
+t488,u47,1884.01,2026-08-13 07:33:00,device_47_A,Tranport,m16,0
+t138,u75,4130.67,2026-08-13 08:51:00,device_75_A,Waltermouth,m14,0
+t391,u11,732.32,2026-08-13 09:58:00,device_11_A,Lake Ashley,m16,0
+t501,u4,6090.35,2026-08-13 10:00:00,device_4_A,Port Cynthia,m15,0
+t264,u82,4108.33,2026-08-13 11:34:00,device_82_A,Mosleystad,m9,0
+t748,u23,2151.01,2026-08-13 11:56:00,device_new_1981,Port Jamesville,m8,0
+t823,u60,1709.37,2026-08-13 12:20:00,device_60_A,North Brent,m1,0
+t449,u95,5921.77,2026-08-13 13:08:00,device_95_A,Sandrabury,m12,0
+t70,u45,1774.7,2026-08-13 13:12:00,device_45_A,Christianberg,m12,0
+t25,u4,3837.92,2026-08-13 13:13:00,device_new_4872,Port Cynthia,m13,0
+t897,u20,2090.39,2026-08-13 13:48:00,device_20_A,Robertsland,m14,0
+t515,u100,948.32,2026-08-13 14:08:00,device_100_A,Gwendolynburgh,m9,0
+t79,u49,3757.9,2026-08-13 14:23:00,device_49_A,Elainefurt,m17,0
+t31,u36,8855.32,2026-08-13 14:28:00,device_36_A,New Rebecca,m12,0
+t487,u25,1897.47,2026-08-13 15:05:00,device_new_9409,Waynefort,m15,0
+t463,u24,1728.16,2026-08-13 15:23:00,device_24_A,Lake Richardton,m13,0
+t981,u66,2362.42,2026-08-13 16:19:00,device_66_A,Donaldfort,m18,0
+t16,u81,5484.77,2026-08-13 16:38:00,device_81_A,West Marcus,m8,0
+t458,u54,5596.8,2026-08-13 16:48:00,device_54_A,West Sharonmouth,m5,0
+t190,u91,907.16,2026-08-13 16:57:00,device_91_A,New Lindsayborough,m15,0
+t238,u20,1715.67,2026-08-13 17:08:00,device_20_A,Robertsland,m3,0
+t52,u60,1668.45,2026-08-13 17:25:00,device_60_A,North Brent,m15,0
+t242,u9,2861.98,2026-08-13 18:30:00,device_9_A,Port Lisastad,m17,0
+t478,u32,1254.03,2026-08-13 18:30:00,device_32_A,New Jade,m13,0
+t512,u27,1238.81,2026-08-13 18:31:00,device_27_A,New Annefort,m14,0
+t209,u49,3730.5,2026-08-13 19:06:00,device_49_A,Elainefurt,m13,0
+t58,u61,2653.7,2026-08-13 19:15:00,device_61_A,Port Steven,m11,0
+t263,u27,1057.06,2026-08-13 19:40:00,device_27_A,New Annefort,m3,0
+t244,u46,4241.85,2026-08-13 20:12:00,device_46_A,New Adrian,m10,0
+t734,u41,950.73,2026-08-13 20:14:00,device_41_A,North Jessica,m4,0
+t428,u77,5025.36,2026-08-13 20:38:00,device_77_A,East Jerry,m1,0
+t299,u52,4831.4,2026-08-13 21:11:00,device_52_A,Albertburgh,m1,0
+t517,u41,1243.57,2026-08-13 21:30:00,device_41_A,Baileytown,m20,0
+t915,u2,5470.42,2026-08-13 21:59:00,device_2_A,Michaelport,m12,0
+t183,u94,2353.62,2026-08-13 22:16:00,device_94_A,Brownberg,m17,0
+t626,u73,625.64,2026-08-13 22:29:00,device_73_A,Margaretchester,m8,0
+t804,u69,594.37,2026-08-13 22:31:00,device_69_A,West Robin,m4,0
+t413,u56,5741.91,2026-08-13 22:55:00,device_56_A,Charlesfort,m16,0
+t858,u99,660.56,2026-08-14 00:01:00,device_99_A,Stevenview,m9,0
+t980,u54,12858.12,2026-08-14 00:04:00,device_unknown_5206,West Sharonmouth,m17,1
+t303,u80,3033.83,2026-08-14 00:13:00,device_unknown_1152,Donnamouth,m14,1
+t709,u77,3924.23,2026-08-14 00:20:00,device_77_A,East Jerry,m12,0
+t424,u75,4526.05,2026-08-14 01:02:00,device_75_A,Dawnport,m9,0
+t922,u47,1902.22,2026-08-14 01:03:00,device_47_A,Tranport,m9,0
+t359,u85,9635.39,2026-08-14 02:15:00,device_unknown_1893,Mendozaport,m20,1
+t900,u61,1605.7,2026-08-14 03:33:00,device_new_3518,New Deniseville,m13,0
+t987,u86,6103.44,2026-08-14 08:39:00,device_unknown_9707,North Jamie,m11,1
+t289,u66,2261.1,2026-08-14 08:46:00,device_66_A,Donaldfort,m15,0
+t549,u41,1052.15,2026-08-14 09:09:00,device_41_A,Baileytown,m16,0
+t351,u86,7005.93,2026-08-14 09:59:00,device_86_A,South Mary,m16,1
+t982,u79,2100.98,2026-08-14 10:09:00,device_new_6769,Johnhaven,m2,0
+t11,u83,1868.98,2026-08-14 10:41:00,device_new_9348,Patriciachester,m5,0
+t130,u38,833.8,2026-08-14 10:54:00,device_38_A,Sarahhaven,m12,0
+t710,u73,372.92,2026-08-14 11:10:00,device_73_A,Margaretchester,m12,0
+t923,u76,3382.11,2026-08-14 11:36:00,device_76_A,Morenoport,m11,0
+t469,u62,2229.93,2026-08-14 12:14:00,device_62_A,Calderonfort,m20,0
+t622,u49,2772.41,2026-08-14 12:18:00,device_49_A,Elainefurt,m16,0
+t615,u22,1081.13,2026-08-14 12:44:00,device_22_A,Aguilarton,m3,0
+t256,u11,466.11,2026-08-14 14:35:00,device_11_A,North Beth,m19,0
+t634,u71,3199.03,2026-08-14 15:46:00,device_71_A,Daisyland,m8,0
+t194,u76,4282.12,2026-08-14 16:29:00,device_76_A,Port Jasonhaven,m16,0
+t964,u60,2070.96,2026-08-14 16:33:00,device_60_A,North Brent,m8,0
+t355,u63,4612.42,2026-08-14 16:41:00,device_63_A,West Danaville,m1,0
+t308,u18,3241.13,2026-08-14 16:41:00,device_new_1439,Davidview,m7,0
+t614,u92,3516.94,2026-08-14 17:30:00,device_92_A,Lake Aaron,m7,0
+t369,u24,2481.72,2026-08-14 18:13:00,device_new_2654,Lake Richardton,m14,0
+t495,u81,3406.11,2026-08-14 18:56:00,device_81_A,Nicholsside,m13,0
+t828,u56,3790.95,2026-08-14 20:03:00,device_56_A,West Kristenfurt,m3,0
+t357,u97,3525.26,2026-08-14 20:07:00,device_97_A,Williamville,m6,0
+t129,u22,1436.69,2026-08-14 20:17:00,device_22_A,Aguilarton,m2,0
+t94,u73,527.45,2026-08-14 20:20:00,device_73_A,Margaretchester,m11,0
+t422,u87,4818.75,2026-08-14 20:50:00,device_87_A,Lake Joyport,m19,0
+t769,u40,2123.71,2026-08-14 20:53:00,device_40_A,Kristenchester,m15,0
+t553,u24,2348.98,2026-08-14 21:20:00,device_24_A,Lake Richardton,m20,0
+t821,u72,1745.94,2026-08-14 21:21:00,device_72_A,South Chelsey,m12,0
+t834,u83,1895.66,2026-08-14 22:00:00,device_83_A,Patriciachester,m1,0
+t503,u15,1436.74,2026-08-14 22:30:00,device_new_5663,East Joseph,m15,0
+t867,u39,4513.31,2026-08-15 00:02:00,device_39_A,Noahborough,m11,0
+t171,u29,8681.36,2026-08-15 00:17:00,device_unknown_1783,Johnville,m12,1
+t189,u24,13991.12,2026-08-15 00:19:00,device_unknown_4453,Lake Richardton,m16,1
+t643,u96,3365.53,2026-08-15 00:35:00,device_96_A,Port Monicastad,m20,0
+t624,u35,7762.72,2026-08-15 01:06:00,device_35_A,Karenberg,m3,1
+t606,u95,20392.8,2026-08-15 01:12:00,device_unknown_9888,Cunninghamfurt,m10,1
+t326,u13,16753.77,2026-08-15 01:58:00,device_13_A,New Sue,m14,1
+t150,u38,5362.3,2026-08-15 02:32:00,device_unknown_2548,Jacobborough,m20,1
+t380,u81,3524.36,2026-08-15 02:33:00,device_81_A,West Marcus,m14,0
+t476,u32,3593.25,2026-08-15 03:28:00,device_32_A,North Lisamouth,m19,1
+t986,u6,1433.13,2026-08-15 03:46:00,device_6_A,Port Jasonstad,m13,0
+t527,u27,3496.98,2026-08-15 04:01:00,device_unknown_2759,South Royhaven,m12,1
+t249,u93,22889.5,2026-08-15 04:17:00,device_unknown_8916,East Josephmouth,m18,1
+t632,u59,692.19,2026-08-15 07:40:00,device_59_A,North Andrewshire,m10,0
+t768,u86,1643.74,2026-08-15 08:13:00,device_86_A,South Mary,m13,0
+t445,u51,4584.32,2026-08-15 09:10:00,device_51_A,Melissamouth,m19,0
+t975,u62,1599.32,2026-08-15 10:09:00,device_62_A,Calderonfort,m16,0
+t217,u89,4609.18,2026-08-15 10:14:00,device_new_9261,South Robertton,m11,0
+t204,u53,5506.71,2026-08-15 10:27:00,device_53_A,Cynthiamouth,m7,0
+t705,u41,7809.67,2026-08-15 10:52:00,device_unknown_8571,Baileytown,m7,1
+t792,u28,2855.72,2026-08-15 11:28:00,device_28_A,Sarahfurt,m5,0
+t977,u67,1272.12,2026-08-15 12:02:00,device_67_A,Kelleytown,m13,0
+t203,u21,3805.57,2026-08-15 12:02:00,device_21_A,West Daniel,m17,0
+t993,u43,841.16,2026-08-15 12:05:00,device_43_A,South William,m15,0
+t665,u15,1137.05,2026-08-15 12:25:00,device_15_A,East Joseph,m16,0
+t644,u27,1619.94,2026-08-15 12:28:00,device_27_A,New Annefort,m9,0
+t155,u69,650.53,2026-08-15 12:31:00,device_69_A,West Robin,m15,0
+t830,u77,3788.28,2026-08-15 12:35:00,device_new_9020,East Jerry,m5,0
+t219,u7,942.76,2026-08-15 12:49:00,device_7_A,Timothyberg,m5,0
+t187,u27,1781.46,2026-08-15 12:49:00,device_27_A,New Annefort,m19,0
+t667,u56,4263.26,2026-08-15 13:00:00,device_56_A,West Kristenfurt,m9,0
+t165,u68,4147.81,2026-08-15 14:07:00,device_68_A,New Susanshire,m19,0
+t117,u80,965.1,2026-08-15 14:13:00,device_80_A,South Cynthia,m12,0
+t418,u94,3207.21,2026-08-15 14:28:00,device_94_A,Brownberg,m1,0
+t516,u88,10299.57,2026-08-15 14:30:00,device_88_A,Davidberg,m10,1
+t439,u46,2455.33,2026-08-15 14:36:00,device_46_A,South William,m2,0
+t343,u20,1529.34,2026-08-15 14:44:00,device_20_A,Robertsland,m19,0
+t639,u18,2610.45,2026-08-15 15:07:00,device_18_A,Davidview,m9,0
+t456,u46,3704.07,2026-08-15 15:33:00,device_46_A,New Adrian,m3,0
+t599,u14,1485.46,2026-08-15 16:09:00,device_14_A,North Monica,m11,0
+t786,u26,4329.41,2026-08-15 16:21:00,device_new_3118,Port Elizabethport,m11,0
+t875,u15,1519.4,2026-08-15 16:55:00,device_15_A,East Joseph,m20,0
+t712,u19,1979.31,2026-08-15 16:59:00,device_19_A,Markberg,m9,0
+t109,u33,573.66,2026-08-15 16:59:00,device_33_A,South Timothy,m11,0
+t168,u16,1010.16,2026-08-15 17:06:00,device_16_A,East Danielle,m6,0
+t798,u69,3844.28,2026-08-15 17:09:00,device_unknown_8974,Kingstad,m13,1
+t953,u39,3978.87,2026-08-15 17:42:00,device_39_A,Noahborough,m1,0
+t427,u30,911.18,2026-08-15 18:02:00,device_30_A,Lake Matthew,m18,0
+t805,u26,3662.46,2026-08-15 18:54:00,device_26_A,Port Elizabethport,m15,0
+t531,u64,2556.15,2026-08-15 19:27:00,device_64_A,Thomasview,m7,0
+t593,u66,19649.78,2026-08-15 19:35:00,device_66_A,Bobbyburgh,m14,1
+t407,u22,970.95,2026-08-15 19:35:00,device_22_A,Aguilarton,m15,0
+t370,u59,697.44,2026-08-15 19:36:00,device_59_A,New Jimmystad,m2,0
+t340,u18,3521.79,2026-08-15 19:58:00,device_18_A,Davidview,m12,0
+t870,u60,1883.67,2026-08-15 19:58:00,device_60_A,North Brent,m4,0
+t863,u87,4176.16,2026-08-15 20:03:00,device_87_A,Lake Joyport,m9,0
+t691,u93,4267.35,2026-08-15 21:07:00,device_93_A,East Josephmouth,m15,0
+t124,u18,6713.59,2026-08-15 21:20:00,device_18_A,Davidview,m3,0
+t114,u19,3007.13,2026-08-15 21:21:00,device_new_4626,Markberg,m10,0
+t417,u52,4398.41,2026-08-15 21:29:00,device_52_A,Albertburgh,m11,0
+t800,u55,2696.23,2026-08-15 21:50:00,device_55_A,Lake Robert,m5,0
+t984,u89,4282.25,2026-08-15 21:51:00,device_89_A,South Robertton,m3,0
+t733,u46,5345.27,2026-08-15 22:22:00,device_46_A,New Adrian,m16,0
+t379,u34,3930.65,2026-08-16 00:06:00,device_34_A,North Kyle,m16,0
+t749,u28,3262.38,2026-08-16 01:16:00,device_28_A,North Matthew,m14,0
+t45,u82,4139.19,2026-08-16 02:45:00,device_82_A,Mosleystad,m14,0
+t958,u73,587.8,2026-08-16 03:18:00,device_new_1478,Margaretchester,m9,0
+t345,u46,13180.16,2026-08-16 03:35:00,device_unknown_3328,East James,m18,1
+t572,u4,4129.62,2026-08-16 03:38:00,device_4_A,Eugeneland,m11,0
+t838,u25,18594.29,2026-08-16 06:09:00,device_25_A,Port Scottberg,m19,1
+t997,u18,3716.31,2026-08-16 07:10:00,device_18_A,Davidview,m14,0
+t763,u42,4194.02,2026-08-16 07:27:00,device_42_A,New Ryanshire,m2,0
+t166,u22,1241.54,2026-08-16 07:50:00,device_22_A,Perezburgh,m13,0
+t136,u51,5383.93,2026-08-16 08:23:00,device_51_A,Melissamouth,m1,0
+t642,u39,3462.96,2026-08-16 09:22:00,device_39_A,Noahborough,m2,0
+t687,u46,4161.0,2026-08-16 09:26:00,device_46_A,New Adrian,m7,0
+t282,u98,2951.33,2026-08-16 10:17:00,device_98_A,Melaniemouth,m12,0
+t118,u10,3392.9,2026-08-16 10:28:00,device_10_A,Salazarville,m15,0
+t274,u47,2070.23,2026-08-16 10:59:00,device_47_A,Tranport,m9,0
+t898,u74,3963.66,2026-08-16 11:10:00,device_74_A,New Jonathanport,m10,0
+t33,u83,1515.95,2026-08-16 11:17:00,device_83_A,Patriciachester,m9,0
+t332,u54,3994.96,2026-08-16 11:40:00,device_54_A,West Sharonmouth,m3,0
+t86,u80,1227.3,2026-08-16 12:15:00,device_new_5415,South Cynthia,m16,0
+t51,u26,2836.72,2026-08-16 12:32:00,device_26_A,Port Elizabethport,m17,0
+t518,u93,4212.51,2026-08-16 12:33:00,device_93_A,East Josephmouth,m4,0
+t661,u25,2668.64,2026-08-16 12:36:00,device_25_A,Port Scottberg,m11,0
+t529,u28,2797.32,2026-08-16 12:40:00,device_28_A,North Matthew,m3,0
+t46,u5,1054.7,2026-08-16 12:46:00,device_5_A,Erikburgh,m20,0
+t74,u49,2878.05,2026-08-16 12:51:00,device_49_A,Elainefurt,m7,0
+t985,u24,2052.38,2026-08-16 13:28:00,device_24_A,Lake Richardton,m12,0
+t807,u7,831.05,2026-08-16 13:36:00,device_7_A,South Sarastad,m10,0
+t390,u41,974.68,2026-08-16 13:45:00,device_41_A,Baileytown,m11,0
+t7,u93,3374.97,2026-08-16 14:00:00,device_93_A,East Josephmouth,m6,0
+t430,u98,2837.49,2026-08-16 14:09:00,device_98_A,Melaniemouth,m18,0
+t827,u91,1215.57,2026-08-16 14:13:00,device_91_A,New Lindsayborough,m4,0
+t628,u45,1245.12,2026-08-16 15:06:00,device_45_A,Christianberg,m15,0
+t952,u93,3692.38,2026-08-16 15:22:00,device_new_1420,East Josephmouth,m8,0
+t404,u81,4368.46,2026-08-16 15:22:00,device_81_A,West Marcus,m8,0
+t260,u23,1684.07,2026-08-16 15:48:00,device_23_A,Port Jamesville,m5,0
+t434,u14,1083.91,2026-08-16 15:49:00,device_14_A,North Monica,m18,0
+t784,u15,10385.75,2026-08-16 16:05:00,device_unknown_7120,Port Richardmouth,m5,1
+t221,u79,1778.77,2026-08-16 16:20:00,device_79_A,Johnhaven,m4,0
+t713,u19,2242.17,2026-08-16 16:55:00,device_19_A,Markberg,m12,0
+t990,u96,2839.93,2026-08-16 17:32:00,device_96_A,Port Monicastad,m13,0
+t645,u67,1430.98,2026-08-16 17:42:00,device_new_5528,Kelleytown,m9,0
+t19,u54,4933.79,2026-08-16 17:49:00,device_54_A,West Sharonmouth,m1,0
+t912,u8,25909.77,2026-08-16 18:16:00,device_unknown_6630,Williamside,m2,1
+t135,u42,2603.91,2026-08-16 18:30:00,device_42_A,New Ryanshire,m14,0
+t559,u82,4002.99,2026-08-16 19:04:00,device_82_A,Mosleystad,m8,0
+t60,u71,2847.21,2026-08-16 19:05:00,device_71_A,Daisyland,m11,0
+t902,u25,5220.1,2026-08-16 19:34:00,device_25_A,Port Scottberg,m10,0
+t412,u48,3182.14,2026-08-16 19:52:00,device_48_A,Port Brittany,m5,0
+t116,u44,5830.06,2026-08-16 20:10:00,device_44_A,Mooremouth,m4,0
+t671,u9,3971.1,2026-08-16 20:39:00,device_9_A,Port Lisastad,m7,0
+t511,u59,720.1,2026-08-16 20:59:00,device_59_A,New Jimmystad,m17,0
+t641,u4,4139.15,2026-08-16 20:59:00,device_4_A,Port Cynthia,m4,0
+t432,u19,2169.05,2026-08-16 21:10:00,device_19_A,Markberg,m8,0
+t740,u61,1662.72,2026-08-16 21:44:00,device_61_A,Port Steven,m14,0
+t169,u24,2103.02,2026-08-16 21:55:00,device_24_A,Lake Richardton,m2,0
+t40,u35,3705.99,2026-08-16 21:59:00,device_35_A,Colemanhaven,m12,0
+t268,u47,1561.19,2026-08-16 22:43:00,device_new_6228,Tranport,m19,0
+t270,u30,3191.02,2026-08-17 00:09:00,device_30_A,East Dawn,m14,1
+t224,u15,1208.89,2026-08-17 01:21:00,device_15_A,East Joseph,m19,0
+t796,u49,2880.27,2026-08-17 01:27:00,device_49_A,Elainefurt,m7,0
+t352,u2,3567.81,2026-08-17 02:03:00,device_2_A,Michaelport,m15,0
+t853,u71,3862.33,2026-08-17 02:31:00,device_new_6597,Daisyland,m1,0
+t732,u56,8569.57,2026-08-17 02:56:00,device_unknown_1438,West Kristenfurt,m5,1
+t349,u9,4067.86,2026-08-17 02:57:00,device_new_6198,Port Lisastad,m8,0
+t795,u14,8442.45,2026-08-17 03:25:00,device_unknown_3985,North Monica,m10,1
+t23,u53,17518.52,2026-08-17 03:42:00,device_53_A,Gomezchester,m5,1
+t723,u95,8500.19,2026-08-17 04:08:00,device_unknown_9260,Sandrabury,m6,1
+t233,u71,4862.85,2026-08-17 08:05:00,device_71_A,Daisyland,m5,0
+t398,u32,1636.07,2026-08-17 08:07:00,device_32_A,New Jade,m13,0
+t650,u33,6032.22,2026-08-17 08:26:00,device_unknown_8144,Loveside,m18,1
+t888,u39,4557.75,2026-08-17 08:50:00,device_39_A,Noahborough,m7,0
+t175,u46,4254.29,2026-08-17 08:56:00,device_new_5498,New Adrian,m3,0
+t30,u95,3526.81,2026-08-17 09:08:00,device_95_A,Sandrabury,m1,0
+t925,u12,4083.61,2026-08-17 10:07:00,device_new_4811,Mercadoside,m10,0
+t916,u61,1620.82,2026-08-17 10:09:00,device_61_A,Port Steven,m13,0
+t574,u15,1375.1,2026-08-17 10:29:00,device_15_A,East Joseph,m15,0
+t832,u48,2255.5,2026-08-17 10:41:00,device_new_2945,Port Brittany,m12,0
+t200,u67,4156.43,2026-08-17 10:42:00,device_unknown_8487,Danielbury,m11,1
+t275,u90,2654.58,2026-08-17 11:52:00,device_90_A,Johnsonfort,m12,0
+t566,u69,1035.32,2026-08-17 12:05:00,device_69_A,Romerofurt,m11,0
+t181,u2,3530.92,2026-08-17 12:30:00,device_2_A,Michaelport,m12,0
+t373,u80,986.55,2026-08-17 13:10:00,device_80_A,South Cynthia,m15,0
+t280,u14,1555.18,2026-08-17 13:42:00,device_14_A,North Monica,m9,0
+t433,u95,4468.41,2026-08-17 13:49:00,device_95_A,Sandrabury,m10,0
+t698,u77,7741.72,2026-08-17 14:34:00,device_77_A,East Jerry,m15,0
+t474,u20,2253.59,2026-08-17 14:53:00,device_20_A,Robertsland,m3,0
+t859,u63,4754.52,2026-08-17 15:30:00,device_63_A,West Danaville,m19,0
+t321,u51,5565.36,2026-08-17 15:57:00,device_51_A,Melissamouth,m3,0
+t781,u17,1937.34,2026-08-17 18:13:00,device_17_A,Mosleytown,m3,0
+t910,u20,2247.48,2026-08-17 18:31:00,device_20_A,Robertsland,m3,0
+t426,u99,701.69,2026-08-17 18:46:00,device_99_A,Bondton,m5,0
+t787,u9,2379.52,2026-08-17 19:12:00,device_9_A,Port Lisastad,m3,0
+t962,u79,2230.0,2026-08-17 19:27:00,device_new_7025,Johnhaven,m19,0
+t420,u43,750.02,2026-08-17 19:29:00,device_43_A,South William,m7,0
+t266,u82,3552.77,2026-08-17 19:42:00,device_82_A,Mosleystad,m11,0
+t797,u56,5993.28,2026-08-17 19:58:00,device_56_A,West Kristenfurt,m4,0
+t69,u32,1337.68,2026-08-17 21:14:00,device_32_A,New Danielle,m8,0
+t522,u44,3900.29,2026-08-17 21:18:00,device_44_A,Mooremouth,m4,0
+t616,u46,3636.32,2026-08-17 21:47:00,device_46_A,New Adrian,m6,0
+t803,u10,3860.31,2026-08-17 22:32:00,device_new_1606,Salazarville,m8,0
+t873,u23,3518.68,2026-08-17 22:33:00,device_23_A,Port Jasonland,m9,1
+t53,u69,1032.0,2026-08-17 22:49:00,device_new_8305,West Robin,m15,0
+t998,u4,2897.04,2026-08-18 00:25:00,device_4_A,Mariashire,m20,0
+t894,u70,5485.11,2026-08-18 02:41:00,device_70_A,Port Michaelmouth,m1,0
+t144,u40,2598.97,2026-08-18 02:59:00,device_40_A,Joneschester,m11,0
+t240,u67,1193.76,2026-08-18 02:59:00,device_67_A,Kelleytown,m1,0
+t393,u49,2228.51,2026-08-18 03:50:00,device_49_A,Elainefurt,m1,0
+t697,u67,1461.27,2026-08-18 03:52:00,device_67_A,Kelleytown,m11,0
+t480,u26,3642.31,2026-08-18 07:18:00,device_26_A,Port Elizabethport,m3,0
+t496,u93,3157.97,2026-08-18 07:44:00,device_93_A,East Josephmouth,m7,0
+t840,u82,3256.92,2026-08-18 07:54:00,device_82_A,Millerview,m9,0
+t185,u58,1424.46,2026-08-18 08:07:00,device_58_A,North Kimberlyside,m4,0
+t839,u19,2747.85,2026-08-18 08:23:00,device_19_A,Markberg,m19,0
+t328,u35,3638.57,2026-08-18 08:27:00,device_35_A,Colemanhaven,m14,0
+t885,u66,3146.95,2026-08-18 08:44:00,device_66_A,Donaldfort,m9,0
+t815,u77,4611.67,2026-08-18 09:05:00,device_77_A,East Jerry,m9,0
+t961,u31,3354.06,2026-08-18 09:45:00,device_31_A,Millerborough,m4,0
+t811,u84,572.22,2026-08-18 10:10:00,device_84_A,Josephside,m2,0
+t947,u31,2618.33,2026-08-18 10:33:00,device_31_A,Alyssabury,m6,0
+t178,u23,1353.97,2026-08-18 10:44:00,device_23_A,Port Jamesville,m1,0
+t421,u3,3089.61,2026-08-18 10:45:00,device_3_A,Hannahmouth,m15,0
+t384,u94,5364.3,2026-08-18 11:03:00,device_94_A,Brownberg,m1,0
+t294,u9,5141.71,2026-08-18 11:05:00,device_9_A,Port Lisastad,m11,0
+t581,u63,3394.16,2026-08-18 11:34:00,device_63_A,West Danaville,m6,0
+t77,u44,4566.81,2026-08-18 12:07:00,device_44_A,Mooremouth,m2,0
+t506,u37,2277.99,2026-08-18 12:30:00,device_37_A,New Daniel,m1,0
+t968,u55,2576.09,2026-08-18 12:49:00,device_55_A,New Samantha,m1,0
+t653,u72,1617.16,2026-08-18 13:18:00,device_72_A,South Chelsey,m10,0
+t816,u72,1323.12,2026-08-18 14:14:00,device_72_A,South Chelsey,m5,0
+t928,u76,2736.21,2026-08-18 14:19:00,device_76_A,Lake Adamborough,m11,0
+t896,u25,3243.71,2026-08-18 14:41:00,device_25_A,Port Scottberg,m17,0
+t214,u22,1441.62,2026-08-18 14:49:00,device_22_A,South Brian,m18,0
+t447,u99,771.68,2026-08-18 14:56:00,device_99_A,Bondton,m5,0
+t158,u2,4439.55,2026-08-18 15:57:00,device_new_4271,Michaelport,m2,0
+t261,u14,1572.47,2026-08-18 16:06:00,device_14_A,North Monica,m15,0
+t944,u72,1643.12,2026-08-18 16:10:00,device_72_A,South Chelsey,m1,0
+t64,u22,1039.01,2026-08-18 16:49:00,device_new_2876,Aguilarton,m4,0
+t277,u33,653.3,2026-08-18 17:18:00,device_33_A,South Timothy,m3,0
+t341,u30,702.51,2026-08-18 17:46:00,device_30_A,Lake Matthew,m20,0
+t950,u1,1878.38,2026-08-18 17:48:00,device_1_A,Kennedystad,m11,0
+t720,u13,3218.04,2026-08-18 18:05:00,device_13_A,East Antonio,m1,0
+t887,u23,2231.03,2026-08-18 18:18:00,device_23_A,Port Jamesville,m17,0
+t436,u16,1669.15,2026-08-18 18:31:00,device_16_A,East Danielle,m3,0
+t939,u8,4229.7,2026-08-18 18:40:00,device_new_6711,Williamside,m2,0
+t197,u48,4108.97,2026-08-18 19:10:00,device_48_A,Port Brittany,m17,0
+t822,u85,2068.95,2026-08-18 19:50:00,device_85_A,Lake Debbieville,m5,0
+t295,u3,4576.03,2026-08-18 19:51:00,device_3_A,Hannahmouth,m15,0
+t57,u82,3454.93,2026-08-18 20:07:00,device_new_5892,Mosleystad,m18,0
+t317,u74,4872.88,2026-08-18 20:28:00,device_74_A,New Jonathanport,m9,0
+t210,u24,2541.33,2026-08-18 21:11:00,device_24_A,Lake Richardton,m9,0
+t855,u10,4519.56,2026-08-18 21:58:00,device_10_A,Salazarville,m4,0
+t924,u11,729.16,2026-08-18 21:59:00,device_11_A,Lake Ashley,m13,0
+t49,u6,1010.77,2026-08-18 22:13:00,device_6_A,Port Jasonstad,m20,0
+t730,u20,1899.52,2026-08-18 22:19:00,device_20_A,Robertsland,m20,0
+t819,u17,3254.29,2026-08-18 22:37:00,device_17_A,Lake James,m10,1
+t461,u78,3890.77,2026-08-18 22:51:00,device_unknown_7052,West Kristinbury,m12,1
+t278,u95,7780.82,2026-08-19 01:28:00,device_95_A,Sandrabury,m17,0
+t663,u20,2187.88,2026-08-19 07:01:00,device_20_A,Robertsland,m1,0
+t202,u5,853.46,2026-08-19 07:30:00,device_5_A,Derricktown,m20,0
+t59,u8,4145.31,2026-08-19 07:53:00,device_8_A,Williamside,m13,0
+t856,u49,2740.63,2026-08-19 07:53:00,device_49_A,Elainefurt,m4,0
+t22,u59,664.29,2026-08-19 08:00:00,device_59_A,New Jimmystad,m4,0
+t656,u64,2499.24,2026-08-19 08:36:00,device_64_A,Thomasview,m13,0
+t227,u43,459.51,2026-08-19 08:53:00,device_43_A,South William,m3,0
+t824,u16,6639.27,2026-08-19 09:02:00,device_unknown_5979,East Danielle,m2,1
+t41,u21,3978.16,2026-08-19 09:21:00,device_21_A,West Daniel,m9,0
+t657,u57,981.13,2026-08-19 09:47:00,device_new_9791,East Dale,m2,0
+t675,u79,2288.06,2026-08-19 09:56:00,device_79_A,Perezton,m14,0
+t789,u95,3808.25,2026-08-19 10:30:00,device_95_A,Sandrabury,m12,0
+t120,u52,4622.58,2026-08-19 11:11:00,device_52_A,Albertburgh,m20,0
+t618,u57,703.62,2026-08-19 11:12:00,device_57_A,East Dale,m15,0
+t147,u51,11878.6,2026-08-19 11:26:00,device_51_A,Melissamouth,m2,0
+t366,u9,4064.6,2026-08-19 11:31:00,device_9_A,Port Lisastad,m20,0
+t520,u2,4773.61,2026-08-19 11:36:00,device_2_A,Michaelport,m2,0
+t625,u45,1580.47,2026-08-19 12:09:00,device_45_A,Christianberg,m15,0
+t305,u20,2085.54,2026-08-19 12:12:00,device_new_3340,Robertsland,m15,0
+t419,u72,1506.03,2026-08-19 12:13:00,device_72_A,South Chelsey,m16,0
+t751,u36,3667.42,2026-08-19 12:46:00,device_new_7914,Alyssachester,m9,0
+t132,u72,2631.75,2026-08-19 12:59:00,device_72_A,Smithmouth,m5,0
+t374,u68,3880.98,2026-08-19 12:59:00,device_68_A,New Susanshire,m3,0
+t967,u26,14783.78,2026-08-19 13:28:00,device_26_A,Jenniferstad,m2,1
+t281,u75,4334.6,2026-08-19 13:40:00,device_75_A,Waltermouth,m15,0
+t994,u54,4441.62,2026-08-19 14:04:00,device_new_9529,Barkerburgh,m10,0
+t148,u63,5242.14,2026-08-19 14:53:00,device_63_A,West Danaville,m15,0
+t12,u35,5370.04,2026-08-19 15:34:00,device_35_A,Colemanhaven,m18,0
+t775,u28,2979.91,2026-08-19 16:08:00,device_28_A,North Matthew,m13,0
+t451,u5,2533.4,2026-08-19 16:43:00,device_new_9992,Derricktown,m3,0
+t945,u65,1755.45,2026-08-19 16:51:00,device_65_A,West Rachel,m14,0
+t9,u46,3095.87,2026-08-19 17:39:00,device_46_A,New Kenneth,m7,0
+t500,u61,2868.64,2026-08-19 17:55:00,device_61_A,Port Steven,m16,0
+t296,u25,18429.75,2026-08-19 17:57:00,device_unknown_9447,Port Scottberg,m15,1
+t291,u64,1583.65,2026-08-19 18:02:00,device_64_A,Thomasview,m20,0
+t448,u26,4753.2,2026-08-19 18:08:00,device_new_3360,Port Elizabethport,m1,0
+t344,u79,1971.64,2026-08-19 18:28:00,device_new_3846,Johnhaven,m19,0
+t908,u27,1692.09,2026-08-19 19:21:00,device_27_A,New Annefort,m6,0
+t660,u31,5678.02,2026-08-19 19:27:00,device_31_A,Millerborough,m11,0
+t350,u28,2265.9,2026-08-19 19:48:00,device_28_A,North Matthew,m19,0
+t715,u68,5225.71,2026-08-19 20:03:00,device_68_A,New Susanshire,m15,0
+t454,u90,2335.7,2026-08-19 20:06:00,device_90_A,Johnsonfort,m9,0
+t363,u74,4273.27,2026-08-19 20:22:00,device_74_A,New Jonathanport,m18,0
+t635,u76,8411.01,2026-08-19 20:33:00,device_new_3525,Lake Adamborough,m13,0
+t762,u78,972.91,2026-08-19 20:34:00,device_78_A,Joshuatown,m4,0
+t35,u55,5636.0,2026-08-19 20:56:00,device_55_A,Lake Robert,m18,0
+t836,u32,1347.74,2026-08-19 21:18:00,device_32_A,New Jade,m5,0
+t596,u95,3583.38,2026-08-19 21:22:00,device_new_1582,Sandrabury,m18,0
+t111,u53,5987.76,2026-08-19 21:23:00,device_53_A,Cynthiamouth,m3,0
+t610,u59,831.15,2026-08-19 21:55:00,device_59_A,New Jimmystad,m16,0
+t991,u28,3221.46,2026-08-19 22:13:00,device_28_A,North Matthew,m19,0
+t68,u49,2888.69,2026-08-19 22:35:00,device_49_A,Elainefurt,m15,0
+t311,u90,2732.67,2026-08-20 00:11:00,device_90_A,Johnsonfort,m1,0
+t479,u36,5041.06,2026-08-20 00:56:00,device_36_A,Alyssachester,m7,0
+t972,u4,3339.0,2026-08-20 01:34:00,device_new_3418,Port Cynthia,m2,0
+t301,u44,3969.33,2026-08-20 01:44:00,device_44_A,Mooremouth,m2,0
+t754,u16,1503.63,2026-08-20 02:38:00,device_16_A,East Danielle,m16,0
+t547,u38,725.61,2026-08-20 03:57:00,device_38_A,Sarahhaven,m2,0
+t215,u92,4681.52,2026-08-20 08:23:00,device_92_A,Simpsonville,m13,0
+t471,u34,5941.5,2026-08-20 08:27:00,device_34_A,North Kyle,m18,0
+t78,u67,1119.0,2026-08-20 08:36:00,device_67_A,Kelleytown,m5,0
+t239,u39,3302.2,2026-08-20 08:38:00,device_39_A,Noahborough,m3,0
+t886,u54,4549.18,2026-08-20 09:02:00,device_54_A,West Sharonmouth,m6,0
+t159,u6,1109.1,2026-08-20 09:23:00,device_6_A,Port Jasonstad,m6,0
+t100,u56,5134.72,2026-08-20 09:29:00,device_new_8994,West Kristenfurt,m8,0
+t121,u75,29064.74,2026-08-20 09:48:00,device_75_A,East Nicole,m1,1
+t508,u35,22170.86,2026-08-20 09:52:00,device_unknown_7504,Rachelland,m9,1
+t17,u90,13617.87,2026-08-20 10:30:00,device_unknown_8962,Johnsonfort,m5,1
+t475,u53,4851.8,2026-08-20 10:49:00,device_53_A,Cynthiamouth,m17,0
+t368,u54,3202.28,2026-08-20 11:01:00,device_54_A,West Sharonmouth,m5,0
+t300,u93,3118.38,2026-08-20 11:23:00,device_new_8009,East Josephmouth,m10,0
+t97,u51,11454.95,2026-08-20 11:29:00,device_51_A,Melissamouth,m16,0
+t409,u61,1789.43,2026-08-20 12:07:00,device_61_A,Port Steven,m20,0
+t15,u47,2045.75,2026-08-20 12:25:00,device_47_A,Tranport,m18,0
+t387,u55,3302.06,2026-08-20 12:40:00,device_55_A,Lake Robert,m11,0
+t766,u35,5529.03,2026-08-20 13:03:00,device_35_A,Colemanhaven,m3,0
+t389,u51,7286.13,2026-08-20 13:52:00,device_51_A,Melissamouth,m17,0
+t477,u47,1943.92,2026-08-20 13:55:00,device_47_A,Smithtown,m14,0
+t323,u4,2776.78,2026-08-20 13:58:00,device_4_A,Port Cynthia,m10,0
+t192,u66,2669.17,2026-08-20 14:05:00,device_66_A,Donaldfort,m15,0
+t28,u83,3759.55,2026-08-20 14:41:00,device_83_A,Patriciachester,m13,0
+t534,u78,777.51,2026-08-20 14:43:00,device_78_A,Loganfurt,m20,0
+t721,u5,1379.65,2026-08-20 14:57:00,device_5_A,Derricktown,m17,0
+t446,u86,3871.34,2026-08-20 15:15:00,device_86_A,East Eric,m20,1
+t956,u33,826.92,2026-08-20 16:32:00,device_33_A,South Timothy,m18,0
+t348,u87,6929.36,2026-08-20 17:02:00,device_87_A,Lake Joyport,m5,0
+t954,u58,1005.28,2026-08-20 19:00:00,device_58_A,North Kimberlyside,m20,0
+t381,u37,1700.94,2026-08-20 19:04:00,device_37_A,Johnshire,m19,0
+t575,u70,3584.44,2026-08-20 19:22:00,device_70_A,Olivialand,m17,0
+t505,u54,9803.3,2026-08-20 19:36:00,device_54_A,West Sharonmouth,m9,0
+t473,u73,381.07,2026-08-20 19:46:00,device_73_A,Margaretchester,m12,0
+t563,u86,1830.41,2026-08-20 19:52:00,device_new_5590,South Mary,m5,0
+t878,u58,1446.93,2026-08-20 21:18:00,device_58_A,North Kimberlyside,m2,0
+t107,u35,28867.07,2026-08-20 21:26:00,device_35_A,East Laurenfurt,m10,1
+t254,u42,3503.97,2026-08-20 22:33:00,device_new_4764,New Ryanshire,m9,0
+t621,u22,5715.01,2026-08-21 00:06:00,device_unknown_6885,Gregorytown,m8,1
+t708,u58,1537.67,2026-08-21 00:13:00,device_58_A,North Kimberlyside,m20,0
+t820,u53,5240.82,2026-08-21 00:45:00,device_53_A,Cynthiamouth,m9,0
+t753,u9,6556.0,2026-08-21 02:36:00,device_unknown_2041,Port Lisastad,m3,1
+t212,u79,10463.58,2026-08-21 03:21:00,device_unknown_1860,Mcdonaldfurt,m4,1
+t371,u8,3953.16,2026-08-21 07:01:00,device_8_A,Sheahaven,m11,0
+t761,u21,2590.1,2026-08-21 08:11:00,device_21_A,West Daniel,m9,0
+t536,u50,1264.69,2026-08-21 08:17:00,device_50_A,Lindafurt,m3,0
+t273,u29,2377.53,2026-08-21 08:23:00,device_29_A,Johnville,m19,0
+t223,u43,643.29,2026-08-21 09:30:00,device_43_A,South William,m17,0
+t659,u59,622.19,2026-08-21 10:03:00,device_59_A,New Jimmystad,m4,0
+t80,u8,4246.65,2026-08-21 10:09:00,device_new_6003,Williamside,m7,0
+t453,u64,1718.21,2026-08-21 11:35:00,device_64_A,Thomasview,m19,0
+t620,u35,4392.59,2026-08-21 11:46:00,device_35_A,New Andrewshire,m10,0
+t196,u72,1681.02,2026-08-21 11:52:00,device_72_A,South Chelsey,m9,0
+t976,u81,8383.05,2026-08-21 12:09:00,device_81_A,West Marcus,m13,0
+t881,u45,2934.65,2026-08-21 12:27:00,device_45_A,Christianberg,m11,0
+t457,u82,2350.33,2026-08-21 13:12:00,device_82_A,Mosleystad,m2,0
+t578,u33,886.01,2026-08-21 13:25:00,device_33_A,South Timothy,m15,0
+t378,u90,2244.86,2026-08-21 13:30:00,device_90_A,Johnsonfort,m8,0
+t654,u90,2005.64,2026-08-21 13:35:00,device_90_A,Johnsonfort,m5,0
+t450,u5,1307.33,2026-08-21 13:35:00,device_5_A,Derricktown,m4,0
+t565,u83,2114.79,2026-08-21 13:50:00,device_83_A,Patriciachester,m5,0
+t342,u1,2592.82,2026-08-21 14:12:00,device_1_A,Kennedystad,m6,0
+t760,u52,5090.61,2026-08-21 14:51:00,device_new_5929,Albertburgh,m10,0
+t367,u70,5614.26,2026-08-21 15:25:00,device_70_A,Olivialand,m17,0
+t29,u18,2981.02,2026-08-21 17:12:00,device_18_A,Davidview,m9,0
+t979,u67,873.75,2026-08-21 17:12:00,device_67_A,Kelleytown,m4,0
+t741,u42,4753.5,2026-08-21 17:17:00,device_42_A,New Ryanshire,m19,0
+t573,u45,1411.62,2026-08-21 17:44:00,device_45_A,Christianberg,m13,0
+t160,u98,2443.35,2026-08-21 18:25:00,device_98_A,Santiagoburgh,m1,0
+t361,u17,2049.69,2026-08-21 18:43:00,device_17_A,Mosleytown,m6,0
+t884,u2,5994.23,2026-08-21 20:05:00,device_2_A,Michaelport,m8,0
+t163,u49,2212.85,2026-08-21 20:43:00,device_49_A,Elainefurt,m4,0
+t648,u11,571.86,2026-08-21 21:24:00,device_11_A,Lake Ashley,m1,0
+t438,u49,2451.08,2026-08-21 22:27:00,device_49_A,Elainefurt,m18,0
