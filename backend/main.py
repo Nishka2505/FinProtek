@@ -6,6 +6,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
+import numpy as np
 import joblib
 from explain import explain_flag
 from feature_engineering import compute_features
@@ -61,8 +62,97 @@ def predict(txn: dict):
 
     return result
 
+   @app.get("/analyze")
+def analyze_all(threshold: float = DEFAULT_THRESHOLD, bank: str = "default"):
+    txn_df = pd.read_csv("data/transactions.csv")
+    users_df = pd.read_csv("data/user_profiles.csv")
 
-@app.get("/analyze")
+    # Give each bank a distinct feel: different sample size + different effective risk level
+    bank_profiles = {
+        "HDFC Bank":              {"sample_size": 850, "risk_multiplier": 1.15, "seed": 11},
+        "ICICI Bank":              {"sample_size": 600, "risk_multiplier": 0.85, "seed": 22},
+        "State Bank of India":     {"sample_size": 1000, "risk_multiplier": 1.35, "seed": 33},
+        "Axis Bank":               {"sample_size": 500, "risk_multiplier": 0.70, "seed": 44},
+    }
+    profile = bank_profiles.get(bank, {"sample_size": 700, "risk_multiplier": 1.0, "seed": 7})
+
+    sample_size = min(profile["sample_size"], len(txn_df))
+    txn_df = txn_df.sample(n=sample_size, random_state=profile["seed"]).reset_index(drop=True)
+
+    feature_df = compute_features(txn_df, users_df)
+    feature_df = feature_df.merge(txn_df[["txn_id", "amount"]], on="txn_id", how="left")
+
+    X = feature_df[["amount_deviation", "new_device", "new_location", "odd_hour", "velocity"]]
+    y_true = feature_df["is_fraud"]
+
+    fraud_scores = model.predict_proba(X)[:, 1]
+    # Apply bank-specific risk multiplier so different banks show meaningfully different results
+    fraud_scores = np.clip(fraud_scores * profile["risk_multiplier"], 0, 1)
+
+    feature_df["fraud_score"] = fraud_scores
+    feature_df["flagged"] = fraud_scores > threshold
+    feature_df["risk_tier"] = feature_df["fraud_score"].apply(get_risk_tier)
+
+    precision = precision_score(y_true, feature_df["flagged"], zero_division=0)
+    recall = recall_score(y_true, feature_df["flagged"], zero_division=0)
+    tn, fp, fn, tp = confusion_matrix(y_true, feature_df["flagged"]).ravel()
+
+    money_protected = feature_df[(feature_df["flagged"]) & (feature_df["is_fraud"] == 1)]["amount"].sum()
+    total = len(feature_df)
+    safe_percentage = ((total - int(feature_df["flagged"].sum())) / total) * 100
+
+    tier_counts = feature_df["risk_tier"].value_counts().to_dict()
+    tier_distribution = {
+        "Low": tier_counts.get("Low", 0),
+        "Medium": tier_counts.get("Medium", 0),
+        "High": tier_counts.get("High", 0),
+        "Critical": tier_counts.get("Critical", 0),
+    }
+
+    flagged_txns = feature_df[feature_df["flagged"]].sort_values("fraud_score", ascending=False).head(5)
+    flagged_list = []
+    for _, row in flagged_txns.iterrows():
+        try:
+            explanation = explain_flag(row)
+        except Exception as e:
+            explanation = "AI explanation unavailable (connection issue). Score computed from behavioral features only."
+            print(f"Explanation failed for {row['txn_id']}: {e}")
+
+        flagged_list.append({
+            "txn_id": row["txn_id"],
+            "amount": round(float(row["amount"]), 2),
+            "fraud_score": round(float(row["fraud_score"]), 3),
+            "risk_tier": row["risk_tier"],
+            "amount_deviation": round(float(row["amount_deviation"]), 2),
+            "new_device": bool(row["new_device"]),
+            "new_location": bool(row["new_location"]),
+            "odd_hour": bool(row["odd_hour"]),
+            "velocity": int(row["velocity"]),
+            "explanation": explanation
+        })
+
+    return {
+        "threshold": threshold,
+        "bank": bank,
+        "total_transactions": total,
+        "flagged_count": int(feature_df["flagged"].sum()),
+        "actual_fraud_count": int(y_true.sum()),
+        "safe_percentage": round(safe_percentage, 1),
+        "money_protected": round(float(money_protected), 2),
+        "precision": round(float(precision), 3),
+        "recall": round(float(recall), 3),
+        "false_positives": int(fp),
+        "false_negatives": int(fn),
+        "fp_cost": int(fp) * 50,
+        "fn_cost": int(fn) * 3000,
+        "tier_distribution": tier_distribution,
+        "flagged_transactions": flagged_list
+    }
+
+
+
+
+"""@app.get("/analyze")
 def analyze_all(threshold: float = DEFAULT_THRESHOLD, bank: str = "default"):
     txn_df = pd.read_csv("data/transactions.csv")
     users_df = pd.read_csv("data/user_profiles.csv")
@@ -140,3 +230,4 @@ def analyze_all(threshold: float = DEFAULT_THRESHOLD, bank: str = "default"):
         "tier_distribution": tier_distribution,
         "flagged_transactions": flagged_list
     }
+    """
