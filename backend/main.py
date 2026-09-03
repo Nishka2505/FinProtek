@@ -63,9 +63,16 @@ def predict(txn: dict):
 
 
 @app.get("/analyze")
-def analyze_all(threshold: float = DEFAULT_THRESHOLD):
+def analyze_all(threshold: float = DEFAULT_THRESHOLD, bank: str = "default"):
     txn_df = pd.read_csv("data/transactions.csv")
     users_df = pd.read_csv("data/user_profiles.csv")
+
+    # Use the bank name to pick a different (but consistent-per-bank) random sample
+    # This makes each connected bank feel like its own live account instead of
+    # always analyzing the exact same fixed 1000 transactions.
+    seed = abs(hash(bank)) % (2**32)
+    sample_size = min(400, len(txn_df))
+    txn_df = txn_df.sample(n=sample_size, random_state=seed).reset_index(drop=True)
 
     feature_df = compute_features(txn_df, users_df)
     feature_df = feature_df.merge(txn_df[["txn_id", "amount"]], on="txn_id", how="left")
@@ -118,6 +125,7 @@ def analyze_all(threshold: float = DEFAULT_THRESHOLD):
 
     return {
         "threshold": threshold,
+        "bank": bank,
         "total_transactions": total,
         "flagged_count": int(feature_df["flagged"].sum()),
         "actual_fraud_count": int(y_true.sum()),

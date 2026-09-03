@@ -1,101 +1,101 @@
 user_id,avg_amount,home_location,known_device
-u1,2185.43,Kennedystad,device_1_A
-u2,4778.21,Michaelport,device_2_A
-u3,3793.97,Hannahmouth,device_3_A
-u4,3193.96,Port Cynthia,device_4_A
-u5,1202.08,Derricktown,device_5_A
-u6,1201.98,Port Jasonstad,device_6_A
-u7,761.38,Timothyberg,device_7_A
-u8,4397.79,Williamside,device_8_A
-u9,3205.02,Port Lisastad,device_9_A
-u10,3686.33,Salazarville,device_10_A
-u11,592.63,Lake Ashley,device_11_A
-u12,4864.59,Mercadoside,device_12_A
-u13,4245.99,East Antonio,device_13_A
-u14,1455.53,North Monica,device_14_A
-u15,1318.21,East Joseph,device_15_A
-u16,1325.32,East Danielle,device_16_A
-u17,1869.09,Mosleytown,device_17_A
-u18,2861.4,Davidview,device_18_A
-u19,2443.75,Markberg,device_19_A
-u20,1810.53,Robertsland,device_20_A
-u21,3253.34,West Daniel,device_21_A
-u22,1127.72,Aguilarton,device_22_A
-u23,1814.65,Port Jamesville,device_23_A
-u24,2148.63,Lake Richardton,device_24_A
-u25,2552.31,Port Scottberg,device_25_A
-u26,4033.29,Port Elizabethport,device_26_A
-u27,1398.53,New Annefort,device_27_A
-u28,2814.05,North Matthew,device_28_A
-u29,3165.87,Johnville,device_29_A
-u30,709.03,Lake Matthew,device_30_A
-u31,3233.95,Millerborough,device_31_A
-u32,1267.36,New Jade,device_32_A
-u33,792.73,South Timothy,device_33_A
-u34,4769.98,North Kyle,device_34_A
-u35,4845.34,Colemanhaven,device_35_A
-u36,4137.79,Alyssachester,device_36_A
-u37,1870.76,Johnshire,device_37_A
-u38,939.52,Sarahhaven,device_38_A
-u39,3579.05,Noahborough,device_39_A
-u40,2480.69,Joneschester,device_40_A
-u41,1049.17,Baileytown,device_41_A
-u42,2728.3,New Ryanshire,device_42_A
-u43,654.75,South William,device_43_A
-u44,4591.94,Mooremouth,device_44_A
-u45,1664.51,Christianberg,device_45_A
-u46,3481.35,New Adrian,device_46_A
-u47,1902.7,Tranport,device_47_A
-u48,2840.31,Port Brittany,device_48_A
-u49,2960.2,Elainefurt,device_49_A
-u50,1331.85,Lindafurt,device_50_A
-u51,4863.13,Melissamouth,device_51_A
-u52,3988.1,Albertburgh,device_52_A
-u53,4727.75,Cynthiamouth,device_53_A
-u54,4526.72,West Sharonmouth,device_54_A
-u55,3190.55,Lake Robert,device_55_A
-u56,4648.43,West Kristenfurt,device_56_A
-u57,898.22,East Dale,device_57_A
-u58,1381.92,North Kimberlyside,device_58_A
-u59,703.52,New Jimmystad,device_59_A
-u60,1963.99,North Brent,device_60_A
-u61,2249.05,Port Steven,device_61_A
-u62,1721.07,Calderonfort,device_62_A
-u63,4229.32,West Danaville,device_63_A
-u64,2105.39,Thomasview,device_64_A
-u65,1764.21,West Rachel,device_65_A
-u66,2942.13,Donaldfort,device_66_A
-u67,1134.16,Kelleytown,device_67_A
-u68,4109.89,New Susanshire,device_68_A
-u69,835.48,West Robin,device_69_A
-u70,4940.99,Olivialand,device_70_A
-u71,3975.1,Daisyland,device_71_A
-u72,1394.22,South Chelsey,device_72_A
-u73,524.85,Margaretchester,device_73_A
-u74,4169.58,New Jonathanport,device_74_A
-u75,3680.86,Waltermouth,device_75_A
-u76,3780.53,Lake Adamborough,device_76_A
-u77,3970.72,East Jerry,device_77_A
-u78,833.2,Loganfurt,device_78_A
-u79,2113.1,Johnhaven,device_79_A
-u80,1021.41,South Cynthia,device_80_A
-u81,4383.97,West Marcus,device_81_A
-u82,3304.84,Mosleystad,device_82_A
-u83,1989.04,Patriciachester,device_83_A
-u84,786.01,Josephside,device_84_A
-u85,1899.42,Lake Debbieville,device_85_A
-u86,1963.32,South Mary,device_86_A
-u87,3783.23,Lake Joyport,device_87_A
-u88,3369.01,Davidberg,device_88_A
-u89,4492.46,South Robertton,device_89_A
-u90,2624.97,Johnsonfort,device_90_A
-u91,1038.17,New Lindsayborough,device_91_A
-u92,3709.6,Simpsonville,device_92_A
-u93,3923.53,East Josephmouth,device_93_A
-u94,3025.75,Brownberg,device_94_A
-u95,3969.35,Sandrabury,device_95_A
-u96,2722.08,Port Monicastad,device_96_A
-u97,2852.3,Williamville,device_97_A
-u98,2423.93,Melaniemouth,device_98_A
-u99,614.39,Bondton,device_99_A
-u100,985.51,Gwendolynburgh,device_100_A
+u1,2185.43,North Amyport,device_1_A
+u2,4778.21,Mccallport,device_2_A
+u3,3793.97,Lake Derek,device_3_A
+u4,3193.96,Amymouth,device_4_A
+u5,1202.08,Michaelbury,device_5_A
+u6,1201.98,Robbinsmouth,device_6_A
+u7,761.38,West Kimberly,device_7_A
+u8,4397.79,South Jonborough,device_8_A
+u9,3205.02,Audreystad,device_9_A
+u10,3686.33,New Kimberlyhaven,device_10_A
+u11,592.63,West John,device_11_A
+u12,4864.59,Hillborough,device_12_A
+u13,4245.99,East Carolyn,device_13_A
+u14,1455.53,Reyesland,device_14_A
+u15,1318.21,Garciachester,device_15_A
+u16,1325.32,Port Michaelbury,device_16_A
+u17,1869.09,South Eric,device_17_A
+u18,2861.4,Port Jessica,device_18_A
+u19,2443.75,North Madelineland,device_19_A
+u20,1810.53,Andrewmouth,device_20_A
+u21,3253.34,Reyesfurt,device_21_A
+u22,1127.72,West Christophermouth,device_22_A
+u23,1814.65,Donmouth,device_23_A
+u24,2148.63,East Rosechester,device_24_A
+u25,2552.31,East Stephanie,device_25_A
+u26,4033.29,Port Karen,device_26_A
+u27,1398.53,West Sarahstad,device_27_A
+u28,2814.05,West Travis,device_28_A
+u29,3165.87,East Ryanfort,device_29_A
+u30,709.03,Harrischester,device_30_A
+u31,3233.95,Brookston,device_31_A
+u32,1267.36,East Jillburgh,device_32_A
+u33,792.73,Matthewtown,device_33_A
+u34,4769.98,North Patricia,device_34_A
+u35,4845.34,Lewisstad,device_35_A
+u36,4137.79,Horneburgh,device_36_A
+u37,1870.76,Port Grace,device_37_A
+u38,939.52,North Lauramouth,device_38_A
+u39,3579.05,Roseside,device_39_A
+u40,2480.69,New Pamela,device_40_A
+u41,1049.17,East Mark,device_41_A
+u42,2728.3,South Raymondburgh,device_42_A
+u43,654.75,West Benjaminview,device_43_A
+u44,4591.94,Chavezfort,device_44_A
+u45,1664.51,New Sharon,device_45_A
+u46,3481.35,Markberg,device_46_A
+u47,1902.7,West Mirandafort,device_47_A
+u48,2840.31,Hamptonberg,device_48_A
+u49,2960.2,Johnsonberg,device_49_A
+u50,1331.85,North Brittany,device_50_A
+u51,4863.13,South Laurie,device_51_A
+u52,3988.1,Port Bethfurt,device_52_A
+u53,4727.75,West Lisaland,device_53_A
+u54,4526.72,East Stephen,device_54_A
+u55,3190.55,South Stevetown,device_55_A
+u56,4648.43,Amyland,device_56_A
+u57,898.22,Stephanieborough,device_57_A
+u58,1381.92,West Trevor,device_58_A
+u59,703.52,North Sarah,device_59_A
+u60,1963.99,Rollinsstad,device_60_A
+u61,2249.05,Soniatown,device_61_A
+u62,1721.07,Darinborough,device_62_A
+u63,4229.32,West Ryanburgh,device_63_A
+u64,2105.39,Garrettland,device_64_A
+u65,1764.21,Michaelfurt,device_65_A
+u66,2942.13,North Sheri,device_66_A
+u67,1134.16,South Lindatown,device_67_A
+u68,4109.89,South Andre,device_68_A
+u69,835.48,Proctorport,device_69_A
+u70,4940.99,Lake Lindsayberg,device_70_A
+u71,3975.1,Lake Elizabeth,device_71_A
+u72,1394.22,Jonathanbury,device_72_A
+u73,524.85,East Jesse,device_73_A
+u74,4169.58,Nicolemouth,device_74_A
+u75,3680.86,New John,device_75_A
+u76,3780.53,Port Laura,device_76_A
+u77,3970.72,Dennisfort,device_77_A
+u78,833.2,Murrayton,device_78_A
+u79,2113.1,Lake Maria,device_79_A
+u80,1021.41,Wilsonville,device_80_A
+u81,4383.97,Tiffanyville,device_81_A
+u82,3304.84,New Sherritown,device_82_A
+u83,1989.04,Paulafort,device_83_A
+u84,786.01,East Kenneth,device_84_A
+u85,1899.42,Michaelberg,device_85_A
+u86,1963.32,East Stevenside,device_86_A
+u87,3783.23,Bentleymouth,device_87_A
+u88,3369.01,Mccallport,device_88_A
+u89,4492.46,Laurafurt,device_89_A
+u90,2624.97,New Philiphaven,device_90_A
+u91,1038.17,Jessicaview,device_91_A
+u92,3709.6,North Kenneth,device_92_A
+u93,3923.53,West Ethan,device_93_A
+u94,3025.75,Lake Kimfort,device_94_A
+u95,3969.35,West Michaelhaven,device_95_A
+u96,2722.08,West Christinemouth,device_96_A
+u97,2852.3,Ashleyport,device_97_A
+u98,2423.93,Martinmouth,device_98_A
+u99,614.39,Scotthaven,device_99_A
+u100,985.51,North Ashleyview,device_100_A

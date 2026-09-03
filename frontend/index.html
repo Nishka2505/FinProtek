@@ -731,8 +731,10 @@
     document.getElementById("verdictBanner").style.display = "none";
     document.getElementById("statsGrid").style.display = "none";
     document.getElementById("txnSection").style.display = "none";
- 
-    fetch(API_URL + "/analyze?threshold=" + threshold)
+    
+    var selectedBank = document.getElementById("bankSelect").value;
+    fetch(API_URL + "/analyze?threshold=" + threshold + "&bank=" + encodeURIComponent(selectedBank))
+   
       .then(function (res) { return res.json(); })
       .then(function (data) {
         var verdict = document.getElementById("verdictBanner");
