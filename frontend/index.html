@@ -2,867 +2,1403 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>FinProtek — Fraud Protection</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FinProtek — Fraud Intelligence Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #0a0e14; --card: #151b23; --border: #262c36;
-    --accent: #78e3f8; --accent2: #4a9eff; --danger: #c1464a; --success: #3fb950;
-    --text: #e6edf3; --muted: #8b949e;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    background: radial-gradient(circle at 20% 0%, #131a24 0%, var(--bg) 55%);
-    color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif;
-    padding: 40px 60px 80px; min-height: 100vh;
-    position: relative;
-  }
-  body::before {
-    content: "";
-    position: fixed;
-    top: -20%; left: -10%;
-    width: 60%; height: 60%;
-    background: radial-gradient(circle, rgba(232,163,61,0.08) 0%, transparent 70%);
-    animation: drift 12s ease-in-out infinite alternate;
-    pointer-events: none;
-    z-index: 0;
-  }
-  body::after {
-    content: "";
-    position: fixed;
-    bottom: -20%; right: -10%;
-    width: 50%; height: 50%;
-    background: radial-gradient(circle, rgba(74,158,255,0.06) 0%, transparent 70%);
-    animation: drift 14s ease-in-out infinite alternate-reverse;
-    pointer-events: none;
-    z-index: 0;
-  }
-  @keyframes drift {
-    from { transform: translate(0,0); }
-    to { transform: translate(40px, 30px); }
-  }
-  header, .subtitle, .bank-box, .main-cta, .verdict-banner, .grid, .section-title,
-  .section-sub, #txnSection, .advanced-panel, .toast-container, .scan-ticker, #riskSparkline {
-    position: relative; z-index: 1;
-  }
-  @keyframes fadeUp { from{opacity:0; transform:translateY(14px);} to{opacity:1; transform:translateY(0);} }
-  @keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(232,163,61,0.4);} 50%{box-shadow:0 0 0 10px rgba(232,163,61,0);} }
-  @keyframes spin { to{transform:rotate(360deg);} }
-  @keyframes shimmer { 0%{background-position:-200px 0;} 100%{background-position:calc(200px + 100%) 0;} }
-  @keyframes floatIn { from{opacity:0; transform:scale(0.96);} to{opacity:1; transform:scale(1);} }
-  @keyframes slideIn { from{opacity:0; transform:translateX(40px);} to{opacity:1; transform:translateX(0);} }
-  @keyframes slideOut { to{opacity:0; transform:translateX(40px);} }
- 
-  header { display:flex; align-items:center; gap:16px; margin-bottom:8px; animation:fadeUp 0.5s ease; }
-  header .icon {
-    width:50px; height:50px; background:linear-gradient(135deg, var(--accent), #ff7a45);
-    border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:24px;
-    animation:pulse 2.4s infinite;
-  }
-  h1 { font-size:26px; font-weight:800; }
-  .live-dot { width:8px; height:8px; border-radius:50%; background:var(--success); display:inline-block; margin-right:6px; animation:pulse 1.6s infinite; }
-  .subtitle { color:var(--muted); margin-bottom:28px; font-size:14px; max-width:600px; line-height:1.5; }
- 
-  .bank-box {
-    background:var(--card); border:1px solid var(--border); border-radius:14px;
-    padding:18px 22px; margin-bottom:22px; display:flex; align-items:center; justify-content:space-between;
-    flex-wrap:wrap; gap:14px;
-  }
-  .bank-left { display:flex; align-items:center; gap:14px; }
-  .bank-icon { width:40px; height:40px; border-radius:10px; background:rgba(74,158,255,0.12); display:flex; align-items:center; justify-content:center; font-size:18px; }
-  .bank-status-title { font-size:14px; font-weight:700; }
-  .bank-status-sub { font-size:12px; color:var(--muted); margin-top:2px; }
-  .connect-btn {
-    background:var(--accent2); color:#0d1117; border:none; padding:10px 22px; border-radius:9px;
-    font-weight:700; font-size:13px; cursor:pointer; transition:transform 0.15s ease;
-  }
-  .connect-btn:hover { transform:translateY(-2px); }
-  .connect-btn.connected { background:rgba(63,185,80,0.15); color:var(--success); border:1px solid var(--success); cursor:default; }
-  .bank-select { background:#0d1117; color:var(--text); border:1px solid var(--border); border-radius:8px; padding:9px 12px; font-size:13px; margin-right:10px; }
-  .alert-toggle { display:flex; align-items:center; gap:8px; font-size:12px; color:var(--muted); }
-  .switch { position:relative; width:38px; height:20px; }
-  .switch input { opacity:0; width:0; height:0; }
-  .slider-switch { position:absolute; cursor:pointer; inset:0; background:#262c36; border-radius:20px; transition:0.2s; }
-  .slider-switch::before { content:""; position:absolute; height:14px; width:14px; left:3px; bottom:3px; background:white; border-radius:50%; transition:0.2s; }
-  .switch input:checked + .slider-switch { background:var(--success); }
-  .switch input:checked + .slider-switch::before { transform:translateX(18px); }
- 
-  .main-cta {
-    background: linear-gradient(135deg, var(--accent), #ff7a45);
-    border-radius: 18px;
-    padding: 28px 32px;
-    margin-bottom: 26px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 18px;
-  }
-  .main-cta-text h2 { color: #1a1a1a; font-size: 19px; font-weight: 800; margin-bottom: 4px; }
-  .main-cta-text p { color: rgba(26,26,26,0.75); font-size: 13px; max-width: 420px; }
-  .run-btn {
-    background: #1a1a1a;
-    color: #fff;
-    border: none;
-    padding: 15px 32px;
-    border-radius: 10px;
-    font-weight: 700;
-    font-size: 15px;
-    cursor: pointer;
-    transition: transform 0.18s ease, box-shadow 0.18s ease;
-    white-space: nowrap;
-  }
-  .run-btn:hover:not(:disabled) { transform: translateY(-2px) scale(1.02); box-shadow: 0 8px 24px rgba(0,0,0,0.35); }
-  .run-btn:disabled { opacity: 0.6; cursor: not-allowed; }
- 
-  .loading { color:var(--muted); font-size:14px; margin:16px 0; }
-  .spinner { display:inline-block; width:14px; height:14px; border:2px solid var(--border); border-top-color:var(--accent); border-radius:50%; animation:spin 0.8s linear infinite; margin-right:8px; vertical-align:middle; }
-  .skeleton { height:60px; border-radius:12px; margin-bottom:12px; background:linear-gradient(90deg, var(--card) 25%, #1c232e 37%, var(--card) 63%); background-size:400px 100%; animation:shimmer 1.4s infinite linear; }
- 
-  .verdict-banner {
-    border-radius: 18px;
-    padding: 30px 34px;
-    margin-bottom: 26px;
-    display: none;
-    animation: floatIn 0.5s ease both;
-    text-align: center;
-  }
-  .verdict-banner.safe { background: linear-gradient(135deg, rgba(63,185,80,0.18), rgba(63,185,80,0.05)); border: 1px solid rgba(63,185,80,0.4); }
-  .verdict-banner.warning { background: linear-gradient(135deg, rgba(232,163,61,0.18), rgba(232,163,61,0.05)); border: 1px solid rgba(232,163,61,0.4); }
-  .verdict-emoji { font-size: 42px; margin-bottom: 8px; }
-  .verdict-title { font-size: 22px; font-weight: 800; margin-bottom: 6px; }
-  .verdict-sub { color: var(--muted); font-size: 14px; }
- 
-  .grid { display:none; grid-template-columns:repeat(3, 1fr); gap:18px; margin-bottom:14px; }
-  .card {
-    background:var(--card); border:1px solid var(--border); border-radius:16px; padding:22px;
-    position:relative; overflow:visible; transition:transform 0.2s ease, border-color 0.2s ease;
-    animation:floatIn 0.45s ease both;
-  }
-  .card:hover { transform:translateY(-4px); border-color:rgba(232,163,61,0.35); }
-  .card .label { color:var(--muted); font-size:12px; margin-bottom:10px; display:flex; align-items:center; gap:6px; }
-  .card .value { font-size:30px; font-weight:800; }
-  .card .sub { font-size:12px; color:var(--muted); margin-top:6px; }
-  .card.danger .value { color:var(--danger); }
-  .card.success .value { color:var(--success); }
-  .card.accent .value { color:var(--accent); }
- 
-  .section-title { font-size:15px; font-weight:700; margin:30px 0 14px; color:var(--text); display:flex; align-items:center; gap:8px; }
-  .section-sub { font-size: 13px; color: var(--muted); margin-top: -8px; margin-bottom: 16px; }
- 
-  .txn-list { display:flex; flex-direction:column; gap:12px; }
-  .txn-card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:18px 22px; cursor:pointer; transition:border-color 0.2s ease, transform 0.15s ease; animation:floatIn 0.4s ease both; }
-  .txn-card:hover { border-color:var(--accent); transform:translateX(3px); box-shadow: 0 4px 20px rgba(232,163,61,0.15); }
-  .txn-card:active { transform: translateX(3px) scale(0.99); }
-  .txn-header { display:flex; justify-content:space-between; align-items:center; }
-  .txn-left { display: flex; align-items: center; gap: 12px; }
-  .rank-badge {
-    width: 26px; height: 26px; border-radius: 50%;
-    background: rgba(255,255,255,0.06); color: var(--muted);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 11px; font-weight: 800; flex-shrink: 0;
-  }
-  .risk-icon { font-size: 22px; }
-  .txn-id { font-weight:700; font-size:14px; }
-  .txn-amount { font-size:16px; font-weight: 800; color: var(--text); margin-top:2px; }
-  .badge-group { display:flex; gap:8px; align-items:center; }
-  .tier-badge { padding:5px 14px; border-radius:20px; font-size:12px; font-weight:800; color:#0d1117; }
-  .chevron { transition:transform 0.25s ease; display:inline-block; margin-left:6px; color:var(--muted); }
-  .txn-card.open .chevron { transform:rotate(90deg); }
-  .txn-details { max-height:0; overflow:hidden; transition:max-height 0.35s ease, margin-top 0.35s ease; }
-  .txn-card.open .txn-details { max-height:400px; margin-top:16px; }
-  .plain-reason {
-    background: rgba(255,255,255,0.03);
-    border-radius: 10px;
-    padding: 14px 16px;
-    font-size: 14px;
-    line-height: 1.7;
-    color: var(--text);
-    white-space: pre-line;
-  }
-  .reason-icon-list { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
-  .reason-item { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--muted); }
-  .action-row { display: flex; gap: 10px; margin-top: 16px; }
-  .action-btn {
-    flex: 1; padding: 10px; border-radius: 8px; border: 1px solid var(--border);
-    background: transparent; color: var(--text); font-size: 13px; font-weight: 600; cursor: pointer;
-    transition: background 0.15s ease;
-  }
-  .action-btn.confirm:hover { background: rgba(63,185,80,0.12); border-color: var(--success); }
-  .action-btn.report:hover { background: rgba(229,72,77,0.12); border-color: var(--danger); }
- 
-  .advanced-panel { display:block; margin-top: 16px; }
- 
-  .slider-box {
-    background:var(--card); border:1px solid var(--border); border-radius:12px; padding:14px 20px;
-    display:flex; align-items:center; gap:14px; max-width: 560px; margin-bottom: 20px;
-  }
-  .slider-box label { font-size:13px; color:var(--muted); white-space:nowrap; display:flex; align-items:center; }
-  .slider-box input[type=range] { flex:1; accent-color:var(--accent); cursor:pointer; }
-  .slider-val { font-weight:800; color:var(--accent); min-width:70px; text-align:right; font-size: 13px; }
- 
-  .tech-panel { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px 20px; margin-bottom:20px; font-size:13px; color:var(--muted); display: flex; gap: 36px; flex-wrap: wrap; }
-  .tech-panel .item { display: flex; flex-direction: column; }
-  .tech-panel .item .item-label { display: flex; align-items: center; }
-  .tech-panel .item b { color:var(--text); display:block; font-size:18px; }
- 
-  .sim-box { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:26px; }
-  .sim-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-bottom:18px; }
-  .field label { display:flex; align-items:center; font-size:12px; color:var(--muted); margin-bottom:6px; }
-  .field input[type=number] { width:100%; background:#0d1117; border:1px solid var(--border); color:var(--text); padding:11px 12px; border-radius:9px; font-size:14px; }
-  .toggle-field { display:flex; align-items:center; gap:10px; background:#0d1117; border:1px solid var(--border); border-radius:9px; padding:11px 12px; cursor:pointer; }
-  .toggle-field label { font-size:13px; color:var(--text); margin:0; cursor:pointer; }
-  .sim-btn { background:var(--accent2); color:#0d1117; border:none; padding:11px 26px; border-radius:9px; font-weight:700; font-size:13px; cursor:pointer; }
- 
-  .sim-result-wrap { margin-top:20px; display:none; align-items:center; gap:26px; }
-  .gauge { position:relative; width:110px; height:110px; flex-shrink:0; }
-  .gauge svg { transform:rotate(-90deg); }
-  .gauge circle { fill:none; stroke-width:10; }
-  .gauge .bg { stroke:#262c36; }
-  .gauge .fg { stroke:var(--accent); stroke-linecap:round; transition:stroke-dashoffset 0.8s cubic-bezier(.22,1,.36,1), stroke 0.3s ease; }
-  .gauge-label { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center; }
-  .gauge-label .pct { font-size:22px; font-weight:800; }
-  .gauge-label .txt { font-size:9px; color:var(--muted); text-transform:uppercase; }
-  .sim-info { flex:1; }
-  .sim-tier-badge { padding:5px 14px; border-radius:20px; font-size:12px; font-weight:800; color:#0d1117; display:inline-block; margin-bottom:10px; }
- 
-  .toast-container { position:fixed; top:24px; right:24px; display:flex; flex-direction:column; gap:10px; z-index:999; max-width:320px; }
-  .toast { background:#161b23; border:1px solid var(--danger); border-left:4px solid var(--danger); border-radius:10px; padding:14px 16px; animation:slideIn 0.35s ease both; box-shadow:0 10px 30px rgba(0,0,0,0.4); cursor:pointer; }
-  .toast.closing { animation:slideOut 0.3s ease forwards; }
-  .toast-title { font-size:13px; font-weight:700; display:flex; align-items:center; gap:6px; }
-  .toast-body { font-size:12px; color:var(--muted); margin-top:4px; }
- 
-  .scan-ticker {
-    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
-    padding: 12px 18px; margin-bottom: 16px; font-size: 13px; color: var(--muted);
-    display: none; align-items: center; gap: 10px;
-    font-variant-numeric: tabular-nums;
-  }
-  .scan-dot {
-    width: 8px; height: 8px; border-radius: 50%; background: var(--accent);
-    animation: pulse 0.8s infinite; flex-shrink: 0;
-  }
- 
-  .info-icon {
-    display: inline-flex; align-items: center; justify-content: center;
-    width: 15px; height: 15px; border-radius: 50%;
-    background: rgba(139,148,158,0.2); color: var(--muted);
-    font-size: 10px; font-weight: 700; cursor: help;
-    position: relative; margin-left: 5px; flex-shrink: 0;
-  }
-  .info-icon:hover { background: var(--accent); color: #0d1117; }
-  .info-icon .tooltip {
-    display: none;
-    position: absolute;
-    bottom: 22px; left: 50%; transform: translateX(-50%);
-    background: #1c232e; border: 1px solid var(--border);
-    color: var(--text); font-size: 12px; font-weight: 400;
-    padding: 10px 12px; border-radius: 8px; width: 220px;
-    line-height: 1.5; text-align: left;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-    z-index: 30;
-  }
-  .info-icon:hover .tooltip { display: block; }
-  .info-icon .tooltip::after {
-    content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-    border: 6px solid transparent; border-top-color: #1c232e;
-  }
+/* ══════════════════════════════════════════════
+   DESIGN TOKENS
+══════════════════════════════════════════════ */
+:root {
+  --bg:          #03060f;
+  --surface-1:   #080f1e;
+  --surface-2:   #0c1628;
+  --surface-3:   #111d35;
+  --border-dim:  rgba(99,126,210,0.12);
+  --border-mid:  rgba(99,126,210,0.22);
+  --border-hi:   rgba(99,126,210,0.42);
+
+  --blue:        #3b82f6;
+  --blue-lt:     #60a5fa;
+  --indigo:      #818cf8;
+  --cyan:        #22d3ee;
+  --emerald:     #10b981;
+  --emerald-lt:  #34d399;
+  --amber:       #f59e0b;
+  --orange:      #fb923c;
+  --rose:        #f43f5e;
+  --rose-lt:     #fb7185;
+
+  --text-1: #eef2ff;
+  --text-2: #94a3c8;
+  --text-3: #4e5f88;
+  --inv:    #04080f;
+
+  --sans: 'Inter', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+
+  --r-sm: 8px; --r-md: 12px; --r-lg: 16px;
+  --r-xl: 20px; --r-2xl: 24px;
+}
+
+/* ══════════════════════════════════════════════
+   BASE
+══════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text-1);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: rgba(59,130,246,0.3); }
+
+/* ══════════════════════════════════════════════
+   BACKGROUND
+══════════════════════════════════════════════ */
+.bg-layer {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
+}
+.bg-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(99,126,210,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99,126,210,0.035) 1px, transparent 1px);
+  background-size: 52px 52px;
+}
+.bg-orb {
+  position: absolute; border-radius: 50%; filter: blur(110px); opacity: 0.6;
+}
+.orb-a {
+  width: 750px; height: 750px; top: -280px; left: -200px;
+  background: radial-gradient(circle, rgba(59,130,246,0.20) 0%, transparent 65%);
+  animation: orb 20s ease-in-out infinite alternate;
+}
+.orb-b {
+  width: 550px; height: 550px; bottom: -180px; right: -120px;
+  background: radial-gradient(circle, rgba(129,140,248,0.16) 0%, transparent 65%);
+  animation: orb 15s ease-in-out infinite alternate-reverse;
+}
+.orb-c {
+  width: 320px; height: 320px; top: 42%; left: 58%;
+  background: radial-gradient(circle, rgba(34,211,238,0.09) 0%, transparent 65%);
+  animation: orb 24s ease-in-out infinite alternate;
+}
+@keyframes orb { from{transform:translate(0,0)scale(1)} to{transform:translate(55px,38px)scale(1.07)} }
+
+/* ══════════════════════════════════════════════
+   LAYOUT
+══════════════════════════════════════════════ */
+.shell {
+  position: relative; z-index: 1;
+  max-width: 1160px; margin: 0 auto;
+  padding: 0 28px 120px;
+}
+
+/* ══════════════════════════════════════════════
+   TOPBAR
+══════════════════════════════════════════════ */
+.topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 0 22px;
+  border-bottom: 1px solid var(--border-dim);
+  margin-bottom: 38px;
+  animation: fade-up .45s ease both;
+}
+.brand { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+.brand-mark {
+  width: 34px; height: 34px; border-radius: 9px;
+  background: linear-gradient(135deg, var(--blue), var(--indigo));
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 20px rgba(59,130,246,.35);
+  animation: pulse-brand 3s ease infinite;
+}
+@keyframes pulse-brand {
+  0%,100%{box-shadow:0 0 20px rgba(59,130,246,.35)}
+  50%{box-shadow:0 0 32px rgba(59,130,246,.55)}
+}
+.brand-mark svg { width: 18px; height: 18px; }
+.brand-name { font-size: 16px; font-weight: 800; letter-spacing: -.3px; color: var(--text-1); }
+.brand-name span { color: var(--blue-lt); }
+.brand-tag { font-size: 10px; color: var(--text-3); font-weight: 500; letter-spacing: .7px; text-transform: uppercase; margin-top: 1px; }
+.topbar-right { display: flex; align-items: center; gap: 14px; }
+.live-pill {
+  display: flex; align-items: center; gap: 6px;
+  background: rgba(16,185,129,.10); border: 1px solid rgba(16,185,129,.25);
+  border-radius: 20px; padding: 4px 12px;
+  font-size: 11px; font-weight: 600; color: var(--emerald-lt);
+}
+.live-dot {
+  width: 6px; height: 6px; border-radius: 50%; background: var(--emerald-lt);
+  animation: blink 2s infinite;
+}
+@keyframes blink { 0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(52,211,153,.5)} 50%{opacity:.6;box-shadow:0 0 0 5px rgba(52,211,153,0)} }
+.version-tag {
+  font-family: var(--mono); font-size: 10px; color: var(--text-3);
+  background: rgba(255,255,255,.04); border: 1px solid var(--border-dim);
+  border-radius: 6px; padding: 3px 9px;
+}
+
+/* ══════════════════════════════════════════════
+   HERO
+══════════════════════════════════════════════ */
+.hero { margin-bottom: 32px; animation: fade-up .5s .05s ease both; }
+.hero-chip {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: rgba(59,130,246,.08); border: 1px solid rgba(59,130,246,.2);
+  border-radius: 20px; padding: 4px 12px; margin-bottom: 14px;
+  font-size: 10px; font-weight: 700; color: var(--blue-lt);
+  letter-spacing: .8px; text-transform: uppercase;
+}
+.hero h1 {
+  font-size: 36px; font-weight: 900; line-height: 1.12;
+  letter-spacing: -.7px; margin-bottom: 12px;
+}
+.hero h1 .grad {
+  background: linear-gradient(95deg, var(--blue-lt), var(--cyan));
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-sub { font-size: 15px; color: var(--text-2); max-width: 520px; line-height: 1.65; }
+
+/* ══════════════════════════════════════════════
+   BANK ROW
+══════════════════════════════════════════════ */
+.bank-row {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 14px;
+  background: rgba(8,15,30,.75); border: 1px solid var(--border-dim);
+  border-radius: var(--r-xl); padding: 16px 22px;
+  margin-bottom: 24px; backdrop-filter: blur(14px);
+  animation: fade-up .5s .10s ease both;
+  transition: border-color .3s ease;
+}
+.bank-row.connected { border-color: rgba(16,185,129,.3); }
+.bank-info { display: flex; align-items: center; gap: 13px; }
+.bank-avatar {
+  width: 40px; height: 40px; border-radius: var(--r-md);
+  background: rgba(59,130,246,.12); border: 1px solid var(--border-dim);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 19px; transition: all .3s ease;
+}
+.bank-avatar.ok { background: rgba(16,185,129,.12); border-color: rgba(16,185,129,.3); }
+.bank-title { font-size: 13px; font-weight: 700; }
+.bank-sub { font-size: 11px; color: var(--text-3); margin-top: 2px; }
+.bank-controls { display: flex; align-items: center; gap: 11px; flex-wrap: wrap; }
+.bank-select {
+  background: rgba(4,8,15,.9); color: var(--text-1);
+  border: 1px solid var(--border-mid); border-radius: var(--r-sm);
+  padding: 8px 13px; font-size: 13px; font-weight: 500;
+  font-family: var(--sans); cursor: pointer; min-width: 195px;
+  transition: border-color .2s;
+}
+.bank-select:focus { outline: none; border-color: var(--blue-lt); }
+.bank-select option { background: #0c1628; }
+.connect-btn {
+  padding: 8px 18px; border-radius: var(--r-sm); border: none; cursor: pointer;
+  font-size: 12px; font-weight: 700; font-family: var(--sans);
+  background: var(--blue); color: #fff;
+  box-shadow: 0 2px 14px rgba(59,130,246,.35);
+  transition: all .2s ease;
+}
+.connect-btn:hover:not(:disabled) { background: var(--blue-lt); transform: translateY(-1px); box-shadow: 0 4px 22px rgba(59,130,246,.45); }
+.connect-btn.ok { background: rgba(16,185,129,.12); color: var(--emerald-lt); border: 1px solid rgba(16,185,129,.3); box-shadow: none; }
+.connect-btn:disabled { opacity: .5; cursor: not-allowed; }
+.notif-wrap { display: flex; align-items: center; gap: 7px; font-size: 11px; color: var(--text-3); }
+.tog { position: relative; width: 34px; height: 18px; }
+.tog input { opacity: 0; width: 0; height: 0; position: absolute; }
+.tog-track {
+  position: absolute; inset: 0; background: var(--surface-3);
+  border-radius: 20px; cursor: pointer; border: 1px solid var(--border-dim);
+  transition: background .2s;
+}
+.tog-track::before {
+  content: ""; position: absolute;
+  height: 12px; width: 12px; left: 2px; top: 50%; transform: translateY(-50%);
+  background: var(--text-3); border-radius: 50%; transition: all .2s;
+}
+.tog input:checked + .tog-track { background: var(--emerald); border-color: var(--emerald); }
+.tog input:checked + .tog-track::before { transform: translate(16px,-50%); background: #fff; }
+
+/* ══════════════════════════════════════════════
+   ACTION CARD
+══════════════════════════════════════════════ */
+.action-card {
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, var(--surface-3), var(--surface-2));
+  border: 1px solid var(--border-mid); border-radius: var(--r-2xl);
+  padding: 28px 30px; margin-bottom: 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 18px;
+  animation: fade-up .5s .15s ease both;
+}
+.action-card::before {
+  content: "";
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(59,130,246,.5), var(--cyan), rgba(59,130,246,.5), transparent);
+}
+.action-glow {
+  position: absolute; top: -60px; right: -60px;
+  width: 220px; height: 220px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(59,130,246,.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.action-text h2 { font-size: 17px; font-weight: 800; letter-spacing: -.3px; margin-bottom: 5px; }
+.action-text p { font-size: 13px; color: var(--text-2); max-width: 440px; line-height: 1.55; }
+.run-btn {
+  display: flex; align-items: center; gap: 9px;
+  padding: 13px 26px;
+  background: linear-gradient(135deg, var(--blue), var(--indigo));
+  color: #fff; border: none; border-radius: var(--r-md);
+  font-size: 14px; font-weight: 700; font-family: var(--sans);
+  cursor: pointer; white-space: nowrap;
+  box-shadow: 0 4px 22px rgba(59,130,246,.4);
+  transition: all .2s ease;
+}
+.run-btn:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(59,130,246,.5); }
+.run-btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+
+/* ══════════════════════════════════════════════
+   LOADING
+══════════════════════════════════════════════ */
+.scan-bar {
+  display: none; align-items: center; gap: 11px;
+  background: rgba(8,15,30,.8); border: 1px solid var(--border-mid);
+  border-radius: var(--r-md); padding: 11px 16px; margin-bottom: 14px;
+  backdrop-filter: blur(10px);
+}
+.scan-pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--cyan); flex-shrink: 0; box-shadow: 0 0 8px var(--cyan); animation: blink .9s infinite; }
+.scan-text { font-family: var(--mono); font-size: 11px; color: var(--text-2); }
+.skel-wrap { display: none; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+.skel {
+  border-radius: var(--r-md);
+  background: linear-gradient(90deg, var(--surface-2) 25%, var(--surface-3) 50%, var(--surface-2) 75%);
+  background-size: 600px 100%; animation: sweep 1.4s linear infinite;
+}
+@keyframes sweep { 0%{background-position:-600px 0} 100%{background-position:600px 0} }
+.loading-row { display: none; align-items: center; gap: 8px; color: var(--text-3); font-size: 13px; margin-bottom: 10px; }
+.spin { width: 15px; height: 15px; border-radius: 50%; border: 2px solid var(--border-dim); border-top-color: var(--blue-lt); animation: spin .75s linear infinite; flex-shrink: 0; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ══════════════════════════════════════════════
+   VERDICT
+══════════════════════════════════════════════ */
+.verdict {
+  display: none; border-radius: var(--r-xl); padding: 26px 30px;
+  margin-bottom: 24px; text-align: center;
+  animation: float-in .45s cubic-bezier(.22,1,.36,1) both;
+}
+.verdict.safe { background: linear-gradient(135deg, rgba(16,185,129,.13), rgba(16,185,129,.04)); border: 1px solid rgba(16,185,129,.3); }
+.verdict.warn { background: linear-gradient(135deg, rgba(245,158,11,.13), rgba(245,158,11,.04)); border: 1px solid rgba(245,158,11,.3); }
+.verdict-icon { font-size: 34px; margin-bottom: 8px; line-height: 1; }
+.verdict-title { font-size: 20px; font-weight: 800; letter-spacing: -.3px; margin-bottom: 5px; }
+.verdict-sub { font-size: 13px; color: var(--text-2); }
+
+/* ══════════════════════════════════════════════
+   METRICS GRID
+══════════════════════════════════════════════ */
+.metrics { display: none; grid-template-columns: repeat(3,1fr); gap: 14px; margin-bottom: 12px; }
+@media(max-width:700px){ .metrics{grid-template-columns:1fr 1fr} }
+@media(max-width:480px){ .metrics{grid-template-columns:1fr} }
+.mcard {
+  background: rgba(8,15,30,.75); border: 1px solid var(--border-dim);
+  border-radius: var(--r-lg); padding: 18px 20px;
+  backdrop-filter: blur(14px); position: relative; overflow: hidden;
+  animation: float-in .4s ease both;
+  transition: transform .2s ease, border-color .2s ease;
+  cursor: default;
+}
+.mcard:hover { transform: translateY(-3px); border-color: var(--border-hi); }
+.mcard::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255,255,255,.02) 0%, transparent 55%);
+  pointer-events: none;
+}
+.mcard-icon {
+  position: absolute; top: 16px; right: 16px;
+  width: 30px; height: 30px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center; font-size: 13px;
+}
+.mcard-icon.rose { background: rgba(244,63,94,.10); }
+.mcard-icon.green { background: rgba(16,185,129,.10); }
+.mcard-icon.blue { background: rgba(59,130,246,.10); }
+.mcard-label {
+  font-size: 10px; font-weight: 700; color: var(--text-3);
+  text-transform: uppercase; letter-spacing: .7px;
+  display: flex; align-items: center; gap: 5px; margin-bottom: 10px;
+}
+.mcard-val {
+  font-size: 30px; font-weight: 900; letter-spacing: -1px;
+  font-variant-numeric: tabular-nums; line-height: 1;
+}
+.mcard-val.rose { color: var(--rose-lt); }
+.mcard-val.green { color: var(--emerald-lt); }
+.mcard-val.blue { color: var(--blue-lt); }
+.mcard-sub { font-size: 11px; color: var(--text-3); margin-top: 7px; }
+
+/* progress bar on money card */
+.mcard-bar-track { height: 3px; background: rgba(255,255,255,.07); border-radius: 2px; margin-top: 10px; overflow: hidden; }
+.mcard-bar-fill { height: 100%; border-radius: 2px; background: var(--emerald-lt); transition: width 1s cubic-bezier(.22,1,.36,1); }
+
+/* ══════════════════════════════════════════════
+   COST IMPACT STRIP
+══════════════════════════════════════════════ */
+.cost-strip {
+  display: none; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 28px;
+}
+.cost-card {
+  background: rgba(8,15,30,.7); border: 1px solid var(--border-dim);
+  border-radius: var(--r-lg); padding: 14px 18px;
+  display: flex; align-items: center; gap: 14px;
+  animation: float-in .4s ease both;
+}
+.cost-icon { font-size: 22px; flex-shrink: 0; }
+.cost-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .7px; color: var(--text-3); margin-bottom: 3px; }
+.cost-val { font-size: 18px; font-weight: 800; letter-spacing: -.5px; }
+.cost-val.amber { color: var(--amber); }
+.cost-val.rose { color: var(--rose-lt); }
+.cost-note { font-size: 10px; color: var(--text-3); margin-top: 2px; }
+
+/* ══════════════════════════════════════════════
+   SECTION HEADINGS
+══════════════════════════════════════════════ */
+.sec-head { display: flex; align-items: center; justify-content: space-between; margin: 28px 0 5px; }
+.sec-title { font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 7px; letter-spacing: -.1px; }
+.sec-sub { font-size: 11px; color: var(--text-3); margin-bottom: 14px; }
+.sec-badge { font-size: 10px; font-weight: 700; color: var(--text-3); background: rgba(255,255,255,.05); border: 1px solid var(--border-dim); border-radius: 20px; padding: 3px 9px; }
+
+/* ══════════════════════════════════════════════
+   SPARKLINE
+══════════════════════════════════════════════ */
+#sparkline {
+  display: block; width: 100%;
+  background: rgba(8,15,30,.6); border: 1px solid var(--border-dim);
+  border-radius: var(--r-md); margin-bottom: 14px; padding: 6px 0;
+}
+
+/* ══════════════════════════════════════════════
+   TRANSACTION CARDS
+══════════════════════════════════════════════ */
+.txn-list { display: flex; flex-direction: column; gap: 10px; }
+.txn-card {
+  background: rgba(8,15,30,.68); border: 1px solid var(--border-dim);
+  border-radius: var(--r-lg); padding: 0;
+  cursor: pointer; backdrop-filter: blur(10px);
+  transition: border-color .2s ease, box-shadow .2s ease;
+  animation: float-in .35s ease both;
+  overflow: hidden;
+}
+.txn-card:hover { border-color: rgba(59,130,246,.35); box-shadow: -3px 0 0 var(--blue); }
+.txn-card.open { border-color: rgba(59,130,246,.4); }
+
+/* left accent bar */
+.txn-card::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0;
+  width: 3px; border-radius: 4px 0 0 4px;
+  background: var(--border-dim); transition: background .25s ease;
+}
+.txn-card { position: relative; }
+.txn-card.tier-low::before    { background: var(--emerald); }
+.txn-card.tier-medium::before { background: var(--amber); }
+.txn-card.tier-high::before   { background: var(--orange); }
+.txn-card.tier-critical::before { background: var(--rose); }
+
+.txn-inner { padding: 16px 20px 16px 22px; }
+.txn-header { display: flex; justify-content: space-between; align-items: center; }
+.txn-left { display: flex; align-items: center; gap: 11px; }
+.rank-num {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: rgba(255,255,255,.05); border: 1px solid var(--border-dim);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; font-weight: 800; font-family: var(--mono); color: var(--text-3); flex-shrink: 0;
+}
+.txn-dot {
+  width: 34px; height: 34px; border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px; flex-shrink: 0;
+}
+.txn-name { font-size: 13px; font-weight: 700; letter-spacing: -.1px; }
+.txn-name .chev { display: inline-block; margin-left: 5px; color: var(--text-3); font-size: 10px; transition: transform .25s ease; }
+.txn-card.open .txn-name .chev { transform: rotate(90deg); }
+.txn-mono { font-family: var(--mono); font-size: 11px; color: var(--text-2); margin-top: 2px; font-weight: 500; }
+.txn-right { display: flex; align-items: center; gap: 9px; }
+.score-chip {
+  font-family: var(--mono); font-size: 11px; font-weight: 600;
+  padding: 3px 9px; border-radius: 6px;
+  background: rgba(255,255,255,.05); border: 1px solid var(--border-dim); color: var(--text-2);
+}
+
+/* score mini-bar under the chip */
+.score-bar-wrap { width: 60px; height: 4px; background: rgba(255,255,255,.07); border-radius: 2px; overflow: hidden; margin-top: 4px; }
+.score-bar-fill { height: 100%; border-radius: 2px; transition: width 1s cubic-bezier(.22,1,.36,1); }
+
+.tier-pill {
+  padding: 4px 11px; border-radius: 20px;
+  font-size: 10px; font-weight: 800; letter-spacing: .3px; color: var(--inv);
+}
+
+/* ══════════════════════════════════════════════
+   EXPANDED DETAIL
+══════════════════════════════════════════════ */
+.txn-detail {
+  max-height: 0; overflow: hidden;
+  transition: max-height .4s cubic-bezier(.22,1,.36,1);
+}
+.txn-card.open .txn-detail { max-height: 600px; }
+.detail-body { border-top: 1px solid var(--border-dim); padding: 16px 20px 18px 22px; }
+
+/* feature flag chips row */
+.flag-row { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px; }
+.flag-chip {
+  display: flex; align-items: center; gap: 5px;
+  padding: 4px 10px; border-radius: 20px; font-size: 11px;
+  background: rgba(255,255,255,.04); border: 1px solid var(--border-dim); color: var(--text-2);
+  transition: all .2s ease;
+}
+.flag-chip.hot {
+  background: rgba(244,63,94,.08); border-color: rgba(244,63,94,.22); color: var(--rose-lt);
+  animation: chip-pop .4s cubic-bezier(.22,1,.36,1) both;
+}
+.flag-chip.warm {
+  background: rgba(245,158,11,.08); border-color: rgba(245,158,11,.22); color: var(--amber);
+}
+@keyframes chip-pop { from{transform:scale(.85);opacity:0} to{transform:scale(1);opacity:1} }
+
+/* AI explanation box */
+.ai-box {
+  background: rgba(4,8,15,.65); border: 1px solid var(--border-mid);
+  border-radius: var(--r-md); padding: 14px 16px; margin-bottom: 14px;
+  font-size: 13px; line-height: 1.75; color: var(--text-2); position: relative;
+  min-height: 52px;
+}
+.ai-label {
+  font-size: 9px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase;
+  color: var(--blue-lt); margin-bottom: 8px; display: flex; align-items: center; gap: 6px;
+}
+.ai-label-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--blue-lt); animation: blink 1.5s infinite; }
+.ai-text { white-space: pre-line; }
+.ai-cursor { display: inline-block; width: 2px; height: 13px; background: var(--blue-lt); margin-left: 2px; vertical-align: middle; animation: cursor-blink .7s step-end infinite; }
+@keyframes cursor-blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+/* risk factor mini-bars */
+.factor-bars { display: flex; flex-direction: column; gap: 7px; margin-bottom: 14px; }
+.factor-row { display: flex; align-items: center; gap: 10px; }
+.factor-label { font-size: 11px; color: var(--text-2); width: 145px; flex-shrink: 0; }
+.factor-track { flex: 1; height: 5px; background: rgba(255,255,255,.07); border-radius: 3px; overflow: hidden; }
+.factor-fill { height: 100%; border-radius: 3px; transition: width 1s cubic-bezier(.22,1,.36,1); }
+.factor-val { font-family: var(--mono); font-size: 10px; color: var(--text-3); width: 38px; text-align: right; flex-shrink: 0; }
+
+/* action row */
+.act-row { display: flex; gap: 9px; }
+.act-btn {
+  flex: 1; padding: 9px; border-radius: var(--r-sm);
+  border: 1px solid var(--border-dim); background: transparent;
+  color: var(--text-2); font-size: 11px; font-weight: 700;
+  font-family: var(--sans); cursor: pointer; transition: all .15s ease;
+}
+.act-btn.safe:hover { background: rgba(16,185,129,.10); border-color: rgba(16,185,129,.3); color: var(--emerald-lt); }
+.act-btn.flag:hover { background: rgba(244,63,94,.10); border-color: rgba(244,63,94,.3); color: var(--rose-lt); }
+
+/* ══════════════════════════════════════════════
+   PANEL SECTION
+══════════════════════════════════════════════ */
+.divider { height: 1px; background: var(--border-dim); margin: 36px 0; }
+.panel-card {
+  background: rgba(8,15,30,.75); border: 1px solid var(--border-dim);
+  border-radius: var(--r-xl); padding: 22px 26px; backdrop-filter: blur(14px);
+  margin-bottom: 14px;
+}
+.stat-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; }
+@media(max-width:700px){ .stat-grid{grid-template-columns:repeat(2,1fr)} }
+.stat-item { display: flex; flex-direction: column; gap: 5px; }
+.stat-label {
+  font-size: 10px; font-weight: 700; color: var(--text-3);
+  text-transform: uppercase; letter-spacing: .6px;
+  display: flex; align-items: center; gap: 5px;
+}
+.stat-val { font-size: 22px; font-weight: 800; letter-spacing: -.5px; }
+
+/* threshold */
+.thresh-row {
+  display: flex; align-items: center; gap: 14px;
+  background: rgba(4,8,15,.7); border: 1px solid var(--border-dim);
+  border-radius: var(--r-md); padding: 11px 16px; max-width: 540px;
+}
+.thresh-label { font-size: 12px; font-weight: 600; color: var(--text-2); white-space: nowrap; display: flex; align-items: center; gap: 6px; }
+.thresh-slider { flex: 1; accent-color: var(--blue-lt); cursor: pointer; }
+.thresh-val { font-family: var(--mono); font-size: 13px; font-weight: 700; color: var(--blue-lt); min-width: 48px; text-align: right; }
+
+/* tier distribution bars */
+.tier-dist { display: flex; gap: 10px; margin-top: 4px; }
+.tier-bar-wrap { display: flex; flex-direction: column; align-items: center; gap: 4px; flex: 1; }
+.tier-bar-track { width: 100%; height: 56px; background: rgba(255,255,255,.04); border-radius: 4px 4px 0 0; display: flex; align-items: flex-end; overflow: hidden; }
+.tier-bar-fill { width: 100%; border-radius: 4px 4px 0 0; transition: height 1s cubic-bezier(.22,1,.36,1); }
+.tier-bar-label { font-size: 9px; font-weight: 700; color: var(--text-3); }
+.tier-bar-count { font-family: var(--mono); font-size: 10px; color: var(--text-2); }
+
+/* ══════════════════════════════════════════════
+   SIMULATOR
+══════════════════════════════════════════════ */
+.sim-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+@media(max-width:600px){ .sim-inputs{grid-template-columns:1fr} }
+.field-label { font-size: 10px; font-weight: 700; color: var(--text-3); text-transform: uppercase; letter-spacing: .6px; margin-bottom: 6px; display: flex; align-items: center; gap: 5px; }
+.field-num {
+  width: 100%; background: rgba(4,8,15,.85);
+  border: 1px solid var(--border-mid); color: var(--text-1);
+  padding: 10px 12px; border-radius: var(--r-sm);
+  font-size: 14px; font-family: var(--mono); font-weight: 600;
+  transition: border-color .2s;
+}
+.field-num:focus { outline: none; border-color: var(--blue-lt); }
+.chk-group { display: flex; flex-direction: column; gap: 8px; }
+.chk-item {
+  display: flex; align-items: center; gap: 10px;
+  background: rgba(4,8,15,.85); border: 1px solid var(--border-mid);
+  border-radius: var(--r-sm); padding: 9px 12px; cursor: pointer;
+  font-size: 12px; color: var(--text-2); transition: all .15s ease;
+}
+.chk-item:has(input:checked) { background: rgba(59,130,246,.07); border-color: rgba(59,130,246,.3); color: var(--blue-lt); }
+.chk-item input { accent-color: var(--blue-lt); cursor: pointer; }
+.sim-btn {
+  padding: 10px 22px; border-radius: var(--r-sm); border: none; cursor: pointer;
+  background: var(--blue); color: #fff;
+  font-size: 12px; font-weight: 700; font-family: var(--sans);
+  box-shadow: 0 2px 14px rgba(59,130,246,.35);
+  transition: all .2s ease; display: block; margin-bottom: 0;
+}
+.sim-btn:hover { background: var(--blue-lt); transform: translateY(-1px); }
+
+/* gauge */
+.sim-result { display: none; align-items: center; gap: 22px; margin-top: 20px; flex-wrap: wrap; }
+.gauge-wrap { position: relative; width: 110px; height: 110px; flex-shrink: 0; }
+.gauge-wrap svg { transform: rotate(-90deg); }
+.g-track, .g-prog { fill: none; stroke-width: 9; }
+.g-track { stroke: rgba(255,255,255,.06); }
+.g-prog {
+  stroke: var(--blue-lt); stroke-linecap: round;
+  stroke-dasharray: 263; stroke-dashoffset: 263; /* r=42 → 2π×42≈263.9 */
+  transition: stroke-dashoffset .9s cubic-bezier(.22,1,.36,1), stroke .3s ease;
+}
+.gauge-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; }
+.gauge-pct { font-size: 22px; font-weight: 900; line-height: 1; font-variant-numeric: tabular-nums; }
+.gauge-lbl { font-size: 8px; color: var(--text-3); text-transform: uppercase; letter-spacing: .8px; }
+.sim-meta { flex: 1; min-width: 190px; }
+.sim-tier-pill { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 10px; font-weight: 800; color: var(--inv); margin-bottom: 10px; }
+.sim-expl { font-size: 12px; line-height: 1.7; color: var(--text-2); background: rgba(4,8,15,.65); border: 1px solid var(--border-dim); border-radius: var(--r-md); padding: 12px 14px; white-space: pre-line; min-height: 44px; }
+
+/* ══════════════════════════════════════════════
+   TOOLTIPS
+══════════════════════════════════════════════ */
+.tip-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 13px; height: 13px; border-radius: 50%;
+  background: rgba(99,126,210,.15); border: 1px solid var(--border-dim);
+  color: var(--text-3); font-size: 8px; font-weight: 800;
+  cursor: help; position: relative; flex-shrink: 0; transition: all .15s;
+}
+.tip-btn:hover { background: var(--blue); color: #fff; border-color: transparent; }
+.tip-btn .tip {
+  display: none; position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+  background: var(--surface-2); border: 1px solid var(--border-mid);
+  color: var(--text-1); font-size: 11px; font-weight: 400; font-family: var(--sans);
+  padding: 9px 12px; border-radius: var(--r-sm); width: 210px; line-height: 1.5;
+  box-shadow: 0 12px 40px rgba(0,0,0,.6); z-index: 50; text-align: left;
+}
+.tip-btn:hover .tip { display: block; }
+.tip-btn .tip::after { content:""; position:absolute; top:100%; left:50%; transform:translateX(-50%); border:5px solid transparent; border-top-color: var(--surface-2); }
+
+/* ══════════════════════════════════════════════
+   TOASTS
+══════════════════════════════════════════════ */
+.toast-wrap { position: fixed; top: 22px; right: 22px; display: flex; flex-direction: column; gap: 8px; z-index: 999; max-width: 290px; }
+.toast {
+  background: rgba(8,15,30,.96); border: 1px solid rgba(244,63,94,.3);
+  border-left: 3px solid var(--rose); border-radius: var(--r-md);
+  padding: 12px 14px; backdrop-filter: blur(14px); cursor: pointer;
+  box-shadow: 0 12px 40px rgba(0,0,0,.55);
+  animation: slide-in .3s cubic-bezier(.22,1,.36,1) both;
+}
+.toast.closing { animation: slide-out .25s ease forwards; }
+.toast-title { font-size: 11px; font-weight: 800; display: flex; align-items: center; gap: 6px; margin-bottom: 3px; }
+.toast-body { font-size: 10px; color: var(--text-3); }
+
+/* ══════════════════════════════════════════════
+   ANIMATIONS
+══════════════════════════════════════════════ */
+@keyframes fade-up { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
+@keyframes float-in { from{opacity:0;transform:scale(.96)} to{opacity:1;transform:scale(1)} }
+@keyframes slide-in { from{opacity:0;transform:translateX(32px)} to{opacity:1;transform:translateX(0)} }
+@keyframes slide-out { to{opacity:0;transform:translateX(32px)} }
+
+/* confetti */
+#confetti { position:fixed; inset:0; pointer-events:none; z-index:998; display:none; }
 </style>
 </head>
 <body>
- 
-<header>
-  <div class="icon">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2L4 5V11C4 16.5 7.4 21.7 12 23C16.6 21.7 20 16.5 20 11V5L12 2Z" fill="#1a1a1a"/>
-      <path d="M10.5 13.5L8.5 11.5L7 13L10.5 16.5L17 10L15.5 8.5L10.5 13.5Z" fill="#e8a33d"/>
-    </svg>
-  </div>
-  <div><h1>FinProtek</h1></div>
-</header>
-<div class="subtitle"><span class="live-dot"></span>We watch your account for suspicious activity and tell you clearly if something looks wrong.</div>
- 
-<div class="bank-box">
-  <div class="bank-left">
-    <div class="bank-icon">bank</div>
-    <div>
-      <div class="bank-status-title" id="bankStatusTitle">No account connected yet</div>
-      <div class="bank-status-sub" id="bankStatusSub">Connect your bank so we can start watching for you</div>
-    </div>
-  </div>
-  <div style="display:flex; align-items:center; gap:14px;">
-    <select class="bank-select" id="bankSelect">
-      <option value="HDFC Bank">HDFC Bank</option>
-      <option value="ICICI Bank">ICICI Bank</option>
-      <option value="State Bank of India">State Bank of India</option>
-      <option value="Axis Bank">Axis Bank</option>
-    </select>
-    <button class="connect-btn" id="connectBtn">Connect My Bank</button>
-    <div class="alert-toggle">
-      <label class="switch"><input type="checkbox" id="alertToggle" checked><span class="slider-switch"></span></label>
-      Notify me
-    </div>
-  </div>
+
+<div class="bg-layer">
+  <div class="bg-grid"></div>
+  <div class="bg-orb orb-a"></div>
+  <div class="bg-orb orb-b"></div>
+  <div class="bg-orb orb-c"></div>
 </div>
- 
-<div class="main-cta">
-  <div class="main-cta-text">
-    <h2>Check my account for fraud</h2>
-    <p>We'll look through your recent transactions and flag anything suspicious, with a clear explanation for each one.</p>
-  </div>
-  <button class="run-btn" id="runBtn">Check My Account Now</button>
-</div>
- 
-<div class="loading" id="loadingText" style="display:none;"><span class="spinner"></span>Looking through your transactions...</div>
-<div class="scan-ticker" id="scanTicker">
-  <span class="scan-dot"></span>
-  <span id="scanText">Scanning transaction 1 of 1000...</span>
-</div>
-<div id="skeletonWrap" style="display:none;"><div class="skeleton"></div><div class="skeleton"></div></div>
- 
-<div class="verdict-banner" id="verdictBanner">
-  <div class="verdict-emoji" id="verdictEmoji">OK</div>
-  <div class="verdict-title" id="verdictTitle">You're safe</div>
-  <div class="verdict-sub" id="verdictSub"></div>
-</div>
- 
-<div class="grid" id="statsGrid">
-  <div class="card danger">
-    <div class="label">Needs Your Attention</div>
-    <div class="value" id="flaggedCount">0</div>
-    <div class="sub">out of <span id="totalTxns">0</span> transactions checked</div>
-  </div>
-  <div class="card success">
-    <div class="label">Money Protected
-      <span class="info-icon">i
-        <span class="tooltip">Total value of transactions that were both flagged by our system AND confirmed as real fraud in this test dataset.</span>
-      </span>
-    </div>
-    <div class="value" id="moneyProtected">Rs.0</div>
-    <div class="sub">caught before it was too late</div>
-  </div>
-  <div class="card accent">
-    <div class="label">Everything Else</div>
-    <div class="value" id="safePct">0%</div>
-    <div class="sub">looked completely normal</div>
-  </div>
-</div>
- 
-<div id="txnSection" style="display:none;">
-  <div class="section-title">Flagged Transactions
-    <span class="info-icon">i
-      <span class="tooltip">Risk Tiers: Low (0-30%), Medium (30-60%), High (60-85%), Critical (85-100%) based on the model's fraud probability score.</span>
-    </span>
-  </div>
-  <div class="section-sub">Sorted from most risky to least risky - tap any one to see why we flagged it.</div>
-  <canvas id="riskSparkline" width="600" height="60" style="width:100%; max-width:600px; margin-bottom:18px; display:block;"></canvas>
-  <div class="txn-list" id="txnList"></div>
-</div>
- 
-<div class="section-title" style="margin-top:36px;">Advanced Settings &amp; Technical Details</div>
-<div class="advanced-panel" id="advancedPanel">
-  <div class="slider-box">
-    <label>Fraud Threshold
-      <span class="info-icon">i
-        <span class="tooltip">The minimum risk score (0-1) a transaction needs to be flagged as fraud. Lower = catches more fraud but more false alarms. Higher = fewer false alarms but may miss some fraud.</span>
-      </span>
-    </label>
-    <input type="range" id="thresholdSlider" min="0.1" max="0.95" step="0.05" value="0.6">
-    <div class="slider-val" id="thresholdVal">0.60</div>
-  </div>
-  <div class="tech-panel" id="techPanel">
-    <div class="item">
-      <div class="item-label">Precision
-        <span class="info-icon">i
-          <span class="tooltip">Of all the transactions we flagged as fraud, this % were actually fraud. Higher precision = fewer false alarms.</span>
-        </span>
-      </div>
-      <b id="precisionVal">-</b>
-    </div>
-    <div class="item">
-      <div class="item-label">Recall
-        <span class="info-icon">i
-          <span class="tooltip">Of all the real fraud that happened, this % was actually caught by the system. Higher recall = fewer missed fraud cases.</span>
-        </span>
-      </div>
-      <b id="recallVal">-</b>
-    </div>
-    <div class="item">
-      <div class="item-label">False Positives
-        <span class="info-icon">i
-          <span class="tooltip">Normal transactions that were incorrectly flagged as fraud. These cost customer trust and support time.</span>
-        </span>
-      </div>
-      <b id="fpVal">-</b>
-    </div>
-    <div class="item">
-      <div class="item-label">False Negatives
-        <span class="info-icon">i
-          <span class="tooltip">Actual fraud transactions that slipped through undetected. These cost real money lost.</span>
-        </span>
-      </div>
-      <b id="fnVal">-</b>
-    </div>
-  </div>
- 
-  <div class="section-title" style="margin-top:30px;">Simulate a Transaction</div>
-  <div class="section-sub">Enter details of a made-up transaction to see how the model would score it.</div>
-  <div class="sim-box">
-    <div class="sim-grid">
-      <div class="field"><label>Amount Deviation
-          <span class="info-icon">i
-            <span class="tooltip">How many times bigger this purchase is compared to the user's normal average. 1 = normal, 5 = five times higher than usual.</span>
-          </span>
-        </label>
-        <input type="number" id="simAmount" value="1.0" step="0.1">
-      </div>
-      <div class="field"><label>Velocity
-          <span class="info-icon">i
-            <span class="tooltip">Number of transactions made by this user in the last hour. High velocity in a short time is a common fraud signal.</span>
-          </span>
-        </label>
-        <input type="number" id="simVelocity" value="1" step="1">
-      </div>
-      <div class="toggle-field"><input type="checkbox" id="simDevice"><label for="simDevice">New / unrecognized device</label></div>
-      <div class="toggle-field"><input type="checkbox" id="simLocation"><label for="simLocation">New / unrecognized location</label></div>
-      <div class="toggle-field"><input type="checkbox" id="simHour"><label for="simHour">Unusual hour (midnight to 5am)</label></div>
-    </div>
-    <button class="sim-btn" id="simBtn">Check This Transaction</button>
-    <div class="sim-result-wrap" id="simResultWrap">
-      <div class="gauge">
-        <svg width="110" height="110">
-          <circle class="bg" cx="55" cy="55" r="46"></circle>
-          <circle class="fg" id="gaugeCircle" cx="55" cy="55" r="46" stroke-dasharray="289" stroke-dashoffset="289"></circle>
+
+<div class="shell">
+
+  <!-- TOPBAR -->
+  <nav class="topbar">
+    <a class="brand" href="#">
+      <div class="brand-mark">
+        <svg viewBox="0 0 18 18" fill="none">
+          <path d="M9 1L2 4V9C2 13.4 5.1 17.4 9 18.5C12.9 17.4 16 13.4 16 9V4L9 1Z" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.3)" stroke-width=".5"/>
+          <path d="M7.5 10L5.5 8L4.5 9L7.5 12L13.5 6L12.5 5L7.5 10Z" fill="white"/>
         </svg>
-        <div class="gauge-label"><div class="pct" id="gaugePct">0%</div><div class="txt">Risk</div></div>
       </div>
-      <div class="sim-info">
-        <div class="sim-tier-badge" id="simTierBadge">-</div>
-        <div class="plain-reason" id="simExplanation"></div>
+      <div>
+        <div class="brand-name">Fin<span>Protek</span></div>
+        <div class="brand-tag">Fraud Intelligence</div>
+      </div>
+    </a>
+    <div class="topbar-right">
+      <div class="live-pill"><span class="live-dot"></span>Systems Live</div>
+      <div class="version-tag">v2.5.0</div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-chip">
+      <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3" fill="currentColor"/></svg>
+      AI-Powered · Real-Time · Groq LLM
+    </div>
+    <h1>Your <span class="grad">financial shield</span>,<br>always watching.</h1>
+    <p class="hero-sub">ML scores every transaction against your behavioral baseline. AI explains every flag in plain language — no jargon, no guesswork.</p>
+  </div>
+
+  <!-- BANK ROW -->
+  <div class="bank-row" id="bankRow">
+    <div class="bank-info">
+      <div class="bank-avatar" id="bankAvatar">🏦</div>
+      <div>
+        <div class="bank-title" id="bankTitle">No account connected</div>
+        <div class="bank-sub" id="bankSub">Select your bank and connect to begin</div>
+      </div>
+    </div>
+    <div class="bank-controls">
+      <select class="bank-select" id="bankSelect">
+        <option value="HDFC Bank">HDFC Bank</option>
+        <option value="ICICI Bank">ICICI Bank</option>
+        <option value="State Bank of India">State Bank of India</option>
+        <option value="Axis Bank">Axis Bank</option>
+      </select>
+      <button class="connect-btn" id="connectBtn">Connect Account</button>
+      <div class="notif-wrap">
+        <label class="tog"><input type="checkbox" id="alertTog" checked><span class="tog-track"></span></label>
+        <span>Alerts</span>
       </div>
     </div>
   </div>
-</div>
- 
-<div class="toast-container" id="toastContainer"></div>
-<canvas id="confettiCanvas" style="position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:998; display:none;"></canvas>
- 
+
+  <!-- ACTION CTA -->
+  <div class="action-card">
+    <div class="action-glow"></div>
+    <div class="action-text">
+      <h2>Run AI fraud analysis on your account</h2>
+      <p>Our ML model scores every transaction. Groq AI then writes a plain-English explanation for every flagged one — instantly.</p>
+    </div>
+    <button class="run-btn" id="runBtn">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 2.5L11 7L5 11.5V2.5Z" fill="white"/></svg>
+      Scan Now
+    </button>
+  </div>
+
+  <!-- LOADING -->
+  <div class="loading-row" id="loadingRow"><div class="spin"></div>Analyzing transaction history…</div>
+  <div class="scan-bar" id="scanBar"><span class="scan-pulse"></span><span class="scan-text" id="scanText">Initializing…</span></div>
+  <div class="skel-wrap" id="skelWrap">
+    <div class="skel" style="height:52px"></div>
+    <div class="skel" style="height:52px"></div>
+    <div class="skel" style="height:36px;opacity:.5"></div>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict" id="verdict">
+    <div class="verdict-icon" id="vIcon"></div>
+    <div class="verdict-title" id="vTitle"></div>
+    <div class="verdict-sub" id="vSub"></div>
+  </div>
+
+  <!-- METRICS -->
+  <div class="metrics" id="metrics">
+    <div class="mcard" style="animation-delay:.05s">
+      <div class="mcard-icon rose">⚠</div>
+      <div class="mcard-label">Flagged
+        <span class="tip-btn">i<span class="tip">Transactions that crossed your detection threshold and need review.</span></span>
+      </div>
+      <div class="mcard-val rose" id="mFlagged">0</div>
+      <div class="mcard-sub">of <span id="mTotal">0</span> transactions scanned</div>
+    </div>
+    <div class="mcard" style="animation-delay:.10s">
+      <div class="mcard-icon green">₹</div>
+      <div class="mcard-label">Value Protected
+        <span class="tip-btn">i<span class="tip">Total rupee value of fraud the model caught — transactions flagged AND confirmed as actual fraud.</span></span>
+      </div>
+      <div class="mcard-val green" id="mMoney">₹0</div>
+      <div class="mcard-sub">in fraud prevented</div>
+      <div class="mcard-bar-track"><div class="mcard-bar-fill" id="mMoneyBar" style="width:0%"></div></div>
+    </div>
+    <div class="mcard" style="animation-delay:.15s">
+      <div class="mcard-icon blue">✓</div>
+      <div class="mcard-label">Safe Rate</div>
+      <div class="mcard-val blue" id="mSafe">0%</div>
+      <div class="mcard-sub">transactions cleared clean</div>
+    </div>
+  </div>
+
+  <!-- COST IMPACT -->
+  <div class="cost-strip" id="costStrip">
+    <div class="cost-card" style="animation-delay:.2s">
+      <div class="cost-icon">⚡</div>
+      <div>
+        <div class="cost-label">False Alarm Cost</div>
+        <div class="cost-val amber" id="cFP">₹0</div>
+        <div class="cost-note"><span id="cFPCount">0</span> false positives × ₹50 each</div>
+      </div>
+    </div>
+    <div class="cost-card" style="animation-delay:.25s">
+      <div class="cost-icon">💸</div>
+      <div>
+        <div class="cost-label">Missed Fraud Cost</div>
+        <div class="cost-val rose" id="cFN">₹0</div>
+        <div class="cost-note"><span id="cFNCount">0</span> missed cases × ₹3,000 each</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLAGGED TRANSACTIONS -->
+  <div id="txnSection" style="display:none">
+    <div class="sec-head">
+      <div class="sec-title">
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 1L1 3.5V7C1 10.5 3.6 13.7 6.5 14.5C9.4 13.7 12 10.5 12 7V3.5L6.5 1Z" stroke="currentColor" stroke-width="1.2"/></svg>
+        Flagged Transactions
+      </div>
+      <div class="sec-badge" id="flagBadge">0 alerts</div>
+    </div>
+    <div class="sec-sub">Ranked by fraud probability · tap any row to expand the full AI analysis</div>
+    <canvas id="sparkline" height="54"></canvas>
+
+    <!-- Tier distribution -->
+    <div class="tier-dist" id="tierDist" style="margin-bottom:16px;display:none">
+      <div class="tier-bar-wrap">
+        <div class="tier-bar-track"><div class="tier-bar-fill" id="tbLow" style="height:0%;background:var(--emerald)"></div></div>
+        <div class="tier-bar-label" style="color:var(--emerald)">Low</div>
+        <div class="tier-bar-count" id="tbLowN">0</div>
+      </div>
+      <div class="tier-bar-wrap">
+        <div class="tier-bar-track"><div class="tier-bar-fill" id="tbMed" style="height:0%;background:var(--amber)"></div></div>
+        <div class="tier-bar-label" style="color:var(--amber)">Med</div>
+        <div class="tier-bar-count" id="tbMedN">0</div>
+      </div>
+      <div class="tier-bar-wrap">
+        <div class="tier-bar-track"><div class="tier-bar-fill" id="tbHigh" style="height:0%;background:var(--orange)"></div></div>
+        <div class="tier-bar-label" style="color:var(--orange)">High</div>
+        <div class="tier-bar-count" id="tbHighN">0</div>
+      </div>
+      <div class="tier-bar-wrap">
+        <div class="tier-bar-track"><div class="tier-bar-fill" id="tbCrit" style="height:0%;background:var(--rose)"></div></div>
+        <div class="tier-bar-label" style="color:var(--rose)">Crit</div>
+        <div class="tier-bar-count" id="tbCritN">0</div>
+      </div>
+    </div>
+
+    <div class="txn-list" id="txnList"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- MODEL PERFORMANCE -->
+  <div class="sec-title" style="margin-bottom:18px">
+    <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M6.5 4V6.5L8 8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+    Model Performance
+  </div>
+  <div class="panel-card">
+    <div class="stat-grid">
+      <div class="stat-item">
+        <div class="stat-label">Precision <span class="tip-btn">i<span class="tip">Of all flagged transactions, % that were truly fraudulent. High = fewer false alarms.</span></span></div>
+        <div class="stat-val" id="sPrecision" style="color:var(--blue-lt)">—</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Recall <span class="tip-btn">i<span class="tip">Of all actual fraud, % the model caught. High = fewer missed cases.</span></span></div>
+        <div class="stat-val" id="sRecall" style="color:var(--emerald-lt)">—</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">False Positives <span class="tip-btn">i<span class="tip">Legit transactions incorrectly flagged. Costs ~₹50 each in support overhead.</span></span></div>
+        <div class="stat-val" id="sFP" style="color:var(--amber)">—</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">False Negatives <span class="tip-btn">i<span class="tip">Fraud that slipped through undetected. Each case costs ~₹3,000.</span></span></div>
+        <div class="stat-val" id="sFN" style="color:var(--rose-lt)">—</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THRESHOLD -->
+  <div class="sec-title" style="margin-bottom:12px">
+    <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5H11M2 3.5H7M5.5 9.5H11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+    Detection Sensitivity
+  </div>
+  <div class="panel-card" style="padding:14px 18px;margin-bottom:26px">
+    <div class="thresh-row">
+      <span class="thresh-label">Threshold
+        <span class="tip-btn">i<span class="tip">Lower = catches more fraud but more false alarms. Higher = stricter, fewer flags.</span></span>
+      </span>
+      <input type="range" class="thresh-slider" id="threshSlider" min="0.1" max="0.95" step="0.05" value="0.6">
+      <span class="thresh-val" id="threshVal">0.60</span>
+    </div>
+  </div>
+
+  <!-- SIMULATOR -->
+  <div class="sec-title" style="margin-bottom:5px">
+    <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1.5" y="1.5" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M5 6.5H8M6.5 5V8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+    Transaction Simulator
+  </div>
+  <div class="sec-sub">Enter any transaction parameters and get an instant AI risk assessment.</div>
+  <div class="panel-card">
+    <div class="sim-inputs">
+      <div>
+        <div class="field-label">Amount Deviation <span class="tip-btn">i<span class="tip">How many times larger than the user's average. 1.0 = normal, 5.0 = 5× their average.</span></span></div>
+        <input type="number" class="field-num" id="simAmt" value="1.0" step="0.1" min="0.1">
+      </div>
+      <div>
+        <div class="field-label">Velocity (last 1 hr) <span class="tip-btn">i<span class="tip">Transactions by this user in the past hour. High velocity = strong fraud signal.</span></span></div>
+        <input type="number" class="field-num" id="simVel" value="1" step="1" min="1">
+      </div>
+      <div>
+        <div class="field-label">Risk Flags</div>
+        <div class="chk-group">
+          <label class="chk-item"><input type="checkbox" id="simDev"> New / unrecognized device</label>
+          <label class="chk-item"><input type="checkbox" id="simLoc"> New / unfamiliar location</label>
+          <label class="chk-item"><input type="checkbox" id="simHr"> Odd hour (midnight – 5 am)</label>
+        </div>
+      </div>
+    </div>
+    <button class="sim-btn" id="simBtn">Run Simulation →</button>
+
+    <div class="sim-result" id="simResult">
+      <div class="gauge-wrap">
+        <svg width="110" height="110" viewBox="0 0 110 110">
+          <circle class="g-track" cx="55" cy="55" r="42"/>
+          <circle class="g-prog" id="gaugeArc" cx="55" cy="55" r="42"/>
+        </svg>
+        <div class="gauge-center">
+          <div class="gauge-pct" id="gaugePct">0%</div>
+          <div class="gauge-lbl">Risk</div>
+        </div>
+      </div>
+      <div class="sim-meta">
+        <div class="sim-tier-pill" id="simPill">—</div>
+        <div class="sim-expl" id="simExpl"></div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- shell -->
+
+<div class="toast-wrap" id="toasts"></div>
+<canvas id="confetti"></canvas>
+
 <script>
-  var API_URL = "https://finprotek.onrender.com";
-  var tierHex = { Low:"#3fb950", Medium:"#e8c93d", High:"#ff9d3d", Critical:"#e5484d" };
-  var tierEmoji = { Low:"LOW", Medium:"MED", High:"HIGH", Critical:"CRIT" };
-  var bankConnected = false;
- 
-  function animateCount(el, target, prefix, suffix) {
-    prefix = prefix || "";
-    suffix = suffix || "";
-    var startTime = null;
-    var duration = 700;
-    function step(ts) {
-      if (!startTime) { startTime = ts; }
-      var progress = Math.min((ts - startTime) / duration, 1);
-      var eased = 1 - Math.pow(1 - progress, 3);
-      var current = Math.floor(target * eased);
-      el.innerText = prefix + current.toLocaleString() + suffix;
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      } else {
-        el.innerText = prefix + target.toLocaleString() + suffix;
-      }
-    }
-    requestAnimationFrame(step);
+// ─────────────────────────────────────────────
+// CONFIG
+// ─────────────────────────────────────────────
+var API = "http://localhost:8000";
+var TIER = {
+  Low:      { color:"#10b981", bg:"rgba(16,185,129,.10)", cls:"tier-low"     },
+  Medium:   { color:"#f59e0b", bg:"rgba(245,158,11,.10)", cls:"tier-medium"  },
+  High:     { color:"#fb923c", bg:"rgba(251,146,60,.10)", cls:"tier-high"    },
+  Critical: { color:"#f43f5e", bg:"rgba(244,63,94,.10)",  cls:"tier-critical"}
+};
+
+// ─────────────────────────────────────────────
+// UTILS
+// ─────────────────────────────────────────────
+function $id(id){ return document.getElementById(id); }
+
+function animCount(el, target, pre, suf) {
+  pre = pre||""; suf = suf||"";
+  var start = null;
+  function tick(ts){
+    if(!start) start = ts;
+    var p = Math.min((ts-start)/800, 1);
+    var e = 1-Math.pow(1-p,3);
+    el.textContent = pre + Math.round(target*e).toLocaleString("en-IN") + suf;
+    if(p<1) requestAnimationFrame(tick);
+    else el.textContent = pre + target.toLocaleString("en-IN") + suf;
   }
- 
-  document.getElementById("thresholdSlider").addEventListener("input", function () {
-    document.getElementById("thresholdVal").innerText = parseFloat(this.value).toFixed(2);
+  requestAnimationFrame(tick);
+}
+
+// typewriter effect used in simulator
+
+// ─────────────────────────────────────────────
+// BANK CONNECT
+// ─────────────────────────────────────────────
+var bankConnected = false;
+$id("connectBtn").addEventListener("click", function(){
+  var btn = this;
+  var bank = $id("bankSelect").value;
+  btn.textContent = "Connecting…"; btn.disabled = true;
+  btn.classList.remove("ok");
+  $id("bankAvatar").classList.remove("ok");
+  $id("bankRow").classList.remove("connected");
+  setTimeout(function(){
+    bankConnected = true;
+    btn.textContent = "✓ Connected"; btn.classList.add("ok"); btn.disabled = false;
+    $id("bankAvatar").classList.add("ok");
+    $id("bankRow").classList.add("connected");
+    var last4 = Math.floor(1000+Math.random()*9000);
+    $id("bankTitle").textContent = bank + " — Connected";
+    $id("bankSub").textContent = "Account ••••" + last4 + " · Live monitoring active";
+  }, 1400);
+});
+
+// ─────────────────────────────────────────────
+// THRESHOLD SLIDER
+// ─────────────────────────────────────────────
+$id("threshSlider").addEventListener("input", function(){
+  $id("threshVal").textContent = parseFloat(this.value).toFixed(2);
+});
+$id("threshSlider").addEventListener("change", function(){
+  if($id("metrics").style.display === "grid") runAnalysis();
+});
+
+// ─────────────────────────────────────────────
+// SCAN TICKER
+// ─────────────────────────────────────────────
+var _scanT = null;
+function startScan(total){
+  $id("scanBar").style.display = "flex";
+  var msgs = ["Scoring behavioral patterns","Checking device history","Analyzing location signals","Running ML inference","Generating AI explanations"];
+  var i = 0;
+  _scanT = setInterval(function(){
+    i += Math.floor(Math.random()*55)+20;
+    if(i>total) i=total;
+    $id("scanText").textContent = "Processing txn " + i.toLocaleString("en-IN") + " / " + total.toLocaleString("en-IN") + "  ·  " + msgs[Math.floor(Math.random()*msgs.length)] + "…";
+  }, 220);
+}
+function stopScan(){ clearInterval(_scanT); _scanT=null; $id("scanBar").style.display="none"; }
+
+// ─────────────────────────────────────────────
+// SPARKLINE
+// ─────────────────────────────────────────────
+function drawSparkline(scores){
+  var c = $id("sparkline");
+  var dpr = window.devicePixelRatio||1;
+  c.width  = c.offsetWidth * dpr;
+  c.height = 54 * dpr;
+  var ctx = c.getContext("2d");
+  ctx.clearRect(0,0,c.width,c.height);
+  if(!scores.length) return;
+  var W=c.width, H=c.height, bw=W/scores.length, max=Math.max.apply(null,scores);
+  scores.forEach(function(s,i){
+    var bh = Math.max(4*dpr, (s/max)*(H-10*dpr));
+    var col = s>.85?"#f43f5e":s>.6?"#fb923c":s>.3?"#f59e0b":"#10b981";
+    ctx.fillStyle = col+"88";
+    var rx=i*bw+dpr, ry=H-bh, rw=bw-2*dpr, rh=bh, r=2*dpr;
+    ctx.beginPath();
+    ctx.moveTo(rx+r,ry); ctx.lineTo(rx+rw-r,ry);
+    ctx.quadraticCurveTo(rx+rw,ry,rx+rw,ry+r);
+    ctx.lineTo(rx+rw,ry+rh); ctx.lineTo(rx,ry+rh); ctx.lineTo(rx,ry+r);
+    ctx.quadraticCurveTo(rx,ry,rx+r,ry); ctx.closePath(); ctx.fill();
   });
- 
-  document.getElementById("thresholdSlider").addEventListener("change", function () {
-    if (document.getElementById("statsGrid").style.display !== "none") {
-      runAnalysis();
-    }
+}
+
+// ─────────────────────────────────────────────
+// TIER DISTRIBUTION BARS
+// ─────────────────────────────────────────────
+function drawTierBars(dist){
+  var max = Math.max(dist.Low, dist.Medium, dist.High, dist.Critical, 1);
+  [["Low","tbLow","tbLowN"], ["Medium","tbMed","tbMedN"],
+   ["High","tbHigh","tbHighN"], ["Critical","tbCrit","tbCritN"]].forEach(function(row){
+    var n = dist[row[0]]||0;
+    $id(row[1]).style.height = Math.max(4, (n/max)*100) + "%";
+    $id(row[2]).textContent = n;
   });
- 
-   document.getElementById("connectBtn").addEventListener("click", function () {
-    var btn = this;
-    var bank = document.getElementById("bankSelect").value;
-    btn.innerText = "Connecting...";
-    btn.disabled = true;
-    btn.classList.remove("connected");
-    setTimeout(function () {
-      bankConnected = true;
-      btn.innerText = "Connected";
-      btn.classList.add("connected");
-      btn.disabled = false;
-      var last4 = Math.floor(1000 + Math.random() * 9000);
-      document.getElementById("bankStatusTitle").innerText = bank + " connected";
-      document.getElementById("bankStatusSub").innerText = "Account ending in " + last4 + " - we are watching it now";
-    }, 1400);
+  $id("tierDist").style.display = "flex";
+}
+
+// ─────────────────────────────────────────────
+// TOAST
+// ─────────────────────────────────────────────
+function showToast(txn){
+  var wrap = $id("toasts");
+  var el = document.createElement("div"); el.className = "toast";
+  el.innerHTML = '<div class="toast-title">🚨 ' + txn.risk_tier + ' Risk — TXN ' + txn.txn_id + '</div>' +
+    '<div class="toast-body">₹' + Number(txn.amount).toLocaleString("en-IN") + ' · tap to review</div>';
+  el.addEventListener("click", function(){
+    var card = document.querySelector('[data-txn="'+txn.txn_id+'"]');
+    if(card){ card.scrollIntoView({behavior:"smooth",block:"center"}); openCard(card); }
   });
- 
-  function showToast(txn) {
-    var container = document.getElementById("toastContainer");
-    var toast = document.createElement("div");
-    toast.className = "toast";
-    var title = document.createElement("div");
-    title.className = "toast-title";
-    title.innerText = "Fraud Alert - " + txn.risk_tier + " Risk";
-    var body = document.createElement("div");
-    body.className = "toast-body";
-    body.innerText = "Rs." + txn.amount.toLocaleString() + " transaction needs your attention. Tap to review.";
-    toast.appendChild(title);
-    toast.appendChild(body);
-    toast.addEventListener("click", function () {
-      var card = document.querySelector('[data-txn-id="' + txn.txn_id + '"]');
-      if (card) {
-        card.scrollIntoView({ behavior: "smooth", block: "center" });
-        card.classList.add("open");
-      }
+  wrap.appendChild(el);
+  setTimeout(function(){ el.classList.add("closing"); setTimeout(function(){ el.remove(); },280); }, 5000);
+}
+
+// ─────────────────────────────────────────────
+// CONFETTI
+// ─────────────────────────────────────────────
+function fireConfetti(){
+  var cv=$id("confetti"); cv.style.display="block"; cv.width=innerWidth; cv.height=innerHeight;
+  var ctx=cv.getContext("2d");
+  var cols=["#3b82f6","#818cf8","#10b981","#22d3ee","#f59e0b"];
+  var pts=Array.from({length:70},function(){return{
+    x:Math.random()*cv.width, y:-10, vx:(Math.random()-.5)*4, vy:Math.random()*3+1.5,
+    sz:Math.random()*7+3, col:cols[Math.floor(Math.random()*cols.length)],
+    rot:Math.random()*360, rv:(Math.random()-.5)*8
+  };});
+  var f=0;
+  (function anim(){
+    ctx.clearRect(0,0,cv.width,cv.height);
+    pts.forEach(function(p){
+      p.x+=p.vx; p.y+=p.vy; p.vy+=0.06; p.rot+=p.rv;
+      ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.rot*Math.PI/180);
+      ctx.fillStyle=p.col; ctx.globalAlpha=Math.max(0,1-f/110);
+      ctx.fillRect(-p.sz/2,-p.sz/2,p.sz,p.sz); ctx.restore();
     });
-    container.appendChild(toast);
-    setTimeout(function () {
-      toast.classList.add("closing");
-      setTimeout(function () { toast.remove(); }, 300);
-    }, 5000);
+    if(++f<125) requestAnimationFrame(anim); else cv.style.display="none";
+  })();
+}
+
+// ─────────────────────────────────────────────
+// OPEN / CLOSE CARD
+// ─────────────────────────────────────────────
+function openCard(card){
+  if(card.classList.contains("open")) return;
+  card.classList.add("open");
+  // animate factor bars
+  card.querySelectorAll(".factor-fill[data-w]").forEach(function(bar){
+    setTimeout(function(){ bar.style.width = bar.getAttribute("data-w"); }, 50);
+  });
+}
+
+// ─────────────────────────────────────────────
+// BUILD TRANSACTION CARD
+// ─────────────────────────────────────────────
+function buildCard(txn, rank){
+  var t = TIER[txn.risk_tier] || TIER.Low;
+  var pct = Math.round(txn.fraud_score*100);
+
+  var card = document.createElement("div");
+  card.className = "txn-card " + t.cls;
+  card.setAttribute("data-txn", txn.txn_id);
+  card.style.animationDelay = (rank*0.04)+"s";
+
+  // ── header ──
+  var inner = document.createElement("div"); inner.className = "txn-inner";
+  var hdr = document.createElement("div"); hdr.className = "txn-header";
+
+  var left = document.createElement("div"); left.className = "txn-left";
+
+  var rn = document.createElement("div"); rn.className = "rank-num"; rn.textContent = "#"+(rank+1);
+
+  var dot = document.createElement("div"); dot.className = "txn-dot";
+  dot.style.background = t.bg; dot.style.border = "1px solid "+t.color+"33";
+  dot.textContent = txn.risk_tier==="Critical"?"🔴":txn.risk_tier==="High"?"🟠":txn.risk_tier==="Medium"?"🟡":"🟢";
+
+  var nameWrap = document.createElement("div");
+  var nameLine = document.createElement("div"); nameLine.className = "txn-name";
+  nameLine.innerHTML = 'Transaction <span style="color:var(--text-2);font-family:var(--mono);font-size:11px">'+txn.txn_id+'</span> <span class="chev">›</span>';
+  var monoLine = document.createElement("div"); monoLine.className = "txn-mono";
+  monoLine.textContent = "₹" + Number(txn.amount).toLocaleString("en-IN");
+  nameWrap.appendChild(nameLine); nameWrap.appendChild(monoLine);
+
+  left.appendChild(rn); left.appendChild(dot); left.appendChild(nameWrap);
+
+  // score chip + mini bar
+  var scoreWrap = document.createElement("div"); scoreWrap.style.textAlign="right";
+  var chip = document.createElement("div"); chip.className = "score-chip"; chip.textContent = pct+"%";
+  var barWrap = document.createElement("div"); barWrap.className = "score-bar-wrap";
+  var barFill = document.createElement("div"); barFill.className = "score-bar-fill";
+  barFill.style.background = t.color; barFill.style.width = "0%";
+  barWrap.appendChild(barFill); scoreWrap.appendChild(chip); scoreWrap.appendChild(barWrap);
+
+  var pill = document.createElement("div"); pill.className = "tier-pill";
+  pill.style.background = t.color; pill.textContent = txn.risk_tier;
+
+  var right = document.createElement("div"); right.className = "txn-right";
+  right.appendChild(scoreWrap); right.appendChild(pill);
+
+  hdr.appendChild(left); hdr.appendChild(right);
+  inner.appendChild(hdr);
+
+  // ── expandable detail ──
+  var detail = document.createElement("div"); detail.className = "txn-detail";
+  var body = document.createElement("div"); body.className = "detail-body";
+
+  // feature flag chips
+  var flagRow = document.createElement("div"); flagRow.className = "flag-row";
+  var flags = [
+    {label:"New Device", active:txn.new_device},
+    {label:"New Location", active:txn.new_location},
+    {label:"Odd Hour", active:txn.odd_hour},
+    {label:(txn.amount_deviation+1).toFixed(1)+"× avg spend", active:txn.amount_deviation>1.2},
+    {label:txn.velocity+" txns/hr", active:txn.velocity>=3},
+    {label:"Score "+pct+"%", active:false}
+  ];
+  flags.forEach(function(f){
+    var chip2 = document.createElement("span");
+    chip2.className = "flag-chip" + (f.active?" hot":"");
+    chip2.textContent = (f.active?"⚑ ":"") + f.label;
+    flagRow.appendChild(chip2);
+  });
+  body.appendChild(flagRow);
+
+  // factor bars
+  var factorData = [
+    {label:"Amount deviation", val:Math.min(txn.amount_deviation/8,1), display:(txn.amount_deviation+1).toFixed(1)+"×", color:"#fb923c"},
+    {label:"Velocity", val:Math.min(txn.velocity/10,1), display:txn.velocity+" /hr", color:"#818cf8"},
+    {label:"Device risk",    val:txn.new_device?1:0.05,   display:txn.new_device?"Yes":"No",   color:"#f43f5e"},
+    {label:"Location risk",  val:txn.new_location?1:0.05, display:txn.new_location?"Yes":"No", color:"#f43f5e"},
+  ];
+  var factorsWrap = document.createElement("div"); factorsWrap.className = "factor-bars";
+  factorData.forEach(function(fd){
+    var row = document.createElement("div"); row.className = "factor-row";
+    var lbl = document.createElement("div"); lbl.className = "factor-label"; lbl.textContent = fd.label;
+    var track = document.createElement("div"); track.className = "factor-track";
+    var fill = document.createElement("div"); fill.className = "factor-fill";
+    fill.style.background = fd.color; fill.style.width = "0%";
+    fill.setAttribute("data-w", Math.round(fd.val*100)+"%");
+    track.appendChild(fill);
+    var val = document.createElement("div"); val.className = "factor-val"; val.textContent = fd.display;
+    row.appendChild(lbl); row.appendChild(track); row.appendChild(val);
+    factorsWrap.appendChild(row);
+  });
+  body.appendChild(factorsWrap);
+
+  // AI explanation
+  var aiBox = document.createElement("div"); aiBox.className = "ai-box";
+  if(txn.explanation && txn.explanation.indexOf("unavailable")===-1){
+    aiBox.innerHTML = '<div class="ai-label"><span class="ai-label-dot"></span>Groq AI Analysis</div><div class="ai-text">' + txn.explanation.replace(/\n/g,"<br>") + '</div>';
+  } else {
+    aiBox.innerHTML = '<div class="ai-label"><span class="ai-label-dot"></span>Groq AI Analysis</div><div class="ai-text" style="color:var(--text-3);font-style:italic">AI explanation loading when expanded…</div>';
   }
- 
-  function buildReasonBits(txn) {
-    var bits = [];
-    if (txn.new_device) { bits.push("Used a device we have not seen before"); }
-    if (txn.new_location) { bits.push("Made from an unfamiliar location"); }
-    if (txn.odd_hour) { bits.push("Happened late at night"); }
-    if (txn.amount_deviation > 1) { bits.push("Amount was " + (txn.amount_deviation + 1).toFixed(1) + "x higher than usual"); }
-    if (txn.velocity > 2) { bits.push(txn.velocity + " purchases in the last hour"); }
-    return bits;
-  }
- 
-  function buildTxnCard(txn, rank) {
-    var card = document.createElement("div");
-    card.className = "txn-card";
-    card.setAttribute("data-txn-id", txn.txn_id);
-    card.style.animationDelay = (rank * 0.05) + "s";
- 
-    var header = document.createElement("div");
-    header.className = "txn-header";
- 
-    var left = document.createElement("div");
-    left.className = "txn-left";
- 
-    var rankBadge = document.createElement("div");
-    rankBadge.className = "rank-badge";
-    rankBadge.innerText = "#" + (rank + 1);
- 
-    var riskIcon = document.createElement("div");
-    riskIcon.className = "risk-icon";
-    riskIcon.innerText = tierEmoji[txn.risk_tier] || "";
- 
-    var idWrap = document.createElement("div");
-    var idLine = document.createElement("div");
-    idLine.className = "txn-id";
-    idLine.innerText = "Transaction " + txn.txn_id;
-    var chevron = document.createElement("span");
-    chevron.className = "chevron";
-    chevron.innerText = ">";
-    idLine.appendChild(chevron);
-    var amountLine = document.createElement("div");
-    amountLine.className = "txn-amount";
-    amountLine.innerText = "Rs." + txn.amount.toLocaleString();
-    idWrap.appendChild(idLine);
-    idWrap.appendChild(amountLine);
- 
-    left.appendChild(rankBadge);
-    left.appendChild(riskIcon);
-    left.appendChild(idWrap);
- 
-    var badge = document.createElement("span");
-    badge.className = "tier-badge";
-    badge.style.background = tierHex[txn.risk_tier] || "#8b949e";
-    badge.innerText = txn.risk_tier + " Risk";
- 
-    header.appendChild(left);
-    header.appendChild(badge);
- 
-    var details = document.createElement("div");
-    details.className = "txn-details";
- 
-    var reasonBox = document.createElement("div");
-    reasonBox.className = "plain-reason";
-    reasonBox.innerText = txn.explanation;
- 
-    var reasonList = document.createElement("div");
-    reasonList.className = "reason-icon-list";
-    buildReasonBits(txn).forEach(function (text) {
-      var item = document.createElement("div");
-      item.className = "reason-item";
-      item.innerText = text;
-      reasonList.appendChild(item);
-    });
- 
-    var actionRow = document.createElement("div");
-    actionRow.className = "action-row";
-    var confirmBtn = document.createElement("button");
-    confirmBtn.className = "action-btn confirm";
-    confirmBtn.innerText = "This was me";
-    var reportBtn = document.createElement("button");
-    reportBtn.className = "action-btn report";
-    reportBtn.innerText = "This was not me";
-    actionRow.appendChild(confirmBtn);
-    actionRow.appendChild(reportBtn);
- 
-    details.appendChild(reasonBox);
-    details.appendChild(reasonList);
-    details.appendChild(actionRow);
- 
-    card.appendChild(header);
-    card.appendChild(details);
- 
-    card.addEventListener("click", function (e) {
-      if (e.target === confirmBtn || e.target === reportBtn) { return; }
-      card.classList.toggle("open");
-    });
-    confirmBtn.addEventListener("click", function (e) {
-      e.stopPropagation();
-      actionRow.innerHTML = "";
-      var msg = document.createElement("div");
-      msg.style.color = "var(--success)";
-      msg.style.fontSize = "13px";
-      msg.innerText = "Marked as confirmed by you";
-      actionRow.appendChild(msg);
-    });
-    reportBtn.addEventListener("click", function (e) {
-      e.stopPropagation();
-      actionRow.innerHTML = "";
-      var msg = document.createElement("div");
-      msg.style.color = "var(--danger)";
-      msg.style.fontSize = "13px";
-      msg.innerText = "Reported - we recommend contacting your bank";
-      actionRow.appendChild(msg);
-    });
- 
-    return card;
-  }
- 
-  var scanInterval = null;
-  function startScanTicker(total) {
-    var ticker = document.getElementById("scanTicker");
-    var text = document.getElementById("scanText");
-    ticker.style.display = "flex";
-    var i = 0;
-    var messages = ["Checking device history", "Comparing to normal spending", "Checking location patterns", "Reviewing transaction timing"];
-    scanInterval = setInterval(function () {
-      i += Math.floor(Math.random() * 40) + 15;
-      if (i > total) { i = total; }
-      var msg = messages[Math.floor(Math.random() * messages.length)];
-      text.innerText = "Scanning transaction " + i + " of " + total + " - " + msg + "...";
-    }, 180);
-  }
-  function stopScanTicker() {
-    if (scanInterval) { clearInterval(scanInterval); scanInterval = null; }
-    document.getElementById("scanTicker").style.display = "none";
-  }
- 
-  function fireConfetti() {
-    var canvas = document.getElementById("confettiCanvas");
-    canvas.style.display = "block";
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    var ctx = canvas.getContext("2d");
-    var colors = ["#e8a33d", "#4a9eff", "#3fb950", "#ff7a45"];
-    var particles = [];
-    for (var i = 0; i < 80; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: -20,
-        vx: (Math.random() - 0.5) * 4,
-        vy: Math.random() * 3 + 2,
-        size: Math.random() * 6 + 4,
-        color: colors[Math.floor(Math.random() * colors.length)],
-        rotation: Math.random() * 360
-      });
-    }
-    var frame = 0;
-    function animate() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      frame++;
-      particles.forEach(function (p) {
-        p.x += p.vx; p.y += p.vy; p.vy += 0.05; p.rotation += 6;
-        ctx.save();
-        ctx.translate(p.x, p.y);
-        ctx.rotate(p.rotation * Math.PI / 180);
-        ctx.fillStyle = p.color;
-        ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
-        ctx.restore();
-      });
-      if (frame < 110) {
-        requestAnimationFrame(animate);
-      } else {
-        canvas.style.display = "none";
-      }
-    }
-    animate();
-  }
- 
-  function drawSparkline(scores) {
-    var canvas = document.getElementById("riskSparkline");
-    var ctx = canvas.getContext("2d");
-    var w = canvas.width, h = canvas.height;
-    ctx.clearRect(0, 0, w, h);
-    if (scores.length === 0) { return; }
-    var max = Math.max.apply(null, scores);
-    var barWidth = w / scores.length;
-    scores.forEach(function (s, i) {
-      var barHeight = (s / max) * (h - 10);
-      var barColor = s > 0.85 ? "#e5484d" : s > 0.6 ? "#ff9d3d" : s > 0.3 ? "#e8c93d" : "#3fb950";
-      ctx.fillStyle = barColor;
-      ctx.fillRect(i * barWidth + 1, h - barHeight, barWidth - 2, barHeight);
-    });
-  }
- 
-  function runAnalysis() {
-    var btn = document.getElementById("runBtn");
-    var loading = document.getElementById("loadingText");
-    var skeleton = document.getElementById("skeletonWrap");
-    var threshold = document.getElementById("thresholdSlider").value;
-    var alertsOn = document.getElementById("alertToggle").checked;
- 
-    btn.disabled = true;
-    loading.style.display = "block";
-    skeleton.style.display = "block";
-    startScanTicker(1000);
-    document.getElementById("verdictBanner").style.display = "none";
-    document.getElementById("statsGrid").style.display = "none";
-    document.getElementById("txnSection").style.display = "none";
-    
-    var selectedBank = document.getElementById("bankSelect").value;
-    fetch(API_URL + "/analyze?threshold=" + threshold + "&bank=" + encodeURIComponent(selectedBank))
-   
-      .then(function (res) { return res.json(); })
-      .then(function (data) {
-        var verdict = document.getElementById("verdictBanner");
-        var flagged = data.flagged_count;
-        if (flagged === 0) {
-          verdict.className = "verdict-banner safe";
-          document.getElementById("verdictEmoji").innerText = "OK";
-          document.getElementById("verdictTitle").innerText = "Everything looks safe";
-          document.getElementById("verdictSub").innerText = "We checked " + data.total_transactions + " transactions and found nothing suspicious.";
-          fireConfetti();
-        } else {
-          verdict.className = "verdict-banner warning";
-          document.getElementById("verdictEmoji").innerText = "!";
-          document.getElementById("verdictTitle").innerText = flagged + " transaction(s) need your attention";
-          document.getElementById("verdictSub").innerText = "Don't worry - nothing has been charged or blocked. Just review them below.";
-        }
-        verdict.style.display = "block";
- 
-        animateCount(document.getElementById("flaggedCount"), data.flagged_count);
-        document.getElementById("totalTxns").innerText = data.total_transactions;
-        animateCount(document.getElementById("moneyProtected"), Math.round(data.money_protected), "Rs.");
-        animateCount(document.getElementById("safePct"), Math.round(data.safe_percentage), "", "%");
- 
-        document.getElementById("precisionVal").innerText = (data.precision * 100).toFixed(1) + "%";
-        document.getElementById("recallVal").innerText = (data.recall * 100).toFixed(1) + "%";
-        document.getElementById("fpVal").innerText = data.false_positives;
-        document.getElementById("fnVal").innerText = data.false_negatives;
- 
-        var txnList = document.getElementById("txnList");
-        txnList.innerHTML = "";
-        data.flagged_transactions.forEach(function (txn, i) {
-          var card = buildTxnCard(txn, i);
-          txnList.appendChild(card);
+  body.appendChild(aiBox);
+
+  // action row
+  var actRow = document.createElement("div"); actRow.className = "act-row";
+  var safeBtn = document.createElement("button"); safeBtn.className = "act-btn safe"; safeBtn.textContent = "✓ This was me — mark safe";
+  var flagBtn = document.createElement("button"); flagBtn.className = "act-btn flag"; flagBtn.textContent = "✕ This was NOT me — report fraud";
+  actRow.appendChild(safeBtn); actRow.appendChild(flagBtn);
+  body.appendChild(actRow);
+
+  detail.appendChild(body);
+  card.appendChild(inner);
+  card.appendChild(detail);
+
+  // ── interactions ──
+  card.addEventListener("click", function(e){
+    if(e.target===safeBtn||e.target===flagBtn) return;
+    card.classList.toggle("open");
+    if(card.classList.contains("open")){
+      // animate bars after open
+      setTimeout(function(){
+        card.querySelectorAll(".factor-fill[data-w]").forEach(function(b){
+          b.style.width = b.getAttribute("data-w");
         });
- 
-        var scores = data.flagged_transactions.map(function (t) { return t.fraud_score; });
-        drawSparkline(scores);
- 
-        stopScanTicker();
-        skeleton.style.display = "none";
-        document.getElementById("statsGrid").style.display = "grid";
-        if (data.flagged_transactions.length > 0) {
-          document.getElementById("txnSection").style.display = "block";
-        }
- 
-        if (alertsOn) {
-          data.flagged_transactions.slice(0, 3).forEach(function (txn, i) {
-            setTimeout(function () { showToast(txn); }, i * 900);
-          });
-        }
-      })
-      .catch(function (err) {
-        alert("We couldn't reach the fraud checking service. Make sure the backend is running.");
-        console.error(err);
-        stopScanTicker();
-        skeleton.style.display = "none";
-      })
-      .finally(function () {
-        btn.disabled = false;
-        loading.style.display = "none";
-      });
-  }
- 
-  function simulateTransaction() {
-    var payload = {
-      amount_deviation: parseFloat(document.getElementById("simAmount").value),
-      velocity: parseInt(document.getElementById("simVelocity").value),
-      new_device: document.getElementById("simDevice").checked ? 1 : 0,
-      new_location: document.getElementById("simLocation").checked ? 1 : 0,
-      odd_hour: document.getElementById("simHour").checked ? 1 : 0
-    };
- 
-    var wrap = document.getElementById("simResultWrap");
-    wrap.style.display = "flex";
-    var explEl = document.getElementById("simExplanation");
-    explEl.innerHTML = "";
-    var loadingSpan = document.createElement("span");
-    loadingSpan.className = "loading";
-    loadingSpan.innerText = "Checking...";
-    explEl.appendChild(loadingSpan);
- 
-    fetch(API_URL + "/predict", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
+      }, 50);
+      // animate score bar
+      setTimeout(function(){ barFill.style.width = pct+"%"; }, 80);
+    } else {
+      barFill.style.width = "0%";
+    }
+  });
+
+  safeBtn.addEventListener("click", function(e){
+    e.stopPropagation();
+    actRow.innerHTML = '<div style="font-size:12px;color:var(--emerald-lt);padding:6px 0">✓ Marked as confirmed by you — no further action needed.</div>';
+    card.classList.remove("tier-critical","tier-high","tier-medium","tier-low");
+    card.style.cssText += ";opacity:.6;";
+  });
+  flagBtn.addEventListener("click", function(e){
+    e.stopPropagation();
+    actRow.innerHTML = '<div style="font-size:12px;color:var(--rose-lt);padding:6px 0">⚑ Reported — contact your bank immediately to freeze this transaction.</div>';
+  });
+
+  return card;
+}
+
+// ─────────────────────────────────────────────
+// MAIN ANALYSIS
+// ─────────────────────────────────────────────
+function runAnalysis(){
+  var threshold = $id("threshSlider").value;
+  var bank = $id("bankSelect").value;
+  var alertsOn = $id("alertTog").checked;
+  var btn = $id("runBtn");
+
+  btn.disabled = true;
+  $id("loadingRow").style.display = "flex";
+  $id("skelWrap").style.display = "flex";
+  startScan(1000);
+  $id("verdict").style.display = "none";
+  $id("metrics").style.display = "none";
+  $id("costStrip").style.display = "none";
+  $id("txnSection").style.display = "none";
+  $id("tierDist").style.display = "none";
+
+  fetch(API+"/analyze?threshold="+threshold+"&bank="+encodeURIComponent(bank))
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      // verdict
+      var vb = $id("verdict");
+      if(d.flagged_count===0){
+        vb.className="verdict safe";
+        $id("vIcon").textContent="✦";
+        $id("vTitle").textContent="All clear — no suspicious activity";
+        $id("vSub").textContent="Scanned "+d.total_transactions.toLocaleString("en-IN")+" transactions. Everything looks normal.";
+        fireConfetti();
+      } else {
+        vb.className="verdict warn";
+        $id("vIcon").textContent="⚠";
+        $id("vTitle").textContent=d.flagged_count+" transaction"+(d.flagged_count>1?"s":"")+" flagged for review";
+        $id("vSub").textContent="Nothing has been blocked. Review each alert below and mark safe or report.";
+      }
+      vb.style.display="block";
+
+      // metrics
+      animCount($id("mFlagged"), d.flagged_count);
+      $id("mTotal").textContent = d.total_transactions.toLocaleString("en-IN");
+      animCount($id("mMoney"), Math.round(d.money_protected), "₹");
+      animCount($id("mSafe"), Math.round(d.safe_percentage), "", "%");
+
+      // money bar
+      var maxProtectable = d.total_transactions * 10000;
+      setTimeout(function(){
+        $id("mMoneyBar").style.width = Math.min(100, (d.money_protected/maxProtectable)*100)+"%";
+      }, 200);
+
+      // cost strip
+      $id("cFP").textContent = "₹"+d.fp_cost.toLocaleString("en-IN");
+      $id("cFN").textContent = "₹"+d.fn_cost.toLocaleString("en-IN");
+      $id("cFPCount").textContent = d.false_positives;
+      $id("cFNCount").textContent = d.false_negatives;
+      $id("costStrip").style.display = "grid";
+
+      // model stats
+      $id("sPrecision").textContent = (d.precision*100).toFixed(1)+"%";
+      $id("sRecall").textContent    = (d.recall*100).toFixed(1)+"%";
+      $id("sFP").textContent = d.false_positives.toLocaleString("en-IN");
+      $id("sFN").textContent = d.false_negatives.toLocaleString("en-IN");
+
+      // tier dist
+      drawTierBars(d.tier_distribution);
+
+      // flag badge
+      $id("flagBadge").textContent = d.flagged_count+" alert"+(d.flagged_count!==1?"s":"");
+
+      // txn list
+      var list=$id("txnList"); list.innerHTML="";
+      d.flagged_transactions.forEach(function(t,i){ list.appendChild(buildCard(t,i)); });
+
+      // sparkline
+      drawSparkline(d.flagged_transactions.map(function(t){return t.fraud_score;}));
+
+      // show
+      stopScan();
+      $id("skelWrap").style.display="none";
+      $id("metrics").style.display="grid";
+      if(d.flagged_transactions.length) $id("txnSection").style.display="block";
+
+      // toasts
+      if(alertsOn){
+        d.flagged_transactions.slice(0,3).forEach(function(t,i){
+          setTimeout(function(){ showToast(t); }, i*950);
+        });
+      }
     })
-      .then(function (res) { return res.json(); })
-      .then(function (data) {
-        var color = tierHex[data.risk_tier] || "#8b949e";
-        var pct = data.fraud_score * 100;
-        var circumference = 289;
-        var offset = circumference - (pct / 100) * circumference;
-        var circle = document.getElementById("gaugeCircle");
-        circle.style.stroke = color;
-        circle.style.strokeDashoffset = offset;
-        animateCount(document.getElementById("gaugePct"), Math.round(pct), "", "%");
-        var badge = document.getElementById("simTierBadge");
-        badge.innerText = data.risk_tier + " Risk";
-        badge.style.background = color;
- 
-        explEl.innerHTML = "";
-        if (data.explanation) {
-          explEl.innerText = data.explanation;
-        } else if (data.flagged) {
-          var span = document.createElement("span");
-          span.style.color = "var(--danger)";
-          span.innerText = "This was flagged as high risk, but we could not generate an explanation right now.";
-          explEl.appendChild(span);
-        } else {
-          var span2 = document.createElement("span");
-          span2.style.color = "var(--muted)";
-          span2.innerText = "This looks like a totally normal transaction.";
-          explEl.appendChild(span2);
-        }
-      })
-      .catch(function (err) {
-        explEl.innerHTML = "";
-        var span = document.createElement("span");
-        span.style.color = "var(--danger)";
-        span.innerText = "Could not reach the service.";
-        explEl.appendChild(span);
-        console.error(err);
-      });
-  }
- 
-  document.getElementById("runBtn").addEventListener("click", runAnalysis);
-  document.getElementById("simBtn").addEventListener("click", simulateTransaction);
+    .catch(function(err){
+      stopScan();
+      $id("skelWrap").style.display="none";
+      $id("loadingRow").style.display="none";
+      alert("Could not reach the backend. Make sure it is running on port 8000.");
+      console.error(err);
+    })
+    .finally(function(){
+      btn.disabled=false;
+      $id("loadingRow").style.display="none";
+    });
+}
+
+// ─────────────────────────────────────────────
+// SIMULATOR
+// ─────────────────────────────────────────────
+function runSim(){
+  var payload = {
+    amount_deviation: parseFloat($id("simAmt").value)||1.0,
+    velocity: parseInt($id("simVel").value)||1,
+    new_device:   $id("simDev").checked?1:0,
+    new_location: $id("simLoc").checked?1:0,
+    odd_hour:     $id("simHr").checked?1:0
+  };
+  var result=$id("simResult"), explEl=$id("simExpl");
+  result.style.display="flex";
+  explEl.textContent="Asking Groq AI…";
+  explEl.style.color="var(--text-3)";
+
+  fetch(API+"/predict",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)})
+    .then(function(r){return r.json();})
+    .then(function(d){
+      var t = TIER[d.risk_tier]||TIER.Low;
+      var pct = d.fraud_score*100;
+      var CIRC = 2*Math.PI*42; // r=42
+      var arc=$id("gaugeArc");
+      arc.style.stroke = t.color;
+      arc.style.strokeDashoffset = (CIRC-(pct/100)*CIRC).toFixed(2);
+      animCount($id("gaugePct"), Math.round(pct), "", "%");
+      var pill=$id("simPill");
+      pill.textContent=d.risk_tier+" Risk"; pill.style.background=t.color;
+
+      explEl.style.color="";
+      if(d.explanation && d.explanation.indexOf("unavailable")===-1){
+        // Build the container then typewrite the text into it
+        explEl.innerHTML = '<div class="ai-label"><span class="ai-label-dot"></span>Groq AI Analysis</div>';
+        var textNode = document.createElement("div");
+        textNode.style.whiteSpace = "pre-line";
+        explEl.appendChild(textNode);
+        var cursor = document.createElement("span");
+        cursor.className = "ai-cursor";
+        textNode.appendChild(cursor);
+        var chars = d.explanation.split("");
+        var idx = 0;
+        (function nextChar(){
+          if(idx < chars.length){
+            cursor.before(document.createTextNode(chars[idx]));
+            idx++;
+            setTimeout(nextChar, 14);
+          } else {
+            cursor.remove();
+          }
+        })();
+      } else if(d.flagged){
+        explEl.innerHTML = "<em style='color:var(--text-3)'>AI explanation warming up. Score: "+pct.toFixed(1)+"% — flagged as "+d.risk_tier+".</em>";
+      } else {
+        explEl.innerHTML = "<span style='color:var(--emerald-lt)'>✓ Normal transaction — no significant risk signals detected. Fraud probability: "+pct.toFixed(1)+"%</span>";
+      }
+    })
+    .catch(function(err){
+      explEl.textContent="Could not reach the backend.";
+      explEl.style.color="var(--rose-lt)";
+      console.error(err);
+    });
+}
+
+$id("runBtn").addEventListener("click", runAnalysis);
+$id("simBtn").addEventListener("click", runSim);
 </script>
- 
+
 </body>
 </html>
